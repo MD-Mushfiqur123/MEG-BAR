@@ -130,7 +130,7 @@ The defensible conclusion is therefore narrow and measured: making the receptor 
 \subsection{Eleven-Receptor Expansion: Multi-Seed Protocol, Controls, and Temporal Split}
 \label{sec:expanded}
 
-The Phase-1 hardening (AdamW with weight decay $0.01$, gradient clipping at norm $1.0$, cosine LR schedule with $5\%$ warmup, peak $5 \times 10^{-4}$) is applied to every condition, each condition is run with five seeds (0--4), and a minimum-data guard skips the cross-attention arm below $800$ training molecules and reports the skip rather than silently substituting a result. \cref{tab:real_expanded} reports the eleven-receptor scaffold-disjoint results; \cref{tab:real_temporal} adds a temporal split (train on records published before 2015, test on 2015+).
+The Phase-1 hardening (AdamW with weight decay $0.01$, gradient clipping at norm $1.0$, cosine LR schedule with $5\%$ warmup, peak $5 \times 10^{-4}$) is applied to every condition, each condition is run with five seeds (0--4), and a minimum-data guard skips the cross-attention arm below $800$ training molecules and reports the skip rather than silently substituting a result. The leave-one-receptor-out transfer experiment (E4) is not re-run on the expanded set; \cref{tab:real_conditioning} remains a four-receptor-core measurement. \cref{tab:real_expanded} reports the eleven-receptor scaffold-disjoint results; \cref{tab:real_temporal} adds a temporal split (train on records published before 2015, test on 2015+).
 
 \begin{table}[!ht]
 \centering

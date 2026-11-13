@@ -144,7 +144,7 @@ def verify_arxiv_manifest():
         print("  [OK] Abstract carries measured counts and no withdrawn claims")
     # Comments
     comments = man.get("comments", "")
-    for term in ["28 pages", "8 figures", "19 tables", "NeurIPS"]:
+    for term in ["47 pages", "8 figures", "19 tables", "NeurIPS"]:
         if term not in comments:
             errors.append(f"Comments missing '{term}' specification! Current: '{comments}'")
     if not errors:
