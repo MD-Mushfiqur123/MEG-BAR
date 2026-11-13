@@ -2,10 +2,13 @@
 
 **Author:** **Md Mushfiqur Rahim**  
 *Affiliation:* Independent Researcher, Bogura, Bangladesh (Clinical Neuroscience & AI Systems Architecture)  
-*Email:* `20mahin2020@gmail.com` | `20mahin2020@gmail.com`  
-*ORCID:* [0009-0003-1021-685X](https://orcid.org/0009-0003-1021-685X)  
-*GitHub:* [https://github.com/MD-Mushfiqur123](https://github.com/MD-Mushfiqur123)  
-*Prior Work (SEGR):* [DOI: 10.5281/zenodo.23841930](https://doi.org/10.5281/zenodo.23841930)  
+*Email:* `20mahin2020@gmail.com`  
+*ORCID:* [0009-0003-1021-685X](https://orcid.org)  
+*GitHub:* [https://github.com](https://github.com)  
+*Preprint DOI:* [10.6084/m9.figshare.35002837](https://doi.org)  
+*Prior Work (SEGR):* [DOI: 10.5281/zenodo.23841930](https://doi.org)  
+
+---
 
 ---
 
