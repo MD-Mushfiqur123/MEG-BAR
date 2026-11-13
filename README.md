@@ -1,4 +1,4 @@
-# MEG-BAR: Molecular Expert Grafting with Binding Affinity Router Re-anchoring for Drug-Receptor Specialization in Protein Foundation Models
+# Receptor Conditioning, Not Expert Routing, Drives Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 23,872 Measured ChEMBL Records
 
 **Author:** **Md Mushfiqur Rahim**  
 *Affiliation:* Independent Researcher, Bogura, Bangladesh (Clinical Neuroscience & AI Systems Architecture)  

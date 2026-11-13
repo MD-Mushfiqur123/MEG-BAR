@@ -1,6 +1,6 @@
 {
   "submission_manifest": {
-    "title": "MEG-BAR: Molecular Expert Grafting with Binding Affinity Router Re-anchoring for Drug-Receptor Specialization in Protein Foundation Models",
+    "title": "Receptor Conditioning, Not Expert Routing, Drives Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 23,872 Measured ChEMBL Records",
     "authors": "Md Mushfiqur Rahim",
     "author_details": [
       {
