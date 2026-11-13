@@ -1,0 +1,38 @@
+{
+  "purpose": "Phase 2: measured hERG liability model (real ChEMBL IC50 data, scaffold-disjoint QSAR)",
+  "computed_utc": "2026-11-13T04:38:52+00:00",
+  "target": {
+    "chembl_id": "CHEMBL240",
+    "uniprot": "Q12809",
+    "name": "human ether-a-go-go-related gene (hERG/KCNH2/KV11.1) channel"
+  },
+  "query_first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL240&standard_type=IC50&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Cdocument_chembl_id",
+  "activity_definition": "IC50 antagonism records with pchembl_value in [2, 13]; per molecule the most potent (max pchembl) record is retained",
+  "active_definition": "pchembl_value >= 5.0 (IC50 <= 10 uM)",
+  "fingerprint": {
+    "type": "Morgan",
+    "nBits": 2048,
+    "radius": 2
+  },
+  "model": "LogisticRegression (scikit-learn, C=1.0, max_iter=5000), Bemis-Murcko scaffold-disjoint 80/20 split, seed 0",
+  "n_records_fetched": 11707,
+  "n_unique_molecules": 9628,
+  "n_modelled": 9628,
+  "n_active": 6589,
+  "n_inactive": 3039,
+  "n_scaffolds": 4838,
+  "n_train": 7609,
+  "n_test": 2019,
+  "test_active": 1366,
+  "test_inactive": 653,
+  "test_roc_auc": 0.7292908728494907,
+  "test_roc_auc_bootstrap95ci": [
+    0.7064292316402679,
+    0.7526484098748919
+  ],
+  "test_pr_auc": 0.8328026628839241,
+  "n_bootstrap": 2000,
+  "artifact_sha256": {
+    "raw_herg_activities.csv": "60d35471fcfe9cfcdbbe9a1a88a795a52eecd908a54277d52762d48c2ef4b36f"
+  }
+}

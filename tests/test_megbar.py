@@ -596,3 +596,64 @@ def test_multi_os_github_workflow():
 
 
 
+def test_phase2_admet_artifacts():
+    """Phase 2: computed physicochemistry and hERG QSAR replace hardcoded ADMET constants."""
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    real = os.path.join(root_dir, 'data', 'real')
+
+    with open(os.path.join(real, 'admet_physchem.json'), 'r', encoding='utf-8') as f:
+        adm = json.load(f)
+    assert adm['n_unique_molecules'] > 10000
+    assert adm['n_unparseable'] == 0
+    mpo = adm['overall']['cns_mpo4']
+    assert 0.0 <= mpo['mean'] <= 4.0
+    assert mpo['sd'] > 0
+    assert 0.0 <= adm['overall']['veber_pass'] <= 1.0
+    assert 0.0 <= adm['overall']['lipinski_pass'] <= 1.0
+    assert 'cns_mpo_note' in adm and 'CNS-MPO(4)' in adm['cns_mpo_note']
+
+    with open(os.path.join(real, 'herg_results.json'), 'r', encoding='utf-8') as f:
+        herg = json.load(f)
+    assert herg['n_modelled'] > 5000
+    assert herg['n_scaffolds'] > 1000
+    assert 0.5 <= herg['test_roc_auc'] <= 1.0
+    lo, hi = herg['test_roc_auc_bootstrap95ci']
+    assert lo < herg['test_roc_auc'] < hi
+    assert herg['target']['uniprot'] == 'Q12809'
+
+
+def test_phase3_expanded_artifacts():
+    """Phase 3: eleven-receptor evidence base with scaffold and temporal splits."""
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    real = os.path.join(root_dir, 'data', 'real')
+
+    with open(os.path.join(real, 'expand_manifest.json'), 'r', encoding='utf-8') as f:
+        man = json.load(f)
+    assert len(man['targets']) == 7
+    assert man['row_count_expanded'] > 40000
+    assert man['documents_with_year'] >= 0.99 * man['documents_total']
+
+    with open(os.path.join(real, 'proteins_expanded.json'), 'r', encoding='utf-8') as f:
+        prot = json.load(f)
+    assert len(prot) == 11
+    for gene, rec in prot.items():
+        assert rec['length'] == len(rec['sequence'])
+
+    with open(os.path.join(real, 'document_years.json'), 'r', encoding='utf-8') as f:
+        years = json.load(f)
+    assert years and all(isinstance(v, int) for v in years.values())
+
+    with open(os.path.join(real, 'expanded_results.json'), 'r', encoding='utf-8') as f:
+        res = json.load(f)
+    assert res['temporal_cutoff'] == 2015
+    e3 = [k for k in res if k.startswith('E3|')]
+    e5 = [k for k in res if k.startswith('E5|')]
+    assert len(e3) >= 10, 'expected scaffold-split blocks for >=10 receptors'
+    assert len(e5) >= 8, 'expected temporal-split blocks for >=8 receptors'
+    for blk_key in e3 + e5:
+        blk = res[blk_key]
+        for arch in ('shared', 'crossattn'):
+            rec = blk.get(arch)
+            if isinstance(rec, dict) and 'skipped' not in rec:
+                assert len(rec.get('seeds', [])) == 5, '%s %s incomplete' % (blk_key, arch)
+                assert 0.0 <= rec['mean_r'] <= 1.0
