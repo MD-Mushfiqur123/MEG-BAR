@@ -21,6 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ZENODO_JSON = BASE_DIR / "zenodo_metadata.json"
 ARXIV_JSON = BASE_DIR / "arxiv_submission_manifest.json"
 LATEX_DIR = BASE_DIR / "latex"
+MANUSCRIPT_TEX = LATEX_DIR / "main.tex"
 
 ORCID_REGEX = re.compile(r'^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$')
 DOI_REGEX = re.compile(r'^10\.\d{4,9}/[-._;()/:A-Za-z0-9]+$')
@@ -42,10 +43,13 @@ def verify_zenodo_manifest():
     meta = data["metadata"]
     errors = []
 
-    # Title check
+    # Title check: must match the manuscript title in latex/main.tex
     title = meta.get("title", "")
-    if "MEG-BAR: Molecular Expert Grafting with Binding Affinity Router Re-anchoring" not in title:
-        errors.append(f"Unexpected title: '{title}'")
+    tex_title_match = re.search(r"\\title\{\\textbf\{(.+?)\}\}", MANUSCRIPT_TEX.read_text(encoding="utf-8"))
+    if tex_title_match is None:
+        errors.append("\\title{...} not found in latex/main.tex!")
+    elif title != tex_title_match.group(1):
+        errors.append(f"Unexpected title: '{title}' (expected: '{tex_title_match.group(1)}')")
     else:
         print(f"  [OK] Title verified: '{title[:60]}...'")
 
