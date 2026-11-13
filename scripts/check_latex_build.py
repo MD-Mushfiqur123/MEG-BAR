@@ -261,7 +261,19 @@ def check_citations_and_crossrefs(content):
         return False
     print(f"  [OK] All {len(cited_keys)} cited keys successfully verified against references.bib.")
     
-    labels = re.findall(r'\\label\{([^}]+)\}', content)
+    inputs = re.findall(r'\\input\{([^}]+)\}', content)
+    included_content = ""
+    for inp in inputs:
+        inc_name = inp if inp.endswith(".tex") else inp + ".tex"
+        inc_path = LATEX_DIR / inc_name
+        if inc_path.exists():
+            with open(inc_path, "r", encoding="utf-8") as f:
+                included_content += f.read() + "\n"
+        else:
+            print(f"  [ERROR] \\input file NOT FOUND: {inc_path}")
+            return False
+
+    labels = re.findall(r'\\label\{([^}]+)\}', content + included_content)
     duplicate_labels = [lbl for lbl in set(labels) if labels.count(lbl) > 1]
     if duplicate_labels:
         print(f"  [ERROR] Duplicate labels found: {duplicate_labels}")

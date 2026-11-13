@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Package MEG-BAR deliverables:
-1. Re-bundle Overleaf ZIP at C:\\Users\\mushfiqur\\Desktop\\MEG-BAR_Overleaf.zip
-2. Re-sync all files to C:\\Users\\mushfiqur\\Desktop\\MUSHFIQUR_ALL_ACHIEVEMENTS\\03_Research_Papers\\MEG-BAR\\
+1. Re-bundle Overleaf ZIP at <repo>/deliverables/MEG-BAR_Overleaf.zip
+2. Re-sync all files to <repo>/deliverables/achievements-sync/
 """
 
 import os
@@ -12,13 +12,15 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 LATEX_DIR = BASE_DIR / "latex"
-DESKTOP_ZIP = Path(r"C:\Users\mushfiqur\Desktop\MEG-BAR_Overleaf.zip")
-ACHIEVEMENTS_DIR = Path(r"C:\Users\mushfiqur\Desktop\MUSHFIQUR_ALL_ACHIEVEMENTS\03_Research_Papers\MEG-BAR")
+DESKTOP_ZIP = BASE_DIR / "deliverables" / "MEG-BAR_Overleaf.zip"
+ACHIEVEMENTS_DIR = BASE_DIR / "deliverables" / "achievements-sync"
 
 def bundle_overleaf_zip():
     print(f"=== 1. PACKAGING OVERLEAF ZIP ===")
     print(f"Source: {LATEX_DIR}")
     print(f"Destination: {DESKTOP_ZIP}")
+
+    DESKTOP_ZIP.parent.mkdir(parents=True, exist_ok=True)
 
     if DESKTOP_ZIP.exists():
         DESKTOP_ZIP.unlink()
@@ -48,7 +50,7 @@ def sync_achievements_archive():
     ACHIEVEMENTS_DIR.mkdir(parents=True, exist_ok=True)
 
     # Walk through BASE_DIR and copy relevant files
-    ignored_patterns = {'.pytest_cache', '__pycache__', '.git'}
+    ignored_patterns = {'.pytest_cache', '__pycache__', '.git', 'deliverables'}
     count = 0
     total_bytes = 0
 

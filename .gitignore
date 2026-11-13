@@ -47,3 +47,6 @@ htmlcov/
 Thumbs.db
 .vscode/
 .idea/
+
+# Reproduction outputs
+deliverables/
