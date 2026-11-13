@@ -1,0 +1,50 @@
+{
+  "purpose": "REAL ESM-2 embeddings of receptor sequences (no simulation)",
+  "model_id": "facebook/esm2_t33_650M_UR50D",
+  "requested_model_id": "facebook/esm2_t33_650M_UR50D",
+  "checkpoint_source": "https://huggingface.co/facebook/esm2_t33_650M_UR50D",
+  "layers": 33,
+  "hidden_size": 1280,
+  "parameters": 651040661,
+  "device": "cpu",
+  "torch_threads": 12,
+  "torch_version": "2.15.0+cpu",
+  "dtype": "float32",
+  "pooling": [
+    "mean_over_residues",
+    "max_over_residues"
+  ],
+  "per_gene": {
+    "CHRM1": {
+      "accession": "P11229",
+      "sequence_length": 460,
+      "tokens_used": 462,
+      "sequence_sha256": "a9d70e6dd79a9d6d5fef6772b08efb426eba56ffbc49737c550220e71c521746",
+      "embed_seconds": 2.911
+    },
+    "DRD2": {
+      "accession": "P14416",
+      "sequence_length": 443,
+      "tokens_used": 445,
+      "sequence_sha256": "8c2b6e1477ff21093d6bdee1a4482a36b1024aaebbd4e968c54262742cefd3e0",
+      "embed_seconds": 2.495
+    },
+    "GABRA1": {
+      "accession": "P14867",
+      "sequence_length": 456,
+      "tokens_used": 458,
+      "sequence_sha256": "b7c5362c168b0a1efb482e33444363f383ebfedc7cbf97406491bbca73a78b70",
+      "embed_seconds": 2.588
+    },
+    "HTR2A": {
+      "accession": "P28223",
+      "sequence_length": 471,
+      "tokens_used": 473,
+      "sequence_sha256": "2b9b5928cca6ac49d4004d64fc2f2598fd08812dd42e720993169a86769075f5",
+      "embed_seconds": 2.391
+    }
+  },
+  "total_seconds": 16.07,
+  "npz_sha256": "87fd4d21e2434fe3737a7cb6531fd77cfd9a06f8f77828c09adfdacf94d0b765",
+  "completed_utc": "2026-11-12T03:38:55+00:00"
+}

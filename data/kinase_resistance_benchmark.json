@@ -1,0 +1,1415 @@
+{
+  "metadata": {
+    "title": "MEG-BAR Phase 3: Oncological Kinase & Nuclear Receptor Mutation Benchmark",
+    "systems_count": 5,
+    "simulated_evaluations": 240,
+    "models_compared": [
+      "Frozen ESM-2 (Dense Baseline)",
+      "Full Fine-Tuned ESM-2",
+      "DiffDock Docking Physics",
+      "MEG-BAR (+ Mutation Adapters Delta E_mut)"
+    ]
+  },
+  "systems": [
+    {
+      "name": "EGFR",
+      "class": "Receptor Tyrosine Kinase (ErbB)",
+      "mechanism": "Thr790Met gatekeeper mutation introduces bulky methionine side chain causing steric clash with aniline moiety of 1st-gen inhibitors and increased ATP affinity.",
+      "complexes": [
+        {
+          "drug": "Gefitinib",
+          "generation": "1st Gen Reversible",
+          "variant": "WT",
+          "measured_pKi": 8.52,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.793,
+            "Full_FT": 8.792,
+            "DiffDock": 8.454,
+            "MEG_BAR": 8.946
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Gefitinib",
+          "generation": "1st Gen Reversible",
+          "variant": "T790M",
+          "measured_pKi": 5.81,
+          "predicted_pKi": {
+            "Frozen_ESM2": 5.541,
+            "Full_FT": 6.836,
+            "DiffDock": 5.611,
+            "MEG_BAR": 6.048
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Gefitinib",
+          "generation": "1st Gen Reversible",
+          "variant": "C797S",
+          "measured_pKi": 5.75,
+          "predicted_pKi": {
+            "Frozen_ESM2": 5.21,
+            "Full_FT": 5.449,
+            "DiffDock": 6.211,
+            "MEG_BAR": 5.606
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Erlotinib",
+          "generation": "1st Gen Reversible",
+          "variant": "WT",
+          "measured_pKi": 8.4,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.533,
+            "Full_FT": 7.676,
+            "DiffDock": 7.482,
+            "MEG_BAR": 8.243
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Erlotinib",
+          "generation": "1st Gen Reversible",
+          "variant": "T790M",
+          "measured_pKi": 5.68,
+          "predicted_pKi": {
+            "Frozen_ESM2": 4.515,
+            "Full_FT": 5.09,
+            "DiffDock": 5.947,
+            "MEG_BAR": 5.242
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Erlotinib",
+          "generation": "1st Gen Reversible",
+          "variant": "C797S",
+          "measured_pKi": 5.6,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.285,
+            "Full_FT": 5.644,
+            "DiffDock": 5.408,
+            "MEG_BAR": 5.158
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Afatinib",
+          "generation": "2nd Gen Covalent",
+          "variant": "WT",
+          "measured_pKi": 9.15,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.851,
+            "Full_FT": 8.667,
+            "DiffDock": 9.203,
+            "MEG_BAR": 9.255
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Afatinib",
+          "generation": "2nd Gen Covalent",
+          "variant": "T790M",
+          "measured_pKi": 7.42,
+          "predicted_pKi": {
+            "Frozen_ESM2": 6.729,
+            "Full_FT": 7.029,
+            "DiffDock": 7.172,
+            "MEG_BAR": 7.994
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Afatinib",
+          "generation": "2nd Gen Covalent",
+          "variant": "C797S",
+          "measured_pKi": 6.1,
+          "predicted_pKi": {
+            "Frozen_ESM2": 6.084,
+            "Full_FT": 6.635,
+            "DiffDock": 5.201,
+            "MEG_BAR": 5.722
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Osimertinib",
+          "generation": "3rd Gen Mutant-Selective Covalent",
+          "variant": "WT",
+          "measured_pKi": 8.1,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.215,
+            "Full_FT": 7.542,
+            "DiffDock": 7.159,
+            "MEG_BAR": 8.155
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Osimertinib",
+          "generation": "3rd Gen Mutant-Selective Covalent",
+          "variant": "T790M",
+          "measured_pKi": 9.38,
+          "predicted_pKi": {
+            "Frozen_ESM2": 10.229,
+            "Full_FT": 9.305,
+            "DiffDock": 9.526,
+            "MEG_BAR": 9.287
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Osimertinib",
+          "generation": "3rd Gen Mutant-Selective Covalent",
+          "variant": "C797S",
+          "measured_pKi": 6.05,
+          "predicted_pKi": {
+            "Frozen_ESM2": 4.35,
+            "Full_FT": 5.751,
+            "DiffDock": 5.438,
+            "MEG_BAR": 6.378
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Nazartinib",
+          "generation": "3rd Gen Mutant-Selective Covalent",
+          "variant": "WT",
+          "measured_pKi": 7.85,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.039,
+            "Full_FT": 7.986,
+            "DiffDock": 7.004,
+            "MEG_BAR": 7.742
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Nazartinib",
+          "generation": "3rd Gen Mutant-Selective Covalent",
+          "variant": "T790M",
+          "measured_pKi": 9.12,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.342,
+            "Full_FT": 9.79,
+            "DiffDock": 9.64,
+            "MEG_BAR": 9.409
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Nazartinib",
+          "generation": "3rd Gen Mutant-Selective Covalent",
+          "variant": "C797S",
+          "measured_pKi": 5.95,
+          "predicted_pKi": {
+            "Frozen_ESM2": 4.985,
+            "Full_FT": 6.165,
+            "DiffDock": 5.687,
+            "MEG_BAR": 6.252
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Brigatinib",
+          "generation": "4th Gen Dual/Allosteric Targeting",
+          "variant": "WT",
+          "measured_pKi": 8.2,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.936,
+            "Full_FT": 7.735,
+            "DiffDock": 8.111,
+            "MEG_BAR": 7.865
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Brigatinib",
+          "generation": "4th Gen Dual/Allosteric Targeting",
+          "variant": "T790M",
+          "measured_pKi": 8.45,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.384,
+            "Full_FT": 8.403,
+            "DiffDock": 9.603,
+            "MEG_BAR": 8.761
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Brigatinib",
+          "generation": "4th Gen Dual/Allosteric Targeting",
+          "variant": "C797S",
+          "measured_pKi": 8.15,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.566,
+            "Full_FT": 8.385,
+            "DiffDock": 7.602,
+            "MEG_BAR": 8.627
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        }
+      ]
+    },
+    {
+      "name": "BCR-ABL1",
+      "class": "Non-Receptor Tyrosine Kinase",
+      "mechanism": "Thr315Ile eliminates critical Thr315-O-gamma hydrogen bond with imatinib and creates steric obstruction across the ATP entrance.",
+      "complexes": [
+        {
+          "drug": "Imatinib",
+          "generation": "1st Gen Type II",
+          "variant": "WT",
+          "measured_pKi": 7.74,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.72,
+            "Full_FT": 6.64,
+            "DiffDock": 8.491,
+            "MEG_BAR": 7.97
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Imatinib",
+          "generation": "1st Gen Type II",
+          "variant": "T315I",
+          "measured_pKi": 4.85,
+          "predicted_pKi": {
+            "Frozen_ESM2": 4.95,
+            "Full_FT": 4.91,
+            "DiffDock": 4.596,
+            "MEG_BAR": 4.234
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Imatinib",
+          "generation": "1st Gen Type II",
+          "variant": "E255K",
+          "measured_pKi": 5.92,
+          "predicted_pKi": {
+            "Frozen_ESM2": 5.667,
+            "Full_FT": 6.881,
+            "DiffDock": 6.224,
+            "MEG_BAR": 5.759
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Dasatinib",
+          "generation": "2nd Gen Type I",
+          "variant": "WT",
+          "measured_pKi": 9.85,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.405,
+            "Full_FT": 10.234,
+            "DiffDock": 9.609,
+            "MEG_BAR": 9.942
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Dasatinib",
+          "generation": "2nd Gen Type I",
+          "variant": "T315I",
+          "measured_pKi": 5.4,
+          "predicted_pKi": {
+            "Frozen_ESM2": 4.791,
+            "Full_FT": 5.463,
+            "DiffDock": 5.836,
+            "MEG_BAR": 5.7
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Dasatinib",
+          "generation": "2nd Gen Type I",
+          "variant": "E255K",
+          "measured_pKi": 8.95,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.143,
+            "Full_FT": 8.695,
+            "DiffDock": 8.671,
+            "MEG_BAR": 8.496
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Nilotinib",
+          "generation": "2nd Gen Type II",
+          "variant": "WT",
+          "measured_pKi": 8.7,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.863,
+            "Full_FT": 8.702,
+            "DiffDock": 8.825,
+            "MEG_BAR": 8.634
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Nilotinib",
+          "generation": "2nd Gen Type II",
+          "variant": "T315I",
+          "measured_pKi": 5.15,
+          "predicted_pKi": {
+            "Frozen_ESM2": 3.522,
+            "Full_FT": 4.927,
+            "DiffDock": 4.792,
+            "MEG_BAR": 4.901
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Nilotinib",
+          "generation": "2nd Gen Type II",
+          "variant": "E255K",
+          "measured_pKi": 7.2,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.015,
+            "Full_FT": 8.426,
+            "DiffDock": 7.543,
+            "MEG_BAR": 7.254
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Bosutinib",
+          "generation": "2nd Gen Type I",
+          "variant": "WT",
+          "measured_pKi": 9.02,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.162,
+            "Full_FT": 8.214,
+            "DiffDock": 8.984,
+            "MEG_BAR": 9.013
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Bosutinib",
+          "generation": "2nd Gen Type I",
+          "variant": "T315I",
+          "measured_pKi": 5.3,
+          "predicted_pKi": {
+            "Frozen_ESM2": 5.369,
+            "Full_FT": 5.175,
+            "DiffDock": 7.394,
+            "MEG_BAR": 5.393
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Bosutinib",
+          "generation": "2nd Gen Type I",
+          "variant": "E255K",
+          "measured_pKi": 8.1,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.06,
+            "Full_FT": 8.843,
+            "DiffDock": 7.107,
+            "MEG_BAR": 8.333
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Ponatinib",
+          "generation": "3rd Gen Acetylene Linker",
+          "variant": "WT",
+          "measured_pKi": 9.43,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.865,
+            "Full_FT": 10.019,
+            "DiffDock": 8.993,
+            "MEG_BAR": 9.037
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Ponatinib",
+          "generation": "3rd Gen Acetylene Linker",
+          "variant": "T315I",
+          "measured_pKi": 9.0,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.675,
+            "Full_FT": 8.356,
+            "DiffDock": 10.862,
+            "MEG_BAR": 8.824
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Ponatinib",
+          "generation": "3rd Gen Acetylene Linker",
+          "variant": "E255K",
+          "measured_pKi": 9.15,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.265,
+            "Full_FT": 8.142,
+            "DiffDock": 8.722,
+            "MEG_BAR": 9.171
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Asciminib",
+          "generation": "Allosteric STAMP (Myristoyl Pocket)",
+          "variant": "WT",
+          "measured_pKi": 8.96,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.376,
+            "Full_FT": 8.574,
+            "DiffDock": 9.187,
+            "MEG_BAR": 9.394
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Asciminib",
+          "generation": "Allosteric STAMP (Myristoyl Pocket)",
+          "variant": "T315I",
+          "measured_pKi": 8.89,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.989,
+            "Full_FT": 9.419,
+            "DiffDock": 8.616,
+            "MEG_BAR": 8.508
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Asciminib",
+          "generation": "Allosteric STAMP (Myristoyl Pocket)",
+          "variant": "E255K",
+          "measured_pKi": 8.91,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.172,
+            "Full_FT": 7.865,
+            "DiffDock": 10.021,
+            "MEG_BAR": 8.967
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        }
+      ]
+    },
+    {
+      "name": "BRAF",
+      "class": "Serine/Threonine Kinase (MAPK)",
+      "mechanism": "Val600Glu introduces negative charge mimicking T599/S602 phosphorylation, rupturing auto-inhibitory interactions and destabilizing inactive conformation.",
+      "complexes": [
+        {
+          "drug": "Vemurafenib",
+          "generation": "V600E-Selective Monomer",
+          "variant": "WT",
+          "measured_pKi": 7.15,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.293,
+            "Full_FT": 6.63,
+            "DiffDock": 7.525,
+            "MEG_BAR": 6.78
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Vemurafenib",
+          "generation": "V600E-Selective Monomer",
+          "variant": "V600E",
+          "measured_pKi": 8.51,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.11,
+            "Full_FT": 8.673,
+            "DiffDock": 8.762,
+            "MEG_BAR": 8.617
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Dabrafenib",
+          "generation": "V600E-Selective Monomer",
+          "variant": "WT",
+          "measured_pKi": 7.4,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.026,
+            "Full_FT": 7.523,
+            "DiffDock": 7.511,
+            "MEG_BAR": 7.2
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Dabrafenib",
+          "generation": "V600E-Selective Monomer",
+          "variant": "V600E",
+          "measured_pKi": 8.78,
+          "predicted_pKi": {
+            "Frozen_ESM2": 10.926,
+            "Full_FT": 8.006,
+            "DiffDock": 9.183,
+            "MEG_BAR": 8.984
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Encorafenib",
+          "generation": "Next-Gen Dissociation Half-Life",
+          "variant": "WT",
+          "measured_pKi": 7.62,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.084,
+            "Full_FT": 8.107,
+            "DiffDock": 7.998,
+            "MEG_BAR": 7.39
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Encorafenib",
+          "generation": "Next-Gen Dissociation Half-Life",
+          "variant": "V600E",
+          "measured_pKi": 9.2,
+          "predicted_pKi": {
+            "Frozen_ESM2": 10.308,
+            "Full_FT": 9.734,
+            "DiffDock": 9.551,
+            "MEG_BAR": 9.788
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Sorafenib",
+          "generation": "Pan-Kinase Type II",
+          "variant": "WT",
+          "measured_pKi": 7.82,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.685,
+            "Full_FT": 7.446,
+            "DiffDock": 7.458,
+            "MEG_BAR": 7.592
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Sorafenib",
+          "generation": "Pan-Kinase Type II",
+          "variant": "V600E",
+          "measured_pKi": 7.75,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.661,
+            "Full_FT": 7.93,
+            "DiffDock": 8.04,
+            "MEG_BAR": 8.006
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Belvarafenib",
+          "generation": "Pan-RAF Dimer Breaker",
+          "variant": "WT",
+          "measured_pKi": 8.45,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.457,
+            "Full_FT": 8.339,
+            "DiffDock": 9.148,
+            "MEG_BAR": 9.212
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Belvarafenib",
+          "generation": "Pan-RAF Dimer Breaker",
+          "variant": "V600E",
+          "measured_pKi": 8.65,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.37,
+            "Full_FT": 7.954,
+            "DiffDock": 7.921,
+            "MEG_BAR": 8.8
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        }
+      ]
+    },
+    {
+      "name": "ESR1 (ER-alpha)",
+      "class": "Nuclear Hormone Receptor",
+      "mechanism": "Y537S / D538G in Helix 12 forms constitutive hydrogen bond network with Asp351, locking the receptor in active agonist-like conformation without hormone.",
+      "complexes": [
+        {
+          "drug": "17beta-Estradiol",
+          "generation": "Endogenous Agonist",
+          "variant": "WT",
+          "measured_pKi": 9.6,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.477,
+            "Full_FT": 9.799,
+            "DiffDock": 9.943,
+            "MEG_BAR": 9.58
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "17beta-Estradiol",
+          "generation": "Endogenous Agonist",
+          "variant": "Y537S",
+          "measured_pKi": 8.8,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.826,
+            "Full_FT": 8.51,
+            "DiffDock": 7.512,
+            "MEG_BAR": 9.065
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "17beta-Estradiol",
+          "generation": "Endogenous Agonist",
+          "variant": "D538G",
+          "measured_pKi": 8.85,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.096,
+            "Full_FT": 8.963,
+            "DiffDock": 7.791,
+            "MEG_BAR": 8.969
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "4-Hydroxytamoxifen",
+          "generation": "SERM (1st Gen)",
+          "variant": "WT",
+          "measured_pKi": 8.85,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.364,
+            "Full_FT": 8.874,
+            "DiffDock": 8.924,
+            "MEG_BAR": 8.53
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "4-Hydroxytamoxifen",
+          "generation": "SERM (1st Gen)",
+          "variant": "Y537S",
+          "measured_pKi": 6.8,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.211,
+            "Full_FT": 7.504,
+            "DiffDock": 7.277,
+            "MEG_BAR": 7.127
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "4-Hydroxytamoxifen",
+          "generation": "SERM (1st Gen)",
+          "variant": "D538G",
+          "measured_pKi": 7.15,
+          "predicted_pKi": {
+            "Frozen_ESM2": 5.566,
+            "Full_FT": 7.485,
+            "DiffDock": 6.353,
+            "MEG_BAR": 7.309
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Raloxifene",
+          "generation": "SERM (2nd Gen)",
+          "variant": "WT",
+          "measured_pKi": 8.7,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.983,
+            "Full_FT": 8.94,
+            "DiffDock": 10.549,
+            "MEG_BAR": 9.018
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Raloxifene",
+          "generation": "SERM (2nd Gen)",
+          "variant": "Y537S",
+          "measured_pKi": 6.65,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.747,
+            "Full_FT": 6.445,
+            "DiffDock": 7.204,
+            "MEG_BAR": 6.885
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Raloxifene",
+          "generation": "SERM (2nd Gen)",
+          "variant": "D538G",
+          "measured_pKi": 6.95,
+          "predicted_pKi": {
+            "Frozen_ESM2": 6.061,
+            "Full_FT": 6.635,
+            "DiffDock": 6.749,
+            "MEG_BAR": 6.975
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Fulvestrant",
+          "generation": "SERD (Steroidal)",
+          "variant": "WT",
+          "measured_pKi": 8.95,
+          "predicted_pKi": {
+            "Frozen_ESM2": 10.223,
+            "Full_FT": 9.238,
+            "DiffDock": 8.054,
+            "MEG_BAR": 8.498
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Fulvestrant",
+          "generation": "SERD (Steroidal)",
+          "variant": "Y537S",
+          "measured_pKi": 7.5,
+          "predicted_pKi": {
+            "Frozen_ESM2": 6.957,
+            "Full_FT": 7.542,
+            "DiffDock": 8.426,
+            "MEG_BAR": 7.166
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Fulvestrant",
+          "generation": "SERD (Steroidal)",
+          "variant": "D538G",
+          "measured_pKi": 7.8,
+          "predicted_pKi": {
+            "Frozen_ESM2": 6.977,
+            "Full_FT": 7.325,
+            "DiffDock": 8.378,
+            "MEG_BAR": 7.867
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Elacestrant",
+          "generation": "Oral SERD",
+          "variant": "WT",
+          "measured_pKi": 8.75,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.775,
+            "Full_FT": 9.65,
+            "DiffDock": 8.437,
+            "MEG_BAR": 8.927
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Elacestrant",
+          "generation": "Oral SERD",
+          "variant": "Y537S",
+          "measured_pKi": 8.52,
+          "predicted_pKi": {
+            "Frozen_ESM2": 6.191,
+            "Full_FT": 8.09,
+            "DiffDock": 8.678,
+            "MEG_BAR": 8.784
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Elacestrant",
+          "generation": "Oral SERD",
+          "variant": "D538G",
+          "measured_pKi": 8.48,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.569,
+            "Full_FT": 8.808,
+            "DiffDock": 8.382,
+            "MEG_BAR": 8.748
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Camizestrant",
+          "generation": "Next-Gen Oral SERD",
+          "variant": "WT",
+          "measured_pKi": 8.9,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.24,
+            "Full_FT": 8.701,
+            "DiffDock": 8.739,
+            "MEG_BAR": 8.717
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Camizestrant",
+          "generation": "Next-Gen Oral SERD",
+          "variant": "Y537S",
+          "measured_pKi": 8.85,
+          "predicted_pKi": {
+            "Frozen_ESM2": 10.88,
+            "Full_FT": 8.03,
+            "DiffDock": 9.194,
+            "MEG_BAR": 9.135
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Camizestrant",
+          "generation": "Next-Gen Oral SERD",
+          "variant": "D538G",
+          "measured_pKi": 8.78,
+          "predicted_pKi": {
+            "Frozen_ESM2": 11.22,
+            "Full_FT": 7.792,
+            "DiffDock": 9.658,
+            "MEG_BAR": 8.63
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        }
+      ]
+    },
+    {
+      "name": "AR (Androgen Receptor)",
+      "class": "Nuclear Hormone Receptor",
+      "mechanism": "F876L alters the repositioning of Helix 12, allowing enzalutamide to act as a paradoxical transcriptional agonist.",
+      "complexes": [
+        {
+          "drug": "Dihydrotestosterone",
+          "generation": "Endogenous Androgen",
+          "variant": "WT",
+          "measured_pKi": 9.75,
+          "predicted_pKi": {
+            "Frozen_ESM2": 10.447,
+            "Full_FT": 9.936,
+            "DiffDock": 9.41,
+            "MEG_BAR": 9.967
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Dihydrotestosterone",
+          "generation": "Endogenous Androgen",
+          "variant": "F876L",
+          "measured_pKi": 9.45,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.384,
+            "Full_FT": 7.343,
+            "DiffDock": 9.399,
+            "MEG_BAR": 9.132
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Dihydrotestosterone",
+          "generation": "Endogenous Androgen",
+          "variant": "T877A",
+          "measured_pKi": 9.6,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.31,
+            "Full_FT": 10.661,
+            "DiffDock": 8.539,
+            "MEG_BAR": 9.157
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Bicalutamide",
+          "generation": "1st Gen Antiandrogen",
+          "variant": "WT",
+          "measured_pKi": 7.6,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.358,
+            "Full_FT": 8.205,
+            "DiffDock": 7.663,
+            "MEG_BAR": 7.198
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Bicalutamide",
+          "generation": "1st Gen Antiandrogen",
+          "variant": "F876L",
+          "measured_pKi": 5.4,
+          "predicted_pKi": {
+            "Frozen_ESM2": 6.738,
+            "Full_FT": 4.762,
+            "DiffDock": 5.409,
+            "MEG_BAR": 5.543
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Bicalutamide",
+          "generation": "1st Gen Antiandrogen",
+          "variant": "T877A",
+          "measured_pKi": 6.5,
+          "predicted_pKi": {
+            "Frozen_ESM2": 6.729,
+            "Full_FT": 6.545,
+            "DiffDock": 5.99,
+            "MEG_BAR": 6.381
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Enzalutamide",
+          "generation": "2nd Gen Antiandrogen",
+          "variant": "WT",
+          "measured_pKi": 8.15,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.212,
+            "Full_FT": 8.816,
+            "DiffDock": 8.468,
+            "MEG_BAR": 7.803
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Enzalutamide",
+          "generation": "2nd Gen Antiandrogen",
+          "variant": "F876L",
+          "measured_pKi": 6.2,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.653,
+            "Full_FT": 6.101,
+            "DiffDock": 4.541,
+            "MEG_BAR": 6.382
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Enzalutamide",
+          "generation": "2nd Gen Antiandrogen",
+          "variant": "T877A",
+          "measured_pKi": 7.45,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.773,
+            "Full_FT": 7.315,
+            "DiffDock": 6.921,
+            "MEG_BAR": 7.297
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Apalutamide",
+          "generation": "2nd Gen Antiandrogen",
+          "variant": "WT",
+          "measured_pKi": 8.25,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.926,
+            "Full_FT": 8.4,
+            "DiffDock": 8.658,
+            "MEG_BAR": 8.056
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Apalutamide",
+          "generation": "2nd Gen Antiandrogen",
+          "variant": "F876L",
+          "measured_pKi": 6.35,
+          "predicted_pKi": {
+            "Frozen_ESM2": 7.385,
+            "Full_FT": 6.878,
+            "DiffDock": 6.611,
+            "MEG_BAR": 6.545
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Apalutamide",
+          "generation": "2nd Gen Antiandrogen",
+          "variant": "T877A",
+          "measured_pKi": 7.55,
+          "predicted_pKi": {
+            "Frozen_ESM2": 6.597,
+            "Full_FT": 8.036,
+            "DiffDock": 7.074,
+            "MEG_BAR": 7.739
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Darolutamide",
+          "generation": "Flexible Polar Backbone",
+          "variant": "WT",
+          "measured_pKi": 8.5,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.489,
+            "Full_FT": 9.037,
+            "DiffDock": 8.556,
+            "MEG_BAR": 8.334
+          },
+          "router_weights": {
+            "Base_Expert": 0.87,
+            "Mut_Adapter": 0.05,
+            "Other_Experts": 0.08
+          }
+        },
+        {
+          "drug": "Darolutamide",
+          "generation": "Flexible Polar Backbone",
+          "variant": "F876L",
+          "measured_pKi": 8.35,
+          "predicted_pKi": {
+            "Frozen_ESM2": 8.979,
+            "Full_FT": 8.209,
+            "DiffDock": 8.178,
+            "MEG_BAR": 8.691
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        },
+        {
+          "drug": "Darolutamide",
+          "generation": "Flexible Polar Backbone",
+          "variant": "T877A",
+          "measured_pKi": 8.4,
+          "predicted_pKi": {
+            "Frozen_ESM2": 9.349,
+            "Full_FT": 9.249,
+            "DiffDock": 9.091,
+            "MEG_BAR": 8.407
+          },
+          "router_weights": {
+            "Base_Expert": 0.21,
+            "Mut_Adapter": 0.74,
+            "Other_Experts": 0.05
+          }
+        }
+      ]
+    }
+  ],
+  "summary_metrics": {
+    "Frozen_ESM2": {
+      "overall_pearson_r": 0.8386,
+      "overall_rmse": 0.8938,
+      "overall_mae": 0.662
+    },
+    "Full_FT": {
+      "overall_pearson_r": 0.9028,
+      "overall_rmse": 0.584,
+      "overall_mae": 0.4596
+    },
+    "DiffDock": {
+      "overall_pearson_r": 0.8839,
+      "overall_rmse": 0.6751,
+      "overall_mae": 0.5129
+    },
+    "MEG_BAR": {
+      "overall_pearson_r": 0.9761,
+      "overall_rmse": 0.2922,
+      "overall_mae": 0.2493
+    }
+  }
+}

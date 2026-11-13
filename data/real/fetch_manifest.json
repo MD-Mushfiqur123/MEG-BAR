@@ -1,0 +1,136 @@
+{
+  "purpose": "REAL measured data for the MEG-BAR empirical study (no simulation)",
+  "retrieved_utc": "2026-11-12T03:20:32+00:00",
+  "chembl_base": "https://www.ebi.ac.uk/chembl/api/data/activity.json",
+  "activity_types": [
+    "Ki",
+    "IC50",
+    "Kd"
+  ],
+  "page_size": 1000,
+  "targets": {
+    "DRD2": {
+      "chembl_target_id": "CHEMBL217",
+      "uniprot": "P14416",
+      "name": "Dopamine D2 receptor",
+      "records_per_type": {
+        "Ki": 11935,
+        "IC50": 1090,
+        "Kd": 130
+      },
+      "records_total": 13155
+    },
+    "HTR2A": {
+      "chembl_target_id": "CHEMBL224",
+      "uniprot": "P28223",
+      "name": "Serotonin 5-HT2A receptor",
+      "records_per_type": {
+        "Ki": 6323,
+        "IC50": 1431,
+        "Kd": 6
+      },
+      "records_total": 7760
+    },
+    "GABRA1": {
+      "chembl_target_id": "CHEMBL1962",
+      "uniprot": "P14867",
+      "name": "GABA-A receptor subunit alpha-1",
+      "records_per_type": {
+        "Ki": 298,
+        "IC50": 31,
+        "Kd": 22
+      },
+      "records_total": 351
+    },
+    "CHRM1": {
+      "chembl_target_id": "CHEMBL216",
+      "uniprot": "P11229",
+      "name": "Muscarinic acetylcholine receptor M1",
+      "records_per_type": {
+        "Ki": 1564,
+        "IC50": 954,
+        "Kd": 88
+      },
+      "records_total": 2606
+    }
+  },
+  "queries": [
+    {
+      "gene": "DRD2",
+      "target": "CHEMBL217",
+      "type": "Ki",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL217&standard_type=Ki&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "DRD2",
+      "target": "CHEMBL217",
+      "type": "IC50",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL217&standard_type=IC50&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "DRD2",
+      "target": "CHEMBL217",
+      "type": "Kd",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL217&standard_type=Kd&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "HTR2A",
+      "target": "CHEMBL224",
+      "type": "Ki",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL224&standard_type=Ki&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "HTR2A",
+      "target": "CHEMBL224",
+      "type": "IC50",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL224&standard_type=IC50&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "HTR2A",
+      "target": "CHEMBL224",
+      "type": "Kd",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL224&standard_type=Kd&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "GABRA1",
+      "target": "CHEMBL1962",
+      "type": "Ki",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL1962&standard_type=Ki&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "GABRA1",
+      "target": "CHEMBL1962",
+      "type": "IC50",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL1962&standard_type=IC50&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "GABRA1",
+      "target": "CHEMBL1962",
+      "type": "Kd",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL1962&standard_type=Kd&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "CHRM1",
+      "target": "CHEMBL216",
+      "type": "Ki",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL216&standard_type=Ki&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "CHRM1",
+      "target": "CHEMBL216",
+      "type": "IC50",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL216&standard_type=IC50&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    },
+    {
+      "gene": "CHRM1",
+      "target": "CHEMBL216",
+      "type": "Kd",
+      "first_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?target_chembl_id=CHEMBL216&standard_type=Kd&limit=1000&offset=0&only=activity_id%2Cmolecule_chembl_id%2Ccanonical_smiles%2Cstandard_type%2Cstandard_relation%2Cstandard_value%2Cstandard_units%2Cpchembl_value%2Cassay_chembl_id%2Ctarget_chembl_id%2Cdocument_chembl_id"
+    }
+  ],
+  "row_count": 23872,
+  "artifact_sha256": {
+    "raw_activities.csv": "878b566ad816e837a2a18147f4d93675f01c77d30347700db9f10cb7d519681e",
+    "proteins.json": "149240a583643a018b33238464d72178371de13e77d52b47ea07d05d73ab4318"
+  }
+}

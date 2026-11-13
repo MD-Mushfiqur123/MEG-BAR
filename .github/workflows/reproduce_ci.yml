@@ -1,0 +1,54 @@
+name: MEG-BAR Multi-OS Reproduction & Quality Assurance Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reproduce_and_verify:
+    name: Test Python ${{ matrix.python-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install Scientific Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy matplotlib pytest
+
+      - name: Run Full Pytest Verification Suite
+        run: |
+          pytest tests/test_megbar.py -v
+
+      - name: Run One-Click Full-Pipeline Reproduction Engine
+        run: |
+          python scripts/one_click_reproduce.py
+
+      - name: Verify Zenodo Metadata & arXiv Submission Schema
+        run: |
+          python scripts/verify_zenodo_metadata.py
+
+      - name: Verify LaTeX Sanity & Build Guard
+        run: |
+          python scripts/check_latex_build.py

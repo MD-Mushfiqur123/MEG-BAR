@@ -1,0 +1,55 @@
+{
+  "purpose": "REAL per-residue ESM-2 embeddings for pocket conditioning (no simulation)",
+  "model_id": "facebook/esm2_t33_650M_UR50D",
+  "checkpoint_source": "https://huggingface.co/facebook/esm2_t33_650M_UR50D",
+  "parameters": 651040661,
+  "hidden_size": 1280,
+  "layers": 33,
+  "device": "cpu",
+  "torch_version": "2.15.0+cpu",
+  "per_gene": {
+    "CHRM1": {
+      "sequence_length": 460,
+      "embedding_shape": [
+        460,
+        1280
+      ],
+      "row_i_is_residue": "i (0-based)",
+      "seconds": 2.41,
+      "row_norm_mean": 9.82474136352539
+    },
+    "DRD2": {
+      "sequence_length": 443,
+      "embedding_shape": [
+        443,
+        1280
+      ],
+      "row_i_is_residue": "i (0-based)",
+      "seconds": 2.24,
+      "row_norm_mean": 9.903498649597168
+    },
+    "GABRA1": {
+      "sequence_length": 456,
+      "embedding_shape": [
+        456,
+        1280
+      ],
+      "row_i_is_residue": "i (0-based)",
+      "seconds": 2.23,
+      "row_norm_mean": 9.634696006774902
+    },
+    "HTR2A": {
+      "sequence_length": 471,
+      "embedding_shape": [
+        471,
+        1280
+      ],
+      "row_i_is_residue": "i (0-based)",
+      "seconds": 2.33,
+      "row_norm_mean": 9.918402671813965
+    }
+  },
+  "total_seconds": 17.12,
+  "npz_sha256": "b0ac583fbba67bb6c2b30f2999a86d36c42a62024702ce1080c1b95c1fa546cd",
+  "completed_utc": "2026-11-12T04:33:16+00:00"
+}
