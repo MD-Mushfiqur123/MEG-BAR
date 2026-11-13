@@ -26,6 +26,7 @@ Tests:
 """
 
 import os
+import re
 import json
 import pytest
 import numpy as np
@@ -289,7 +290,12 @@ def test_zenodo_and_arxiv_manifests():
         z_data = json.load(f)
         
     meta = z_data.get("metadata", {})
-    assert "MEG-BAR" in meta.get("title", "")
+    with open(os.path.join(root_dir, "latex", "main.tex"), 'r', encoding='utf-8') as f:
+        tex_title = re.search(r"\\title\{\\textbf\{(.+?)\}\}", f.read())
+    assert tex_title is not None, "\\title{...} not found in latex/main.tex"
+    assert meta.get("title", "") == tex_title.group(1), (
+        "zenodo_metadata.json title does not match latex/main.tex title"
+    )
     assert meta.get("creators", [{}])[0].get("name") == "Rahim, Md Mushfiqur"
     assert meta.get("creators", [{}])[0].get("orcid") == "0009-0003-1021-685X"
     
