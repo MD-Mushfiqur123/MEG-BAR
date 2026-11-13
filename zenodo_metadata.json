@@ -1,47 +1,49 @@
 {
-  "metadata": {
-    "title": "Receptor Conditioning, Not Expert Routing, Drives Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 23,872 Measured ChEMBL Records",
-    "upload_type": "publication",
-    "publication_type": "preprint",
-    "publication_date": "2024-11-02",
-    "creators": [
-      {
-        "name": "Rahim, Md Mushfiqur",
-        "affiliation": "Independent Researcher",
-        "orcid": "0009-0003-1021-685X"
-      }
-    ],
-    "description": "<p><b>MEG-BAR (Molecular Expert Grafting with Binding Affinity Router Re-anchoring)</b> establishes a zero-retraining framework for modular drug-receptor specialization in protein foundation models (ESM-2, ProtTrans) elevated to PhD dissertation and Nature Biotechnology standards.</p><p><b>Key Innovations &amp; Results:</b></p><ul><li><b>Modular Molecular Expert Grafting (MEG):</b> Surgical grafting of modular receptor expert banks (Dopaminergic D2, Serotonergic 5-HT2A, GABAergic GABAA, Cholinergic mAChR, and Oncological Kinases EGFR, BCR-ABL1, BRAF) via low-rank residual adapters (&Delta;E_k, rank r=16), isolating chemical binding manifolds while freezing the base 650M foundation backbone.</li><li><b>Binding Affinity Router (BAR) Re-anchoring:</b> Strictly convex contrastive loss equipped with a projected gradient mask (M_k &odot; &nabla;W_r) steering pocket tokens to corresponding specialized experts with 86.4% mass concentration while guaranteeing absolute mathematical invariance for non-target routing boundaries (&Delta;r = 0.0000 drift).</li><li><b>Empirical Superiority:</b> State-of-the-art affinity correlation (Pearson r = 0.834 [95% CI: 0.813, 0.853] on GPCRs; Pearson r = 0.9761 on oncological resistant kinase mutants) with zero degradation of general protein evolutionary representations (+0.04% perplexity drift), tuning only 0.58M parameters (0.089% of the model) in 3.1 minutes on a single GPU (77&times; faster than monolithic fine-tuning).</li><li><b>Rigorous Statistical Hypothesis Testing:</b> Paired Student's t-test (t = 8.7061, p = 1.28 &times; 10^-17), Wilcoxon signed-rank test (W = 180,169.0, p = 1.70 &times; 10^-14), and Cohen's d effect size (d = 11.04) across 1,000 bootstrap iterations.</li><li><b>ADMET &amp; Safety Profile:</b> Blood-Brain Barrier (BBB) penetrance under Lipinski and Veber parameters (CNS-MPO score 5.24/6.0, Pe &gt; 10 &times; 10^-6 cm/s) and hERG cardiotoxicity avoidance layer (IC50 / EC50 &gt; 42.6&times;, IC50 &gt; 10 &mu;M).</li><li><b>Theoretical Guarantees:</b> Non-asymptotic Dudley chaining metric entropy bound proving low-rank adapter parameterization contracts hypothesis space covering complexity by 103&times; relative to full parameter fine-tuning.</li></ul>",
-    "keywords": [
-      "Mixture of Experts",
-      "Protein Foundation Models",
-      "Drug Discovery",
-      "GPCR",
-      "Kinase",
-      "Binding Affinity",
-      "ESM-2",
-      "ADMET",
-      "Computational Pharmacology",
-      "Low-Rank Adaptation",
-      "Drug Resistance",
-      "Neuroscience"
-    ],
-    "access_right": "open",
-    "license": "cc-by-4.0",
-    "language": "eng",
-    "version": "1.0.0",
-    "related_identifiers": [
-      {
-        "relation": "isDerivedFrom",
-        "identifier": "10.5281/zenodo.23841930",
-        "resource_type": "publication-article"
-      },
-      {
-        "relation": "isSupplementTo",
-        "identifier": "https://github.com/MD-Mushfiqur123",
-        "resource_type": "software"
-      }
-    ],
-    "notes": "Code repository and complete 28-page preprint formatted for NeurIPS 2024 / Nature Biotechnology standards. Correspondence: mushfiqur.rahim@gmail.com / 20mahin2020@gmail.com."
-  }
+ "metadata": {
+  "title": "Receptor Conditioning, Not Expert Routing, Drives Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 56,637 Measured ChEMBL Records",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-11-13",
+  "creators": [
+   {
+    "name": "Rahim, Md Mushfiqur",
+    "affiliation": "Independent Researcher",
+    "orcid": "0009-0003-1021-685X"
+   }
+  ],
+  "description": "<p>Protein foundation models such as ESM-2 encode transferable structural and evolutionary features, and sparse expert-routing overlays with router re-anchoring have been proposed as a route to modular drug–receptor specialization—accompanied by simulated reports of large accuracy margins. In this study we test what survives measurement. We curate 56,637 measured Ki/IC50/Kd records for eleven human receptors (dopamine D2/D3, serotonin 5-HT1A/5-HT2A, muscarinic M1, GABA-A α1, adrenergic α2A/β2, histamine H1, and the SERT/DAT transporters) from ChEMBL, reduce them to 41,271 unique receptor–ligand pairs (23,872 records → 17,177 pairs on the four-receptor core), and combine 2048-bit Morgan fingerprints with embeddings from the genuine frozen ESM-2 650M checkpoint. Under Bemis–Murcko scaffold-disjoint splits, five-seed Pearson correlation reaches r = 0.50–0.80 for the ten data-rich receptors (not the simulated 0.834); random splits overstate performance by 0.10–0.21 in r on the core, confirming that naive splits largely measure analogue recall; and a temporal split (train on pre-2015 records, test on 2015+) lowers performance further (shared-model r = 0.11–0.72). Three controls are decisive, and all three persist across the expanded set. First, the trained router remains near-uniform (gate entropy ≥ 93% of maximum) and never outperforms a frozen-uniform router—measuring router blindness rather than curing it. Second, cross-attention receptor conditioning improves the shared model only marginally and not significantly (paired Wilcoxon across seeds, p ≥ 0.0625), and a wrong-pocket control that deliberately supplies the wrong pocket residues matches it: the small gains do not come from pocket structure. Third, a Ridge regression on the fingerprints alone is competitive throughout (r = 0.39–0.83) and is the only model with signal on the low-resource receptor (r = 0.53 where the deep models collapse to r ≈ 0.01). We conclude that, on measured data, expert routing and contrastive router re-anchoring are not the operative mechanism of cross-family affinity prediction, and that fingerprint baselines remain the bar such architectures must clear. The earlier simulation-only sections are retained as a clearly labelled design study, the withdrawn theoretical claims are catalogued in a defect register, and all measurements, scripts, and frozen artefacts are public.</p>",
+  "keywords": [
+   "Mixture of Experts",
+   "Protein Foundation Models",
+   "Drug Discovery",
+   "GPCR",
+   "Kinase",
+   "Binding Affinity",
+   "ESM-2",
+   "ADMET",
+   "Computational Pharmacology",
+   "Low-Rank Adaptation",
+   "Drug Resistance",
+   "Neuroscience",
+   "ChEMBL",
+   "Negative Result"
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "version": "1.0.0",
+  "related_identifiers": [
+   {
+    "relation": "isDerivedFrom",
+    "identifier": "10.5281/zenodo.23841930",
+    "resource_type": "publication-article"
+   },
+   {
+    "relation": "isSupplementTo",
+    "identifier": "https://github.com/MD-Mushfiqur123",
+    "resource_type": "software"
+   }
+  ],
+  "notes": "Code repository and complete 28-page preprint formatted for NeurIPS 2024 / Nature Biotechnology standards. Correspondence: mushfiqur.rahim@gmail.com / 20mahin2020@gmail.com."
+ }
 }

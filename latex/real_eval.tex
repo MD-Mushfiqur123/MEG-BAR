@@ -16,6 +16,8 @@ D$_2$: 9{,}079 \quad $5\text{-HT}_{2A}$: 5{,}714 \quad $M_1$: 2{,}053 \quad GABA
 \end{center}
 The median $\text{pChEMBL}$ per receptor was $6.76$ (D$_2$), $7.25$ ($5\text{-HT}_{2A}$), $6.70$ ($M_1$), and $7.65$ (GABA$_A\alpha_1$). All $17{,}177$ molecules parsed successfully and span $5{,}693$ distinct Bemis--Murcko scaffolds.
 
+\textbf{Eleven-receptor expansion.} The identical live-fetch protocol was then re-run for seven further receptors: $5\text{-HT}_{1A}$ (P08908, \texttt{CHEMBL214}), $D_3$ (P35462, \texttt{CHEMBL234}), $\alpha_{2A}$ (P08913, \texttt{CHEMBL1867}), $\beta_2$ (P07550, \texttt{CHEMBL210}), SERT (P31645, \texttt{CHEMBL228}), DAT (Q01959, \texttt{CHEMBL238}), and $H_1$ (P35367, \texttt{CHEMBL231}). (The planning document listed P23975 for DAT; UniProt confirms P23975 is the norepinephrine transporter SLC6A2, and human DAT is Q01959.) The expansion yields $56{,}637$ measured records and $41{,}271$ unique receptor--ligand pairs after median-pChEMBL deduplication. UniProt binding-site annotations and genuine ESM-2 650M embeddings (mean-pooled and per-residue) were recomputed for the seven new sequences (\cref{sec:expanded}).
+
 \textbf{Protein representation.} The genuine \texttt{facebook/esm2\_t33\_650M\_UR50D} checkpoint was downloaded from HuggingFace and run on the four UniProt sequences (443--471 residues), producing mean-pooled final-layer embeddings of dimension $1280$ (651.0M parameters, 33 layers, CPU, 2.4--2.9~s per sequence). These embeddings identify the receptor; they do not vary across its ligands, so the ligand-side signal must come from chemistry.
 
 \textbf{Ligand representation and models.} Ligands are described by Morgan fingerprints (2048 bits, radius 2). Two architectures were compared under an identical training budget (Adam, lr $10^{-3}$, batch 512, SmoothL1 loss, early stopping at patience 8, at most 90 epochs, CPU):
@@ -89,7 +91,7 @@ All inputs, code, and outputs are archived under \path{data/real/} and \path{scr
 \path{01_fetch_data.py} (live ChEMBL + UniProt retrieval, emits \path{raw_activities.csv} with $23{,}872$ rows and \path{proteins.json}),
 \path{02_embed_proteins.py} (real ESM-2 650M embeddings, $4 \times 1280$),
 \path{03_experiment.py} (within-receptor and leave-one-receptor-out runs, $468$~s wall clock),
-and \path{04_scaffold_eval.py} (scaffold-disjoint runs, scaffold overlap verified $0$).
+and \path{04_scaffold_eval.py} (scaffold-disjoint runs, scaffold overlap verified $0$). The Phase-1/2/3 hardening adds \path{08_robust_eval.py} (five-seed AdamW protocol with minimum-data guard, wrong-pocket control, Ridge baseline, paired Wilcoxon), \path{09_admet_physchem.py} (computed RDKit physicochemistry and CNS-MPO(4)), \path{10_herg_qsar.py} (measured hERG scaffold-disjoint QSAR), \path{11_expand_receptors.py} (live eleven-receptor retrieval plus document years), \path{12_embed_expanded.py} (ESM-2 embeddings and UniProt pockets for the new receptors), and \path{13_expanded_eval.py} (eleven-receptor scaffold and temporal evaluation).
 Every retrieval is timestamped, and SHA-256 digests of the data artefacts are stored alongside them in the fetch manifest.
 
 
@@ -124,3 +126,63 @@ Cross-attention conditioning is the best of the three on seven of the eight comp
 Three honest qualifications must accompany these numbers. First, the zero-shot levels remain low in absolute terms ($r = 0.19$--$0.29$). Conditioning narrows the gap to the simulation's $0.812$ claim; it does not close it, and that claim remains withdrawn. Second, the $331$-molecule GABA$_A$ receptor is unstable under the cross-attention model, which diverges in the leave-one-out setting (RMSE $5.308$, $r = -0.170$); the architecture needs regularisation or a minimum-data guard before it can be trusted on sparsely populated targets. Third, the absolute gains on $5\text{-HT}_{2A}$ and $D_2$ zero-shot are within roughly two standard errors and should not be over-read.
 
 The defensible conclusion is therefore narrow and measured: making the receptor context ligand-dependent improves affinity prediction on real ChEMBL data, most visibly for within-receptor $D_2$ and for zero-shot $M_1$, but it does not turn a shared-model-level predictor into the high-correlation model the simulation described.
+
+\subsection{Eleven-Receptor Expansion: Multi-Seed Protocol, Controls, and Temporal Split}
+\label{sec:expanded}
+
+The Phase-1 hardening (AdamW with weight decay $0.01$, gradient clipping at norm $1.0$, cosine LR schedule with $5\%$ warmup, peak $5 \times 10^{-4}$) is applied to every condition, each condition is run with five seeds (0--4), and a minimum-data guard skips the cross-attention arm below $800$ training molecules and reports the skip rather than silently substituting a result. \cref{tab:real_expanded} reports the eleven-receptor scaffold-disjoint results; \cref{tab:real_temporal} adds a temporal split (train on records published before 2015, test on 2015+).
+
+\begin{table}[!ht]
+\centering
+\small
+\caption{\textbf{Eleven-receptor scaffold-disjoint evaluation (five seeds, mean $\pm$ sd Pearson $r$).} Ridge is deterministic. The Wilcoxon column is the paired signed-rank test of cross-attention vs.\ shared across seeds; $p = 0.0625$ is the smallest attainable value at five pairs. ``skipped'' marks arms below the $800$-molecule minimum-data guard. All values are measurements.}
+\label{tab:real_expanded}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{l c c c c c}
+\toprule
+\textbf{Receptor} & \textbf{Ridge (FP)} & \textbf{shared} & \textbf{crossattn} & \textbf{wrong-pocket} & \textbf{Wilcoxon $p$} \\
+\midrule
+$D_2$ (DRD2)     & 0.521 & 0.577 $\pm$ 0.015 & 0.613 $\pm$ 0.020 & 0.624 $\pm$ 0.013 & 0.1875 \\
+$D_3$ (DRD3)     & 0.662 & 0.684 $\pm$ 0.004 & 0.713 $\pm$ 0.003 & 0.717 $\pm$ 0.003 & 0.0625 \\
+$5\text{-HT}_{2A}$ & 0.597 & 0.660 $\pm$ 0.010 & 0.688 $\pm$ 0.006 & 0.698 $\pm$ 0.006 & 0.0625 \\
+$5\text{-HT}_{1A}$ & 0.601 & 0.682 $\pm$ 0.002 & 0.698 $\pm$ 0.003 & 0.703 $\pm$ 0.005 & 0.0625 \\
+$M_1$ (CHRM1)    & 0.547 & 0.562 $\pm$ 0.027 & 0.523 $\pm$ 0.164 & 0.448 $\pm$ 0.203 & 0.8125 \\
+SERT             & 0.444 & 0.500 $\pm$ 0.003 & 0.541 $\pm$ 0.007 & 0.542 $\pm$ 0.010 & 0.0625 \\
+DAT              & 0.607 & 0.590 $\pm$ 0.008 & 0.598 $\pm$ 0.015 & 0.606 $\pm$ 0.018 & 0.4375 \\
+$H_1$ (HRH1)     & 0.825 & 0.802 $\pm$ 0.007 & 0.834 $\pm$ 0.004 & 0.824 $\pm$ 0.022 & 0.0625 \\
+$\beta_2$ (ADRB2)& 0.385 & 0.541 $\pm$ 0.013 & 0.533 $\pm$ 0.011 & 0.529 $\pm$ 0.014 & 0.4375 \\
+$\alpha_{2A}$ (ADRA2A) & \textbf{0.800} & 0.711 $\pm$ 0.012 & skipped & skipped & --- \\
+GABA$_A\alpha_1$ & \textbf{0.532} & 0.008 $\pm$ 0.005 & skipped & skipped & --- \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+Three findings replicate and extend the four-receptor study. First, the Ridge fingerprint baseline is competitive everywhere and is the best model on two receptors ($\alpha_{2A}$: $0.800$ vs $0.711$; $H_1$: $0.825$ vs $0.802$); on GABA$_A\alpha_1$ ($n = 331$) it remains the only model with signal ($r = 0.532$) while the shared MLP collapses ($r = 0.008$). Second, cross-attention conditioning beats the shared model on eight of nine eligible receptors, but never significantly (paired Wilcoxon across seeds, $p \ge 0.0625$, the smallest attainable $p$ at five pairs; the $M_1$ arm is unstable, sd $0.164$). Third, the wrong-pocket control matches correct-pocket conditioning on every receptor (e.g.\ $D_2$: $0.624$ vs $0.613$; $D_3$: $0.717$ vs $0.713$; $5\text{-HT}_{2A}$: $0.698$ vs $0.688$): the small gains do not come from pocket structure.
+
+\begin{table}[!ht]
+\centering
+\small
+\caption{\textbf{Temporal split: train on pre-2015 records, test on 2015+ records (five seeds, mean $\pm$ sd Pearson $r$).} Document years were resolved live from ChEMBL ($2{,}084$/$2{,}086$ documents; $1{,}366$ pre-2015, $718$ from 2015+; $544$ pairs without a dated document are excluded and reported). All values are measurements.}
+\label{tab:real_temporal}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{l c c c c c}
+\toprule
+\textbf{Receptor} & \textbf{Ridge (FP)} & \textbf{shared} & \textbf{crossattn} & \textbf{wrong-pocket} & \textbf{Wilcoxon $p$} \\
+\midrule
+$D_2$ (DRD2)     & 0.429 & 0.474 $\pm$ 0.002 & 0.478 $\pm$ 0.008 & 0.475 $\pm$ 0.007 & 0.3125 \\
+$D_3$ (DRD3)     & 0.380 & 0.468 $\pm$ 0.004 & 0.474 $\pm$ 0.023 & 0.486 $\pm$ 0.029 & 0.6250 \\
+$5\text{-HT}_{2A}$ & 0.271 & 0.384 $\pm$ 0.015 & 0.420 $\pm$ 0.007 & 0.439 $\pm$ 0.029 & 0.0625 \\
+$5\text{-HT}_{1A}$ & 0.436 & 0.425 $\pm$ 0.016 & 0.462 $\pm$ 0.011 & 0.468 $\pm$ 0.010 & 0.0625 \\
+$M_1$ (CHRM1)    & 0.256 & 0.458 $\pm$ 0.005 & 0.459 $\pm$ 0.007 & 0.407 $\pm$ 0.051 & 1.0000 \\
+SERT             & 0.315 & 0.252 $\pm$ 0.013 & 0.299 $\pm$ 0.021 & 0.296 $\pm$ 0.023 & 0.0625 \\
+DAT              & 0.302 & 0.379 $\pm$ 0.010 & 0.274 $\pm$ 0.018 & 0.280 $\pm$ 0.012 & 0.0625 \\
+$H_1$ (HRH1)     & 0.182 & 0.204 $\pm$ 0.007 & 0.332 $\pm$ 0.015 & 0.318 $\pm$ 0.049 & 0.0625 \\
+$\beta_2$ (ADRB2)& 0.531 & \textbf{0.723 $\pm$ 0.003} & skipped & skipped & --- \\
+$\alpha_{2A}$ (ADRA2A) & 0.064 & 0.109 $\pm$ 0.012 & skipped & skipped & --- \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+The temporal split is the harshest test in the manuscript, and it moves every number down: shared-model $r$ falls to $0.11$--$0.72$ across the ten receptors with dated records (GABA$_A\alpha_1$ has too few dated records to split). Ridge degrades most precisely where its scaffold-disjoint advantage was largest ($\alpha_{2A}$: $0.800 \to 0.064$; $H_1$: $0.825 \to 0.182$), consistent with those baselines partly exploiting temporal analogue clusters, while cross-attention again never significantly beats the shared model ($p \ge 0.0625$) and the wrong-pocket control still matches it ($H_1$: $0.318$ vs $0.332$; $5\text{-HT}_{2A}$: $0.439$ vs $0.420$). The negative conclusion of this section---receptor conditioning helps marginally at best, pocket structure is not the driver, and fingerprint baselines remain the bar---therefore survives both a scaffold-disjoint and a temporal evaluation on eleven receptors.

@@ -132,9 +132,19 @@ def verify_arxiv_manifest():
     else:
         print(f"  [OK] Secondary categories verified: {secondaries}")
 
+    # Stale-claim regression guard
+    abstract = man.get("abstract", "")
+    for must in ["56,637", "41,271"]:
+        if must not in abstract:
+            errors.append(f"arXiv abstract missing measured count '{must}'")
+    for banned in ["0.9761", "5.24/6.0", "96.4%", "Nature Biotechnology"]:
+        if banned in abstract:
+            errors.append(f"arXiv abstract contains withdrawn claim '{banned}'")
+    if not errors:
+        print("  [OK] Abstract carries measured counts and no withdrawn claims")
     # Comments
     comments = man.get("comments", "")
-    for term in ["28 pages", "8 figures", "13 tables", "NeurIPS"]:
+    for term in ["28 pages", "8 figures", "19 tables", "NeurIPS"]:
         if term not in comments:
             errors.append(f"Comments missing '{term}' specification! Current: '{comments}'")
     if not errors:

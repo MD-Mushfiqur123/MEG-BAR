@@ -1,46 +1,46 @@
 {
-  "submission_manifest": {
-    "title": "Receptor Conditioning, Not Expert Routing, Drives Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 23,872 Measured ChEMBL Records",
-    "authors": "Md Mushfiqur Rahim",
-    "author_details": [
-      {
-        "name": "Md Mushfiqur Rahim",
-        "affiliation": "Independent Researcher (Clinical Neuroscience & AI Systems Architecture), Bogura, Bangladesh",
-        "email": "20mahin2020@gmail.com",
-        "secondary_email": "20mahin2020@gmail.com",
-        "orcid": "0009-0003-1021-685X",
-        "github": "https://github.com/MD-Mushfiqur123",
-        "prior_work_doi": "10.5281/zenodo.23841930"
-      }
-    ],
-    "primary_category": "q-bio.BM",
-    "secondary_categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ],
-    "comments": "28 pages, 8 figures, 13 tables, NeurIPS 2024 format with extensive mathematical proofs and pharmacology validation",
-    "report_number": "MEG-BAR-2024-V1",
-    "license": "http://creativecommons.org/licenses/by/4.0/",
-    "abstract": "Protein foundation models (e.g., ESM-2, ProtTrans) trained on evolutionary sequences across millions of diverse taxa learn generalized representations of structural topology and evolutionary conservation. However, adapting these massive models to specialized computational pharmacology tasks---such as predicting small-molecule binding affinity across distinct central nervous system (CNS) neurotransmitter receptor families and oncological kinases---presents two fundamental bottlenecks: (1) Catastrophic Forgetting and Monolithic Retraining: Full-parameter fine-tuning overfits to narrow pocket chemistries, degrades universal protein evolutionary fitness, and requires prohibitive computational resources; and (2) The Router Blindness Phenomenon in Biological Mixtures-of-Experts (MoEs): Sparse MoE architectures decouple parameter capacity from inference compute, but pre-trained or frozen gating networks remain completely oblivious to newly grafted receptor-specific sub-manifolds, routing target amino acid tokens uniformly at random across all experts (~1/N). In this work, we introduce MEG-BAR (Molecular Expert Grafting with Binding Affinity Router Re-anchoring), a zero-retraining framework for modular drug-receptor specialization in protein foundation models elevated to PhD dissertation and Nature Biotechnology standards. MEG-BAR establishes six unified innovations: (1) Surgical grafting of modular receptor expert banks via rank-constrained residual adapters (Delta E_k, rank r=16), isolating chemical binding manifolds while freezing the base foundation backbone; (2) Binding Affinity Router (BAR) Re-anchoring, a strictly convex contrastive loss equipped with a projected gradient mask (M_k odot nabla W_r) that steers receptor pocket tokens to their corresponding specialized experts with 86.4% mass concentration while guaranteeing absolute mathematical invariance for non-target routing boundaries; (3) A multi-objective optimization objective uniting binding affinity regression, contrastive re-anchoring, and auxiliary load balancing; (4) Rigorous theoretical guarantees, including Theorem 1 bounding binding affinity generalization error via Dudley chaining metric entropy and Lemma 1 proving Lipschitz continuity of routing projections under low-rank perturbations; (5) Comprehensive ADMET and CNS pharmacokinetics integration, evaluating Blood-Brain Barrier (BBB) permeability under Lipinski and Veber criteria (CNS-MPO score 5.24/6.0) alongside an hERG cardiotoxicity risk avoidance layer (IC50/EC50 > 42.6x); and (6) Multi-domain empirical validation across BindingDB, ChEMBL, PDBbind, and clinical drug-resistance kinase panels (EGFR T790M, BCR-ABL1 T315I, BRAF V600E), reinforced by a 1,000-complex bootstrap simulation with formal hypothesis tests (Wilcoxon p = 1.70e-14, paired t-test p = 1.28e-17, Cohen's d = 11.04). MEG-BAR achieves state-of-the-art affinity correlation (Pearson r = 0.834 on GPCRs; Pearson r = 0.9761 on oncological resistant kinase mutants) with zero degradation of general protein evolutionary representations (+0.04% perplexity drift), tuning only 0.58M parameters (0.089% of the model) in 3.1 minutes on a single GPU (77x faster than full fine-tuning).",
-    "compilation_package": {
-      "main_latex": "main.tex",
-      "bib_file": "references.bib",
-      "style_files": [
-        "neurips_2024.sty",
-        "neurips.sty"
-      ],
-      "figures": [
-        "figure1_megbar_architecture.png",
-        "figure2_expert_heatmap.png",
-        "figure3_binding_comparison.png",
-        "figure4_router_weights.png",
-        "figure5_training_curves.png",
-        "figure6_residue_attention.png",
-        "figure7_bootstrap_distribution.png",
-        "figure8_mutation_adaptation.png"
-      ],
-      "compiler": "pdflatex",
-      "texlive_version": "2024"
-    }
+ "submission_manifest": {
+  "title": "Receptor Conditioning, Not Expert Routing, Drives Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 56,637 Measured ChEMBL Records",
+  "authors": "Md Mushfiqur Rahim",
+  "author_details": [
+   {
+    "name": "Md Mushfiqur Rahim",
+    "affiliation": "Independent Researcher (Clinical Neuroscience & AI Systems Architecture), Bogura, Bangladesh",
+    "email": "20mahin2020@gmail.com",
+    "secondary_email": "20mahin2020@gmail.com",
+    "orcid": "0009-0003-1021-685X",
+    "github": "https://github.com/MD-Mushfiqur123",
+    "prior_work_doi": "10.5281/zenodo.23841930"
+   }
+  ],
+  "primary_category": "q-bio.BM",
+  "secondary_categories": [
+   "cs.LG",
+   "q-bio.QM"
+  ],
+  "comments": "28 pages, 8 figures, 19 tables, NeurIPS 2024 format. Controlled measurement study on ChEMBL data with a clearly labelled simulation-only design study and a defect register of withdrawn simulated claims.",
+  "report_number": "MEG-BAR-2026-V1",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "abstract": "Protein foundation models such as ESM-2 encode transferable structural and evolutionary features, and sparse expert-routing overlays with router re-anchoring have been proposed as a route to modular drug–receptor specialization—accompanied by simulated reports of large accuracy margins. In this study we test what survives measurement. We curate 56,637 measured Ki/IC50/Kd records for eleven human receptors (dopamine D2/D3, serotonin 5-HT1A/5-HT2A, muscarinic M1, GABA-A α1, adrenergic α2A/β2, histamine H1, and the SERT/DAT transporters) from ChEMBL, reduce them to 41,271 unique receptor–ligand pairs (23,872 records → 17,177 pairs on the four-receptor core), and combine 2048-bit Morgan fingerprints with embeddings from the genuine frozen ESM-2 650M checkpoint. Under Bemis–Murcko scaffold-disjoint splits, five-seed Pearson correlation reaches r = 0.50–0.80 for the ten data-rich receptors (not the simulated 0.834); random splits overstate performance by 0.10–0.21 in r on the core, confirming that naive splits largely measure analogue recall; and a temporal split (train on pre-2015 records, test on 2015+) lowers performance further (shared-model r = 0.11–0.72). Three controls are decisive, and all three persist across the expanded set. First, the trained router remains near-uniform (gate entropy ≥ 93% of maximum) and never outperforms a frozen-uniform router—measuring router blindness rather than curing it. Second, cross-attention receptor conditioning improves the shared model only marginally and not significantly (paired Wilcoxon across seeds, p ≥ 0.0625), and a wrong-pocket control that deliberately supplies the wrong pocket residues matches it: the small gains do not come from pocket structure. Third, a Ridge regression on the fingerprints alone is competitive throughout (r = 0.39–0.83) and is the only model with signal on the low-resource receptor (r = 0.53 where the deep models collapse to r ≈ 0.01). We conclude that, on measured data, expert routing and contrastive router re-anchoring are not the operative mechanism of cross-family affinity prediction, and that fingerprint baselines remain the bar such architectures must clear. The earlier simulation-only sections are retained as a clearly labelled design study, the withdrawn theoretical claims are catalogued in a defect register, and all measurements, scripts, and frozen artefacts are public.",
+  "compilation_package": {
+   "main_latex": "main.tex",
+   "bib_file": "references.bib",
+   "style_files": [
+    "neurips_2024.sty",
+    "neurips.sty"
+   ],
+   "figures": [
+    "figure1_megbar_architecture.png",
+    "figure2_expert_heatmap.png",
+    "figure3_binding_comparison.png",
+    "figure4_router_weights.png",
+    "figure5_training_curves.png",
+    "figure6_residue_attention.png",
+    "figure7_bootstrap_distribution.png",
+    "figure8_mutation_adaptation.png"
+   ],
+   "compiler": "pdflatex",
+   "texlive_version": "2024"
   }
+ }
 }

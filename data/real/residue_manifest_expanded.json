@@ -1,0 +1,76 @@
+{
+  "purpose": "REAL ESM-2 embeddings for the expanded eleven-receptor set (no simulation)",
+  "model_id": "facebook/esm2_t33_650M_UR50D",
+  "checkpoint_source": "https://huggingface.co/facebook/esm2_t33_650M_UR50D",
+  "parameters": 651040661,
+  "hidden_size": 1280,
+  "layers": 33,
+  "device": "cpu",
+  "torch_version": "2.15.0+cpu",
+  "computed_utc": "2026-11-13T04:44:38+00:00",
+  "per_gene": {
+    "HTR1A": {
+      "accession": "P08908",
+      "sequence_length": 422,
+      "embedding_shape": [
+        422,
+        1280
+      ],
+      "seconds": 2.8
+    },
+    "DRD3": {
+      "accession": "P35462",
+      "sequence_length": 400,
+      "embedding_shape": [
+        400,
+        1280
+      ],
+      "seconds": 1.2
+    },
+    "ADRA2A": {
+      "accession": "P08913",
+      "sequence_length": 465,
+      "embedding_shape": [
+        465,
+        1280
+      ],
+      "seconds": 1.5
+    },
+    "ADRB2": {
+      "accession": "P07550",
+      "sequence_length": 413,
+      "embedding_shape": [
+        413,
+        1280
+      ],
+      "seconds": 1.3
+    },
+    "SERT": {
+      "accession": "P31645",
+      "sequence_length": 630,
+      "embedding_shape": [
+        630,
+        1280
+      ],
+      "seconds": 2.3
+    },
+    "DAT": {
+      "accession": "Q01959",
+      "sequence_length": 620,
+      "embedding_shape": [
+        620,
+        1280
+      ],
+      "seconds": 2.3
+    },
+    "HRH1": {
+      "accession": "P35367",
+      "sequence_length": 487,
+      "embedding_shape": [
+        487,
+        1280
+      ],
+      "seconds": 1.7
+    }
+  }
+}
