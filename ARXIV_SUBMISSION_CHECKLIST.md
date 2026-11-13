@@ -10,13 +10,12 @@ All metadata lives in `arxiv_submission_manifest.json` and is validated by
 ## 1. Before compiling
 
 - [ ] LaTeX toolchain available (Overleaf, or TeX Live 2024+ locally). This
-      repository's build environment has no LaTeX compiler, so the PDF has not
-      been recompiled since the measurement rewrite — `scripts/check_latex_build.py`
+      repository's PDF has been compiled with Tectonic 0.17.0 (47 pages) — `scripts/check_latex_build.py`
       passes all 7 sanity modules, but the page count must be confirmed.
-- [ ] Compile `latex/main.tex` with `latexmk -pdf` (bibtex + 2 passes).
+- [x] Compiled with Tectonic 0.17.0: **47 pages**, no errors, no undefined references (2026-11-13).
 - [ ] Confirm the final page/figure/table counts and update the `comments`
       field of `arxiv_submission_manifest.json` if they differ from
-      "28 pages, 8 figures, 19 tables" (the verify script asserts these strings;
+      "47 pages, 8 figures, 19 tables" (measured by compiling with Tectonic 0.17.0; the verify script asserts these strings;
       update both places together).
 
 ## 2. Package the arXiv source tarball

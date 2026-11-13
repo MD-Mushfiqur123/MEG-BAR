@@ -316,7 +316,7 @@ def test_zenodo_and_arxiv_manifests():
     assert sub.get("primary_category") == "q-bio.BM"
     assert "cs.LG" in sub.get("secondary_categories", [])
     assert "q-bio.QM" in sub.get("secondary_categories", [])
-    assert "28 pages" in sub.get("comments", "")
+    assert "47 pages" in sub.get("comments", "")
     assert "8 figures" in sub.get("comments", "")
     assert "19 tables" in sub.get("comments", "")
     
