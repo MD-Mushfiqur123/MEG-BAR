@@ -1,3 +1,12 @@
-numpy
-matplotlib
-pytest
+# Core dependencies for the MEG-BAR verification suite and reproduction pipeline
+# (tests/test_megbar.py, scripts/one_click_reproduce.py, scripts/check_latex_build.py).
+# CI installs these on Python 3.10-3.12 across ubuntu/macos/windows, so exact pins
+# that drop Python 3.10 support are avoided; ranges are bounded for reproducibility.
+numpy>=1.26,<3.0
+matplotlib>=3.8,<4.0
+pytest>=8.0,<10.0
+
+# Runtime dependencies for the real-data pipeline in colab/scripts/ (ChEMBL fetch,
+# RDKit descriptors, hERG QSAR, ESM-2 embeddings, expanded evaluation) are pinned
+# separately in requirements_colab.txt because they include large binary wheels
+# (torch) that CI does not need.
