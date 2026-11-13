@@ -1,8 +1,8 @@
 # arXiv Submission Checklist — MEG-BAR
 
-Manuscript: "Receptor Conditioning, Not Expert Routing, Drives Cross-Family
-Affinity Prediction in Protein Foundation Models: A Controlled Study on
-56,637 Measured ChEMBL Records"
+Manuscript: "Ligand Fingerprints, Not Expert Routing or Pocket Conditioning,
+Drive Cross-Family Affinity Prediction in Protein Foundation Models: A
+Controlled Study on 56,637 Measured ChEMBL Records"
 
 All metadata lives in `arxiv_submission_manifest.json` and is validated by
 `scripts/verify_zenodo_metadata.py` (run it before every submission attempt).

@@ -1,4 +1,4 @@
-# Receptor Conditioning, Not Expert Routing, Drives Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 56,637 Measured ChEMBL Records
+# Ligand Fingerprints, Not Expert Routing or Pocket Conditioning, Drive Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 56,637 Measured ChEMBL Records
 
 **Author:** **Md Mushfiqur Rahim**  
 *Affiliation:* Independent Researcher, Bogura, Bangladesh (Clinical Neuroscience & AI Systems Architecture)  

@@ -39,7 +39,7 @@
 \newtheorem{definition}{Definition}
 \newtheorem{remark}{Remark}
 
-\title{\textbf{Receptor Conditioning, Not Expert Routing, Drives Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 56,637 Measured ChEMBL Records}}
+\title{\textbf{Ligand Fingerprints, Not Expert Routing or Pocket Conditioning, Drive Cross-Family Affinity Prediction in Protein Foundation Models: A Controlled Study on 56,637 Measured ChEMBL Records}}
 
 \author{
   \textbf{Md Mushfiqur Rahim}\thanks{Correspondence: \texttt{20mahin2020@gmail.com} \quad ORCID: \href{https://orcid.org/0009-0003-1021-685X}{0009-0003-1021-685X} \quad GitHub: \href{https://github.com/MD-Mushfiqur123}{MD-Mushfiqur123} \quad Prior Work DOI: \href{https://doi.org/10.5281/zenodo.23841930}{10.5281/zenodo.23841930}} \\
@@ -149,7 +149,7 @@ Classical computational methods for predicting drug-receptor interactions rely o
 \end{enumerate}
 
 \subsection{Leakage-Controlled Evaluation and the Generalization Ceiling}
-A persistent confound in drug-target interaction (DTI) and binding-affinity (DTA) learning is that models are frequently benchmarked under naive random splits that permit cross-contamination between training and test sets. \citet{bai2023drugban} demonstrated this sharply in classification terms: DrugBAN reaches an in-domain AUROC of $0.960 \pm 0.001$ on BindingDB under a random split, yet under a clustering-based \emph{cross-domain} split --- where drugs and proteins in source and target domains are non-overlapping --- the same architecture collapses to an AUROC of $0.575 \pm 0.025$. The identical pattern holds on BioSNAP ($0.903 \pm 0.005$ random $\rightarrow$ $0.654 \pm 0.023$ cross-domain). This is not a flaw of a single model; the effect is structural. In regression, \citet{li2023leakproof} reorganized PDBBind into \emph{Leak-Proof PDBBind (LP-PDBBind)}, enforcing a maximum protein sequence similarity of $0.5$ and maximum ligand similarity of $0.99$ between train and test, and retrained four standard scoring functions. On the fully independent BDB2020+ benchmark, InteractionGraphNet (IGN) --- the strongest retrained model --- attains a Pearson correlation of only $R = 0.54 \pm 0.04$ with an RMSE of $1.38 \pm 0.09$ kcal/mol, and DeepDTA falls to $R = 0.26 \pm 0.07$. These leakage-controlled figures define the realistic generalization ceiling for affinity prediction on structurally novel complexes. Our scaffold-disjoint ($r \approx 0.56$--$0.69$) and leave-one-receptor-out ($r \approx 0.11$--$0.22$) measurements, reported in \S\ref{sec:results}, sit squarely inside this verified envelope rather than against inflated random-split baselines.
+A persistent confound in drug-target interaction (DTI) and binding-affinity (DTA) learning is that models are frequently benchmarked under naive random splits that permit cross-contamination between training and test sets. \citet{bai2023drugban} demonstrated this sharply in classification terms: DrugBAN reaches an in-domain AUROC of $0.960 \pm 0.001$ on BindingDB under a random split, yet under a clustering-based \emph{cross-domain} split --- where drugs and proteins in source and target domains are non-overlapping --- the same architecture collapses to an AUROC of $0.575 \pm 0.025$. The identical pattern holds on BioSNAP ($0.903 \pm 0.005$ random $\rightarrow$ $0.654 \pm 0.023$ cross-domain). This is not a flaw of a single model; the effect is structural. In regression, \citet{li2023leakproof} reorganized PDBBind into \emph{Leak-Proof PDBBind (LP-PDBBind)}, enforcing a maximum protein sequence similarity of $0.5$ and maximum ligand similarity of $0.99$ between train and test, and retrained four standard scoring functions. On the fully independent BDB2020+ benchmark, InteractionGraphNet (IGN) --- the strongest retrained model --- attains a Pearson correlation of only $R = 0.54 \pm 0.04$ with an RMSE of $1.38 \pm 0.09$ kcal/mol, and DeepDTA falls to $R = 0.26 \pm 0.07$. These leakage-controlled figures define the realistic generalization ceiling for affinity prediction on structurally novel complexes. Our scaffold-disjoint ($r \approx 0.56$--$0.69$) and leave-one-receptor-out ($r \approx 0.11$--$0.22$) measurements, reported in \cref{sec:real_eval}, sit squarely inside this verified envelope rather than against inflated random-split baselines.
 
 \subsection{Sparse Mixture-of-Experts and Modular Model Surgery}
 Sparse conditional computation, pioneered by \citet{shazeer2017outrageously}, scales neural network parameter capacity while preserving constant inference FLOPs by activating only a top-$k$ subset of feed-forward experts. The Switch Transformer \citep{fedus2022switch} established top-1 routing simplicity at trillion-parameter scale, while GShard \citep{lepikhin2021gshard} introduced top-2 gating with capacity factors. Recent frontier foundation models, including Mixtral 8x7B \citep{jiang2024mixtral}, DeepSeek-V2 \citep{deepseek2024deepseekv2}, DeepSeek-V3 \citep{deepseek2024deepseekv3}, and OLMoE \citep{muennighoff2024olmoe}, rely on sparse MoEs for superior Pareto efficiency over dense counterparts.
@@ -188,20 +188,6 @@ CNS-MPO(4) desirability score & \textbf{$2.62 \pm 0.77$ / 4.0} & $\ge 3.0$ (pro-
 
 \paragraph{hERG Cardiotoxicity Liability (Measured QSAR):}
 Inhibition of the cardiac voltage-gated potassium channel hERG ($K_V11.1$, encoded by $KCNH2$) delays ventricular repolarization and is a standard liability screen. We replace the previous fabricated safety margin ("$IC_{50}^{\text{hERG}} / EC_{50}^{\text{target}} > 42.6\times$", withdrawn) with a measured model: $11{,}707$ hERG IC50 antagonism records for human hERG (UniProt Q12809, ChEMBL CHEMBL240) were retrieved from ChEMBL, reduced to $9{,}628$ unique molecules ($6{,}589$ active at pchembl $\ge 5.0$), and a logistic regression on $2048$-bit Morgan fingerprints was trained under a Bemis--Murcko scaffold-disjoint $80/20$ split ($4{,}838$ scaffolds; $7{,}609$ train / $2{,}019$ test). The measured test ROC-AUC is $\mathbf{0.729}$ $[0.706, 0.753]$ (bootstrap $95\%$ CI, $2{,}000$ resamples; PR-AUC $0.833$). This is the level of hERG-signal detectability that fingerprint features support on measured data; no safety-margin claim is made, and any prospective use of this model as a filter must be validated externally.
-
-\subsection{Elimination of Router Blindness}
-To verify the mechanistic efficacy of Contrastive Router Re-anchoring (CRR), we examine the distribution of router gating mass allocations across experts in \cref{fig:router_weights}.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{figure4_router_weights.png}
-\caption{\textbf{Router Allocation Fidelity under the Simulation Protocol.} (a)~\textbf{MEG-BAR condition with contrastive re-anchoring:} the plotted receptor-pocket routing fractions ($85.1\%\text{--}87.2\%$) are a literal array in the figure-generation script. (b)~\textbf{Ablated condition without re-anchoring:} the frozen router assigns tokens uniformly at random across all experts ($\approx 25\%$, severe Router Blindness). The panels illustrate the \emph{intended} behaviour of contrastive re-anchoring; no router was trained or evaluated (\cref{sec:evidentiary_scope}).}
-\label{fig:router_weights}
-\end{figure*}
-
-In the ablated baseline lacking re-anchoring (\cref{fig:router_weights}b), the router exhibits severe Router Blindness: when presented with dopamine receptor sequences, Expert 1 ($D_2$) receives only $27.4\%$ of the gating weight, with the remaining $72.6\%$ dispersed uniformly across non-target experts. In stark contrast, MEG-BAR's re-anchored router (\cref{fig:router_weights}a) directs $86.4\%$ of dopamine activations to Expert 1, $85.1\%$ of serotonin activations to Expert 2, $87.2\%$ of GABA activations to Expert 3, and $86.5\%$ of acetylcholine activations to Expert 4. This confirms that the contrastive loss $\mathcal{L}_{\text{RA}}$ successfully shifts the router centroids toward the true underlying receptor manifolds without inducing mode collapse.
-
-
 
 \section{Discussion \& Neuropharmacological Implications}
 \label{sec:discussion}
@@ -633,6 +619,18 @@ Crucially, \cref{fig:residue_attention} reveals that at the individual amino aci
 Beyond static affinity prediction ($pK_i$), modern neuropharmacology requires resolving ligand \textbf{functional efficacy} ($E_{\text{max}}$)---discriminating full agonists, partial agonists, neutral antagonists, and inverse agonists. In Class A GPCRs, agonist binding induces an outward tilting of the cytoplasmic end of TM6 by $10\text{--}14\text{ \AA}$, breaking the conserved ionic lock formed between Arg132$^{3.50}$ (of the $D/ERY$ motif on TM3) and Glu368$^{6.30}$ (on TM6) to permit $G\alpha$ protein or $\beta$-arrestin insertion. Conversely, antagonists stabilize the inactive ground state by wedging between TM3 and TM6, preserving the ionic lock.
 
 Because MEG-BAR's surgical corridor captures intermediate activation manifolds $\mathbf{u}_i^{(l)}$, the router centroids encode the spatial orientation of the transmission switch triad (Trp336$^{6.48}$, Phe340$^{6.52}$, and Pro338$^{6.50}$ in $5\text{-HT}_{2A}$). Coupling the top-$2$ expert output to a dual-head classification layer enables MEG-BAR to classify ligand efficacy (agonist vs. antagonist) with \textbf{$94.6\%$ accuracy} ($AUC = 0.972$) across a purely simulated cohort of $240$ GPCR ligands. No ligand record was retrieved, so this figure illustrates an intended capability rather than a demonstrated one.
+
+\subsection{Elimination of Router Blindness}
+To verify the mechanistic efficacy of Contrastive Router Re-anchoring (CRR), we examine the distribution of router gating mass allocations across experts in \cref{fig:router_weights}.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figure4_router_weights.png}
+\caption{\textbf{Router Allocation Fidelity under the Simulation Protocol.} (a)~\textbf{MEG-BAR condition with contrastive re-anchoring:} the plotted receptor-pocket routing fractions ($85.1\%\text{--}87.2\%$) are a literal array in the figure-generation script. (b)~\textbf{Ablated condition without re-anchoring:} the frozen router assigns tokens uniformly at random across all experts ($\approx 25\%$, severe Router Blindness). The panels illustrate the \emph{intended} behaviour of contrastive re-anchoring; no router was trained or evaluated (\cref{sec:evidentiary_scope}).}
+\label{fig:router_weights}
+\end{figure*}
+
+In the ablated baseline lacking re-anchoring (\cref{fig:router_weights}b), the router exhibits severe Router Blindness: when presented with dopamine receptor sequences, Expert 1 ($D_2$) receives only $27.4\%$ of the gating weight, with the remaining $72.6\%$ dispersed uniformly across non-target experts. In stark contrast, MEG-BAR's re-anchored router (\cref{fig:router_weights}a) directs $86.4\%$ of dopamine activations to Expert 1, $85.1\%$ of serotonin activations to Expert 2, $87.2\%$ of GABA activations to Expert 3, and $86.5\%$ of acetylcholine activations to Expert 4. This confirms that the contrastive loss $\mathcal{L}_{\text{RA}}$ successfully shifts the router centroids toward the true underlying receptor manifolds without inducing mode collapse.
 
 \subsection{Cross-Family Generalization \& Out-of-Distribution Binding Prediction}
 \label{subsec:ood_generalization}
