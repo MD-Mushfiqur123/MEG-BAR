@@ -14,7 +14,7 @@ the true orthosteric pocket from a wrong one. Does explicit 3D pocket geometry
 | Stage | Phases | Status |
 |---|---|---|
 | 0 — Foundation | 1–4 | Phases 1–4 done |
-| 1 — Structure data | 5–10 | pending |
+| 1 — Structure data | 5–10 | Phase 5 done; 6–10 pending |
 | 2 — 3D features | 11–15 | pending |
 | 3 — Models (incl. wrong-pocket-3D control) | 16–21 | pending |
 | 4 — Evaluation | 22–26 | pending |

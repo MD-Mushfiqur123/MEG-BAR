@@ -360,7 +360,7 @@ A phase is "done" only when its exit criteria pass and its outputs are committed
 - [x] Phase 2 — scaffolding
 - [x] Phase 3 — environment lock
 - [x] Phase 4 — pre-registration (frozen)
-- [ ] Phase 5 — PDB mapping (`paper2/scripts/05_pdb_mapping.py`)
+- [x] Phase 5 — PDB mapping (`paper2/scripts/05_pdb_mapping.py`) — 11/11 ligand-bound primaries, 2.17–3.14 A
 - [ ] Phase 6 — AFDB models
 - [ ] Phase 7 — pocket definition
 
