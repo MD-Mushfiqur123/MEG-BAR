@@ -13,7 +13,7 @@ the true orthosteric pocket from a wrong one. Does explicit 3D pocket geometry
 
 | Stage | Phases | Status |
 |---|---|---|
-| 0 — Foundation | 1–4 | Phase 1 done; 2–4 pending |
+| 0 — Foundation | 1–4 | Phases 1–4 done |
 | 1 — Structure data | 5–10 | pending |
 | 2 — 3D features | 11–15 | pending |
 | 3 — Models (incl. wrong-pocket-3D control) | 16–21 | pending |
@@ -27,13 +27,12 @@ the true orthosteric pocket from a wrong one. Does explicit 3D pocket geometry
 
 ```
 paper2/
-  data/
-    structures/     PDB/mmCIF artefacts + manifest.json (SHA-256 frozen)
-  scripts/          numbered, one phase per script where possible
-  results/          frozen evaluation outputs
-  figures/          300 DPI regenerable figures
-  PREREGISTRATION.md   hypotheses H1-H4 + statistical tests (Phase 4)
-  ENVIRONMENT.md       pinned versions (Phase 3)
+  data/                frozen inputs inherited from ../data/real/
+  scripts/             numbered, one phase per script where possible
+  results/             frozen evaluation outputs
+  figures/             300 DPI regenerable figures
+  PREREGISTRATION.md   hypotheses H1-H4 + decision rules (Phase 4, frozen)
+  ENVIRONMENT.md       verified versions + structure-tooling plan (Phase 3)
   DEFECT_REGISTER.md   failed claims, catalogued honestly (Phase 34)
 ```
 
