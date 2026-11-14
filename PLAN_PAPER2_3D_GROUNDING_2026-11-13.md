@@ -361,11 +361,13 @@ A phase is "done" only when its exit criteria pass and its outputs are committed
 - [x] Phase 3 — environment lock
 - [x] Phase 4 — pre-registration (frozen)
 - [x] Phase 5 — PDB mapping (`paper2/scripts/05_pdb_mapping.py`) — 11/11 ligand-bound primaries, 2.17–3.14 A
+
+Stage 1 complete (Phases 5–10).
 - [x] Phase 6 — AFDB models (`paper2/scripts/06_afdb_models.py`) — 11/11 at AFDB v6, per-residue pLDDT + SHA-256
 - [x] Phase 7 — pocket definition (`paper2/scripts/07_pocket_definition.py`) — orthosteric ligand chosen by anchor-first + Paper 1 overlap scoring; 21–36 pocket residues per receptor
 - [x] Phase 8 — residue mapping (`paper2/scripts/08_residue_mapping.py`) — 0 unmapped across 11 receptors; 10/10 anchors present (GABRA1 n/a)
-- [x] Phase 10 — manifest (`paper2/scripts/10_manifest.py`) — 26 files SHA-256-frozen
-- [ ] Phase 9 — ligand–pair mapping
+- [x] Phase 10 — manifest (`paper2/scripts/10_manifest.py`) — 28 files SHA-256-frozen
+- [x] Phase 9 — ligand–pair mapping (`paper2/scripts/09_pair_mapping.py`) — exactly 41,271 pairs (Paper 1 dedup rule), 100% with 3D pocket grounding, pre-2015/2015+ counts per receptor
 
 ## Non-Negotiables
 

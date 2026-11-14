@@ -91,7 +91,15 @@
   },
   "afdb/afdb_models.json": {
    "bytes": 98083,
-   "sha256": "fd4445ffe770e656a5a1a8c3febce3b06eee3037a4bb5299f5d4241fd0cf2def"
+   "sha256": "4e63671d4f6c386eb7567d0083a14edc61d64fef0ddb55a8518eda4036ab3964"
+  },
+  "ligand_pair_mapping.json": {
+   "bytes": 5114,
+   "sha256": "d283ba2582e7bb3e2d08176323d532b076a999d8342bbcb5ae8cdcc801588659"
+  },
+  "pairs_41271.csv": {
+   "bytes": 3973184,
+   "sha256": "c728b0a0dc14ce33bb8759f97675a5c258cc15ea2102c6060ca5a2f7563fe860"
   },
   "pdb_selection.json": {
    "bytes": 48709,
@@ -99,15 +107,15 @@
   },
   "pockets_defined.json": {
    "bytes": 47905,
-   "sha256": "3415a35bc0c40e85b54a6a82f738cbcab0e794123a7036106deb163e2cff5bd9"
+   "sha256": "03aa6cea2d2040ba03ca66a442e8096b8854f77c6c0cfb73e0804440bd6b8448"
   },
   "residue_mapping.json": {
    "bytes": 79394,
-   "sha256": "a04b5c3776288692688515fda97f753f805dcacaebacc8828b0abdf3be496007"
+   "sha256": "a85927e44bd949ba7ab02de807944ff3fb888d0cbb3608fb8b786e2f8f4c0243"
   }
  },
- "generated_utc": "2026-11-14T01:56:24Z",
- "n_files": 26,
+ "generated_utc": "2026-11-14T02:02:14Z",
+ "n_files": 28,
  "purpose": "Paper 2 Phase 10 - frozen structure artefact manifest",
- "total_bytes": 13452705
+ "total_bytes": 17431003
 }

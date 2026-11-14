@@ -1,0 +1,219 @@
+{
+ "purpose": "Paper 2 Phase 9 - frozen ChEMBL pairs joined onto receptor structures",
+ "generated_utc": "2026-11-14T02:02:13Z",
+ "pair_construction": "identical to Paper 1 scripts/real/03_experiment.py: measured pChEMBL + SMILES present, median per (gene, molecule_chembl_id)",
+ "totals": {
+  "raw_records": 56637,
+  "records_after_dropna": 56637,
+  "records_collapsed_by_dedup": 15366,
+  "pairs": 41271,
+  "records_with_document_year": 55303,
+  "pairs_with_3d_pocket": 41271,
+  "pairs_without_3d_pocket": 0
+ },
+ "exclusions": [
+  "rows without measured pChEMBL or SMILES (dropna)",
+  "duplicate (gene, molecule) records collapsed by median pChEMBL"
+ ],
+ "per_receptor": {
+  "DRD2": {
+   "uniprot": "P14416",
+   "pdb_id": "7JVR",
+   "receptor_chain": "R",
+   "orthosteric_ligand": "08Y",
+   "n_pocket_residues": 36,
+   "n_esm2_indices": 36,
+   "pocket_grounding_available": true,
+   "n_pairs": 9079,
+   "n_unique_ligands": 9079,
+   "n_pairs_with_year": 9043,
+   "n_pairs_pre2015": 5161,
+   "n_pairs_2015plus": 3882,
+   "pchembl_median_range": [
+    3.74,
+    10.83
+   ]
+  },
+  "DRD3": {
+   "uniprot": "P35462",
+   "pdb_id": "7CMV",
+   "receptor_chain": "R",
+   "orthosteric_ligand": "G6O",
+   "n_pocket_residues": 29,
+   "n_esm2_indices": 29,
+   "pocket_grounding_available": true,
+   "n_pairs": 5994,
+   "n_unique_ligands": 5994,
+   "n_pairs_with_year": 5922,
+   "n_pairs_pre2015": 3589,
+   "n_pairs_2015plus": 2333,
+   "pchembl_median_range": [
+    4.07,
+    10.92
+   ]
+  },
+  "HTR1A": {
+   "uniprot": "P08908",
+   "pdb_id": "8FY8",
+   "receptor_chain": "R",
+   "orthosteric_ligand": "YFW",
+   "n_pocket_residues": 28,
+   "n_esm2_indices": 28,
+   "pocket_grounding_available": true,
+   "n_pairs": 5376,
+   "n_unique_ligands": 5376,
+   "n_pairs_with_year": 5376,
+   "n_pairs_pre2015": 3158,
+   "n_pairs_2015plus": 2218,
+   "pchembl_median_range": [
+    4.01,
+    11.0
+   ]
+  },
+  "HTR2A": {
+   "uniprot": "P28223",
+   "pdb_id": "6A94",
+   "receptor_chain": "A",
+   "orthosteric_ligand": "ZOT",
+   "n_pocket_residues": 29,
+   "n_esm2_indices": 29,
+   "pocket_grounding_available": true,
+   "n_pairs": 5714,
+   "n_unique_ligands": 5714,
+   "n_pairs_with_year": 5640,
+   "n_pairs_pre2015": 3168,
+   "n_pairs_2015plus": 2472,
+   "pchembl_median_range": [
+    4.0,
+    11.0
+   ]
+  },
+  "CHRM1": {
+   "uniprot": "P11229",
+   "pdb_id": "6ZFZ",
+   "receptor_chain": "A",
+   "orthosteric_ligand": "QJT",
+   "n_pocket_residues": 30,
+   "n_esm2_indices": 30,
+   "pocket_grounding_available": true,
+   "n_pairs": 2053,
+   "n_unique_ligands": 2053,
+   "n_pairs_with_year": 1993,
+   "n_pairs_pre2015": 1280,
+   "n_pairs_2015plus": 713,
+   "pchembl_median_range": [
+    4.0,
+    10.52
+   ]
+  },
+  "ADRA2A": {
+   "uniprot": "P08913",
+   "pdb_id": "6KUX",
+   "receptor_chain": "A",
+   "orthosteric_ligand": "E3F",
+   "n_pocket_residues": 24,
+   "n_esm2_indices": 24,
+   "pocket_grounding_available": true,
+   "n_pairs": 1024,
+   "n_unique_ligands": 1024,
+   "n_pairs_with_year": 931,
+   "n_pairs_pre2015": 688,
+   "n_pairs_2015plus": 243,
+   "pchembl_median_range": [
+    4.0,
+    10.38
+   ]
+  },
+  "ADRB2": {
+   "uniprot": "P07550",
+   "pdb_id": "2RH1",
+   "receptor_chain": "A",
+   "orthosteric_ligand": "CAU",
+   "n_pocket_residues": 27,
+   "n_esm2_indices": 27,
+   "pocket_grounding_available": true,
+   "n_pairs": 1233,
+   "n_unique_ligands": 1233,
+   "n_pairs_with_year": 1218,
+   "n_pairs_pre2015": 846,
+   "n_pairs_2015plus": 372,
+   "pchembl_median_range": [
+    3.85,
+    10.92
+   ]
+  },
+  "HRH1": {
+   "uniprot": "P35367",
+   "pdb_id": "8X5Y",
+   "receptor_chain": "B",
+   "orthosteric_ligand": "XB7",
+   "n_pocket_residues": 33,
+   "n_esm2_indices": 33,
+   "pocket_grounding_available": true,
+   "n_pairs": 1732,
+   "n_unique_ligands": 1732,
+   "n_pairs_with_year": 1705,
+   "n_pairs_pre2015": 1136,
+   "n_pairs_2015plus": 569,
+   "pchembl_median_range": [
+    4.0,
+    10.0
+   ]
+  },
+  "GABRA1": {
+   "uniprot": "P14867",
+   "pdb_id": "6HUJ",
+   "receptor_chain": "A",
+   "orthosteric_ligand": "PIO",
+   "n_pocket_residues": 21,
+   "n_esm2_indices": 21,
+   "pocket_grounding_available": true,
+   "n_pairs": 331,
+   "n_unique_ligands": 331,
+   "n_pairs_with_year": 331,
+   "n_pairs_pre2015": 45,
+   "n_pairs_2015plus": 286,
+   "pchembl_median_range": [
+    4.26,
+    10.0
+   ]
+  },
+  "SERT": {
+   "uniprot": "P31645",
+   "pdb_id": "5I6X",
+   "receptor_chain": "A",
+   "orthosteric_ligand": "8PR",
+   "n_pocket_residues": 36,
+   "n_esm2_indices": 36,
+   "pocket_grounding_available": true,
+   "n_pairs": 5352,
+   "n_unique_ligands": 5352,
+   "n_pairs_with_year": 5273,
+   "n_pairs_pre2015": 3783,
+   "n_pairs_2015plus": 1490,
+   "pchembl_median_range": [
+    4.0,
+    11.0
+   ]
+  },
+  "DAT": {
+   "uniprot": "Q01959",
+   "pdb_id": "8Y2D",
+   "receptor_chain": "A",
+   "orthosteric_ligand": "LDP",
+   "n_pocket_residues": 28,
+   "n_esm2_indices": 28,
+   "pocket_grounding_available": true,
+   "n_pairs": 3383,
+   "n_unique_ligands": 3383,
+   "n_pairs_with_year": 3307,
+   "n_pairs_pre2015": 2225,
+   "n_pairs_2015plus": 1082,
+   "pchembl_median_range": [
+    4.0,
+    9.92
+   ]
+  }
+ },
+ "pairs_csv": "pairs_41271.csv"
+}

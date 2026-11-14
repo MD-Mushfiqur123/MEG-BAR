@@ -89,6 +89,21 @@ def test_phase8_residue_mapping_exit_criteria():
     assert d["receptors"]["GABRA1"]["anchor"] is None
 
 
+def test_phase9_pair_mapping_frozen():
+    d = _load(os.path.join("data", "structures", "ligand_pair_mapping.json"))
+    t = d["totals"]
+    assert t["raw_records"] == 56637
+    assert t["pairs"] == 41271
+    assert t["pairs_with_3d_pocket"] == 41271
+    assert t["pairs_without_3d_pocket"] == 0
+    for sym, v in d["per_receptor"].items():
+        assert v["pocket_grounding_available"], f"{sym} lacks 3D pocket"
+        assert v["n_pairs"] > 0
+    with open(os.path.join(PAPER2, "data", "structures", "pairs_41271.csv")) as f:
+        n_rows = sum(1 for _ in f) - 1
+    assert n_rows == 41271
+
+
 def test_phase10_manifest_covers_artefacts():
     import hashlib
 
