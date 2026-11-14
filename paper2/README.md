@@ -14,7 +14,7 @@ the true orthosteric pocket from a wrong one. Does explicit 3D pocket geometry
 | Stage | Phases | Status |
 |---|---|---|
 | 0 — Foundation | 1–4 | Phases 1–4 done |
-| 1 — Structure data | 5–10 | Phase 5 done; 6–10 pending |
+| 1 — Structure data | 5–10 | Phases 5–8 + 10 done; 9 pending |
 | 2 — 3D features | 11–15 | pending |
 | 3 — Models (incl. wrong-pocket-3D control) | 16–21 | pending |
 | 4 — Evaluation | 22–26 | pending |
@@ -23,17 +23,36 @@ the true orthosteric pocket from a wrong one. Does explicit 3D pocket geometry
 | 7 — Manuscript | 35–38 | pending |
 | 8 — Packaging & submission | 39–41 | pending |
 
-## Directory layout (to be filled in Stage 0–1)
+## Directory layout
 
 ```
 paper2/
-  data/                frozen inputs inherited from ../data/real/
-  scripts/             numbered, one phase per script where possible
-  results/             frozen evaluation outputs
-  figures/             300 DPI regenerable figures
-  PREREGISTRATION.md   hypotheses H1-H4 + decision rules (Phase 4, frozen)
-  ENVIRONMENT.md       verified versions + structure-tooling plan (Phase 3)
-  DEFECT_REGISTER.md   failed claims, catalogued honestly (Phase 34)
+  data/                    frozen inputs inherited from ../data/real/
+  data/structures/         frozen structure artefacts (Phase 5-10)
+    pdb_selection.json     reference structure selection (Phase 5)
+    afdb/                  AlphaFold DB models + per-residue pLDDT (Phase 6)
+    pockets_defined.json   orthosteric pockets, 6.5 A (Phase 7)
+    residue_mapping.json   pocket -> UniProt -> ESM-2 token indices (Phase 8)
+    manifest.json          SHA-256 of every file here (Phase 10)
+  scripts/                 numbered, one phase per script where possible
+    mmcif_lite.py          stdlib mmCIF parser + NW alignment (shared)
+    run_stage1.py          Stage 1 orchestrator (checkpointed)
+  results/                 frozen evaluation outputs + pipeline_state.json
+  figures/                 300 DPI regenerable figures
+  PREREGISTRATION.md       hypotheses H1-H4 + decision rules (Phase 4, frozen)
+  ENVIRONMENT.md           verified versions + structure-tooling plan (Phase 3)
+  DEFECT_REGISTER.md       failed claims, catalogued honestly
+```
+
+## Workflow automation
+
+Stage 1 runs end-to-end with one command from the repo root:
+
+```
+make paper2-stage1            # runs phases 06 -> 07 -> 08 -> 10, skips completed
+make paper2-stage1-force      # rerun everything
+make paper2-test              # Paper 2 artefact tests only
+make test                     # full suite
 ```
 
 ## Non-negotiables

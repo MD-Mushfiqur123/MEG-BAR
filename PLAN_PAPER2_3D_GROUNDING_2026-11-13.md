@@ -361,8 +361,11 @@ A phase is "done" only when its exit criteria pass and its outputs are committed
 - [x] Phase 3 — environment lock
 - [x] Phase 4 — pre-registration (frozen)
 - [x] Phase 5 — PDB mapping (`paper2/scripts/05_pdb_mapping.py`) — 11/11 ligand-bound primaries, 2.17–3.14 A
-- [ ] Phase 6 — AFDB models
-- [ ] Phase 7 — pocket definition
+- [x] Phase 6 — AFDB models (`paper2/scripts/06_afdb_models.py`) — 11/11 at AFDB v6, per-residue pLDDT + SHA-256
+- [x] Phase 7 — pocket definition (`paper2/scripts/07_pocket_definition.py`) — orthosteric ligand chosen by anchor-first + Paper 1 overlap scoring; 21–36 pocket residues per receptor
+- [x] Phase 8 — residue mapping (`paper2/scripts/08_residue_mapping.py`) — 0 unmapped across 11 receptors; 10/10 anchors present (GABRA1 n/a)
+- [x] Phase 10 — manifest (`paper2/scripts/10_manifest.py`) — 26 files SHA-256-frozen
+- [ ] Phase 9 — ligand–pair mapping
 
 ## Non-Negotiables
 
@@ -374,3 +377,4 @@ A phase is "done" only when its exit criteria pass and its outputs are committed
 ## Amendment Log
 
 - 2026-11-13 — v2: phases expanded with Objective/Tasks/Inputs/Outputs/Exit-criteria/Risks detail; no scientific content changed; Stage 0 marked complete (Phases 1–4).
+- 2026-11-14 — Stage 1 automation: `paper2/scripts/run_stage1.py` + `Makefile` added; Phase 6 resolves AFDB model URLs via the AFDB API (fixed-version URLs now 404); Phase 7 selects the orthosteric ligand by anchor-first scoring then Paper 1 pocket overlap. Anchor correction: HTR1A D116 (not D82) and ADRA2A D128 (not D113), sequence-derived from the DRY motif and structurally validated — see `paper2/DEFECT_REGISTER.md` #1. Phase 8 exit criteria (0 unmapped, 10/10 anchors) enforced by asserts and tests.
