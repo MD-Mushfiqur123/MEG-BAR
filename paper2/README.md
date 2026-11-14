@@ -93,6 +93,23 @@ make paper2-test              # Paper 2 artefact tests only
 make test                     # full suite
 ```
 
+## Stage 7-8: manuscript, preprint, submission
+
+```
+paper2/manuscript/main.tex   full manuscript (compiles with Tectonic,
+                             9 pp, zero undefined references)
+paper2/manuscript/main.pdf   compiled manuscript
+paper2/PREPRINT_PACKAGING.md Phase 40 checklist: Figshare / Zenodo /
+                             GitHub release v3.0.0, in order
+paper2/RELEASE_NOTES_v3.0.0.md  release notes text
+paper2/submission/COVER_LETTER.md   Phase 41 cover letter + checklist
+paper2/submission/toc_graphic.png   ACS TOC graphic, 3.25x1.75 in, 300 DPI
+```
+
+Regenerate the TOC graphic with
+`python3 paper2/scripts/35_toc_graphic.py` (reads the frozen statistics
+artefact; no numbers are hard-coded).
+
 ## Non-negotiables
 
 1. Zero simulation; measured or explicitly "not run".
