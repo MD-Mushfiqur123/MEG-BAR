@@ -1,0 +1,113 @@
+{
+ "algorithm": "sha256",
+ "files": {
+  "2RH1.cif": {
+   "bytes": 468375,
+   "sha256": "d6ea480f35d461bccda41a1410b9bc0718444e6de5af58405a580071b606b171"
+  },
+  "5I6X.cif": {
+   "bytes": 1527045,
+   "sha256": "d04a4e6e48b4fdb64b505c1ae173096aba314d9d81d401da4d2eae83ab7c643d"
+  },
+  "6A94.cif": {
+   "bytes": 1157277,
+   "sha256": "64fb320f34cbd0f7b9e0cfb4768278bb88458c0a672b27673598145afd910ead"
+  },
+  "6HUJ.cif": {
+   "bytes": 1654578,
+   "sha256": "ca045762eb5169605fc0f9db04cf5c1930997aeee7b9ab11abf16d14adf3c941"
+  },
+  "6KUX.cif": {
+   "bytes": 623642,
+   "sha256": "2b082343ad09e5ed8f56565b54c8040c6fc6c03f2e3183754cb0d995e827b36b"
+  },
+  "6ZFZ.cif": {
+   "bytes": 772168,
+   "sha256": "a2122df4dc6ac0a699ba721db69f60225d31b336959fdf61ff8325e86d6e12e1"
+  },
+  "7CMV.cif": {
+   "bytes": 956818,
+   "sha256": "86700e73c03a0ed9474e77ac54cf3f1ad67d351ea523cf1fa29c400b90f2807e"
+  },
+  "7JVR.cif": {
+   "bytes": 984701,
+   "sha256": "32c18a4d8533f24e44ea7e0c14d3057140078dbce32f147a853f9df4b65cff62"
+  },
+  "8FY8.cif": {
+   "bytes": 827464,
+   "sha256": "559067e96139acfd5a3946210c98b512d8689f6a9f5ab7edb5396ffddd10f707"
+  },
+  "8X5Y.cif": {
+   "bytes": 301952,
+   "sha256": "ed5a58d6342ba597018fc1eb1fe16490a3ee4a62ad05137d279a01fa95ba3c6b"
+  },
+  "8Y2D.cif": {
+   "bytes": 472716,
+   "sha256": "2481a44bdbe98d3ba290b5e75408c083e22d1dae3ec23fa8f5015292858fd136"
+  },
+  "afdb/AF-P07550-F1-model_v6.pdb": {
+   "bytes": 271349,
+   "sha256": "f6c92a8e92db8ec97f473b961905ddca11eaea1d896c53ec61ebff42648df519"
+  },
+  "afdb/AF-P08908-F1-model_v6.pdb": {
+   "bytes": 269000,
+   "sha256": "6f238a1410888f748abadf1146d8a7d2b9c5430be523294cdbec1c4b49104fe0"
+  },
+  "afdb/AF-P08913-F1-model_v6.pdb": {
+   "bytes": 296459,
+   "sha256": "9bd750c123332b12df7aef94a0de2a9a033725b7fc33b1fe98c501aa4d9da9ee"
+  },
+  "afdb/AF-P11229-F1-model_v6.pdb": {
+   "bytes": 299375,
+   "sha256": "84eb5af54fdac352cfbc22941bc9ca154c1caeeec2db66cb6978d6143e6639be"
+  },
+  "afdb/AF-P14416-F1-model_v6.pdb": {
+   "bytes": 294839,
+   "sha256": "35d32bcbf077f214a00c479a2d71948cc40453d337c43f1665de2f36182604ec"
+  },
+  "afdb/AF-P14867-F1-model_v6.pdb": {
+   "bytes": 302696,
+   "sha256": "7fee00bdd8ed43638125410ad03da9655ffa91896d8b0956b6bb91ba20cac71d"
+  },
+  "afdb/AF-P28223-F1-model_v6.pdb": {
+   "bytes": 305612,
+   "sha256": "089336a56401ae406c971fd354422a592be1be3f8295c9daa879ab183e31e295"
+  },
+  "afdb/AF-P31645-F1-model_v6.pdb": {
+   "bytes": 410345,
+   "sha256": "e44b00dd3290a000749281f7383e4b17254ab58e16ac59da648767d9821546e8"
+  },
+  "afdb/AF-P35367-F1-model_v6.pdb": {
+   "bytes": 324404,
+   "sha256": "a27c57d21a534a9c06a4b7d26a23060705c026eadec71fb18770a12acb56a39c"
+  },
+  "afdb/AF-P35462-F1-model_v6.pdb": {
+   "bytes": 257741,
+   "sha256": "e7dbd028544d7ff9afdd836b584155bb2c9da99cdb78c06c891bf3cba9b0975b"
+  },
+  "afdb/AF-Q01959-F1-model_v6.pdb": {
+   "bytes": 400058,
+   "sha256": "79d4a64d66951c8777c7027edccab4c66679e5e17729aee4d50937abc3b7dcfb"
+  },
+  "afdb/afdb_models.json": {
+   "bytes": 98083,
+   "sha256": "fd4445ffe770e656a5a1a8c3febce3b06eee3037a4bb5299f5d4241fd0cf2def"
+  },
+  "pdb_selection.json": {
+   "bytes": 48709,
+   "sha256": "9363f95eb1cfbc66af00d50fe4b62a34be5a013701e898045e9849315d90270e"
+  },
+  "pockets_defined.json": {
+   "bytes": 47905,
+   "sha256": "3415a35bc0c40e85b54a6a82f738cbcab0e794123a7036106deb163e2cff5bd9"
+  },
+  "residue_mapping.json": {
+   "bytes": 79394,
+   "sha256": "a04b5c3776288692688515fda97f753f805dcacaebacc8828b0abdf3be496007"
+  }
+ },
+ "generated_utc": "2026-11-14T01:56:24Z",
+ "n_files": 26,
+ "purpose": "Paper 2 Phase 10 - frozen structure artefact manifest",
+ "total_bytes": 13452705
+}
