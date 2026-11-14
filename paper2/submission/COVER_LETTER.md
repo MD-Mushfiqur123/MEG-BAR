@@ -38,8 +38,9 @@ not-run probe transparently, maintains a public defect register, and
 releases every frozen artefact with SHA-256 checksums so that any reader
 can check, extend, or overturn the conclusion.
 
-The manuscript is not under consideration elsewhere. A preprint DOI will be
-inserted in the Data and Software Availability section prior to acceptance.
+The manuscript is not under consideration elsewhere. The preprint is
+archived at https://doi.org/10.6084/m9.figshare.35010655 and cited in the
+Data and Software Availability section.
 
 Sincerely,
 Md Mushfiqur Rahim
@@ -59,6 +60,6 @@ ORCID 0009-0003-1021-685X
 - [ ] LaTeX source ZIP (main.tex + figures) → "Manuscript File"
 - [ ] TOC graphic (`toc_graphic.png`, 3.25×1.75 in, 300 DPI) → "Table of Contents Graphic"
 - [ ] Cover letter (this file, pasted)
-- [ ] Preprint disclosure: Yes → [Figshare DOI to be inserted]
+- [ ] Preprint disclosure: Yes → https://doi.org/10.6084/m9.figshare.35010655
 - [ ] Publishing route: Traditional (subscription, no fee)
 - [ ] Link companion Paper 1 (ci-2026-04206a) in the cover letter as done above
