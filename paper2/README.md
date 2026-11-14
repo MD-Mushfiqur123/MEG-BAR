@@ -14,7 +14,7 @@ the true orthosteric pocket from a wrong one. Does explicit 3D pocket geometry
 | Stage | Phases | Status |
 |---|---|---|
 | 0 — Foundation | 1–4 | Phases 1–4 done |
-| 1 — Structure data | 5–10 | Phases 5–8 + 10 done; 9 pending |
+| 1 — Structure data | 5–10 | complete (Phases 5–10 done) |
 | 2 — 3D features | 11–15 | pending |
 | 3 — Models (incl. wrong-pocket-3D control) | 16–21 | pending |
 | 4 — Evaluation | 22–26 | pending |
@@ -33,6 +33,8 @@ paper2/
     afdb/                  AlphaFold DB models + per-residue pLDDT (Phase 6)
     pockets_defined.json   orthosteric pockets, 6.5 A (Phase 7)
     residue_mapping.json   pocket -> UniProt -> ESM-2 token indices (Phase 8)
+    pairs_41271.csv        frozen ChEMBL pairs joined onto structures (Phase 9)
+    ligand_pair_mapping.json  pair coverage + exclusions (Phase 9)
     manifest.json          SHA-256 of every file here (Phase 10)
   scripts/                 numbered, one phase per script where possible
     mmcif_lite.py          stdlib mmCIF parser + NW alignment (shared)

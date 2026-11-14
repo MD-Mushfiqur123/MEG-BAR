@@ -1,6 +1,6 @@
 {
  "purpose": "Paper 2 Phase 8 - pocket residue -> UniProt -> ESM-2 token mapping",
- "generated_utc": "2026-11-14T01:56:24Z",
+ "generated_utc": "2026-11-14T02:02:12Z",
  "esm2_index_convention": "esm2_residue_index_0based = uniprot_pos - 1 (0-based index into the full UniProt sequence)",
  "receptors": {
   "DRD2": {

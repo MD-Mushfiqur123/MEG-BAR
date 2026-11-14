@@ -1,6 +1,6 @@
 {
  "purpose": "Paper 2 Phase 7 - orthosteric pockets from reference structures",
- "generated_utc": "2026-11-14T01:56:21Z",
+ "generated_utc": "2026-11-14T02:02:10Z",
  "pocket_radius_a": 6.5,
  "selection_rule": "if Paper 1 pocket annotation exists: ligand whose 6.5 A pocket maximizes overlap with it (UniProt numbering); otherwise the ligand whose pocket contains the conserved anchor residue (Asp3.32 / SERT D98 / DAT D79)",
  "receptors": {

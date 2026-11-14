@@ -1,7 +1,7 @@
 """Stage 1 orchestrator - runs Paper 2 structure pipeline phases in order.
 
 Executes: 06 (AFDB models) -> 07 (pocket definition) -> 08 (residue mapping)
--> 10 (manifest). Checkpoint state is stored in
+-> 09 (pair mapping) -> 10 (manifest). Checkpoint state is stored in
 paper2/results/pipeline_state.json; completed phases are skipped on rerun
 unless --force is given.
 
@@ -22,6 +22,7 @@ PHASES = [
     ("06_afdb_models", "phase_06_afdb_models"),
     ("07_pocket_definition", "phase_07_pocket_definition"),
     ("08_residue_mapping", "phase_08_residue_mapping"),
+    ("09_pair_mapping", "phase_09_pair_mapping"),
     ("10_manifest", "phase_10_manifest"),
 ]
 
@@ -55,7 +56,7 @@ def main():
     force = "--force" in sys.argv
     state = load_state()
     stages = state.setdefault("stages", {})
-    for name, key in PHASES:
+    for idx, (name, key) in enumerate(PHASES):
         if stages.get(key, {}).get("status") == "done" and not force:
             print(f"[skip] {key} (done at {stages[key].get('finished_utc')}; "
                   f"use --force to rerun)")
@@ -67,6 +68,10 @@ def main():
             "finished_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             "runtime_s": round(dt, 1),
         }
+        for later_name, later_key in PHASES[idx + 1:]:
+            if stages.get(later_key, {}).get("status") == "done":
+                print(f"[invalidate] {later_key} (upstream {key} reran)")
+                stages[later_key]["status"] = "stale"
         save_state(state)
     print("\nStage 1 complete. State:", STATE_PATH)
 

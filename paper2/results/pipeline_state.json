@@ -3,26 +3,32 @@
   "phase_06_afdb_models": {
    "status": "done",
    "script": "06_afdb_models.py",
-   "finished_utc": "2026-11-14T01:56:21Z",
-   "runtime_s": 2.5
+   "finished_utc": "2026-11-14T02:02:10Z",
+   "runtime_s": 2.7
   },
   "phase_07_pocket_definition": {
    "status": "done",
    "script": "07_pocket_definition.py",
-   "finished_utc": "2026-11-14T01:56:24Z",
-   "runtime_s": 2.9
+   "finished_utc": "2026-11-14T02:02:12Z",
+   "runtime_s": 2.8
   },
   "phase_08_residue_mapping": {
    "status": "done",
    "script": "08_residue_mapping.py",
-   "finished_utc": "2026-11-14T01:56:24Z",
+   "finished_utc": "2026-11-14T02:02:13Z",
    "runtime_s": 0.1
   },
   "phase_10_manifest": {
    "status": "done",
    "script": "10_manifest.py",
-   "finished_utc": "2026-11-14T01:56:24Z",
+   "finished_utc": "2026-11-14T02:02:14Z",
    "runtime_s": 0.1
+  },
+  "phase_09_pair_mapping": {
+   "status": "done",
+   "script": "09_pair_mapping.py",
+   "finished_utc": "2026-11-14T02:02:13Z",
+   "runtime_s": 1.0
   }
  }
 }
