@@ -2,6 +2,7 @@
 
 import json
 import os
+import sys
 
 import pytest
 
@@ -43,3 +44,58 @@ def test_preregistration_exists_and_frozen():
 def test_environment_lock_exists():
     src = open(os.path.join(PAPER2, "ENVIRONMENT.md")).read()
     assert "2.15.0" in src and "5.22.2" in src
+
+
+def test_mmcif_lite_nw_align_and_tokenize():
+    sys.path.insert(0, os.path.join(PAPER2, "scripts"))
+    from mmcif_lite import AA3TO1, _tokenize, alignment_identity, nw_align
+
+    assert _tokenize('a "b c" d') == ["a", "b c", "d"]
+    assert nw_align("MKTAYIAK", "MKTAYIAK") == [(i, i) for i in range(8)]
+    ident, npairs = alignment_identity("ACDEFGHIKLMNPQRSTVWY", "ACDEFGHIKLMNPQRSTVWY")
+    assert ident == 1.0 and npairs == 20
+    assert AA3TO1["ASP"] == "D" and AA3TO1["MSE"] == "M"
+
+
+def test_phase6_afdb_models_complete():
+    d = _load(os.path.join("data", "structures", "afdb", "afdb_models.json"))
+    assert len(d["receptors"]) == 11
+    for sym, v in d["receptors"].items():
+        assert v["n_residues_with_plddt"] >= 400, f"{sym} pLDDT coverage too low"
+        assert len(v["sha256"]) == 64
+        assert 0.0 <= v["pct_plddt_below_50"] <= 100.0
+
+
+def test_phase7_pockets_defined_complete():
+    d = _load(os.path.join("data", "structures", "pockets_defined.json"))
+    assert len(d["receptors"]) == 11
+    for sym, v in d["receptors"].items():
+        assert v["receptor_chain"], f"{sym} has no receptor chain"
+        assert v["ligand"]["comp_id"], f"{sym} has no chosen ligand"
+        assert v["n_pocket_residues"] >= 10, f"{sym} pocket too small"
+        assert v["chain_alignment_identity"] >= 0.7, f"{sym} chain alignment weak"
+
+
+def test_phase8_residue_mapping_exit_criteria():
+    d = _load(os.path.join("data", "structures", "residue_mapping.json"))
+    assert d["totals"]["total_unmapped"] == 0
+    assert len(d["receptors"]) == 11
+    anchors = {"DRD2": 114, "DRD3": 110, "HTR1A": 116, "HTR2A": 155,
+               "CHRM1": 105, "ADRA2A": 128, "ADRB2": 113, "HRH1": 107,
+               "SERT": 98, "DAT": 79}
+    for sym, pos in anchors.items():
+        a = d["receptors"][sym]["anchor"]
+        assert a and a["present"] and a["position"] == pos, f"{sym} anchor check failed"
+    assert d["receptors"]["GABRA1"]["anchor"] is None
+
+
+def test_phase10_manifest_covers_artefacts():
+    import hashlib
+
+    d = _load(os.path.join("data", "structures", "manifest.json"))
+    assert d["n_files"] >= 20
+    for rel, e in d["files"].items():
+        assert len(e["sha256"]) == 64, f"{rel} bad digest"
+        path = os.path.join(PAPER2, "data", "structures", rel)
+        with open(path, "rb") as f:
+            assert hashlib.sha256(f.read()).hexdigest() == e["sha256"], f"{rel} hash mismatch"

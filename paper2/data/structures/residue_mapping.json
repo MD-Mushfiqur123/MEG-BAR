@@ -1,0 +1,3438 @@
+{
+ "purpose": "Paper 2 Phase 8 - pocket residue -> UniProt -> ESM-2 token mapping",
+ "generated_utc": "2026-11-14T01:56:24Z",
+ "esm2_index_convention": "esm2_residue_index_0based = uniprot_pos - 1 (0-based index into the full UniProt sequence)",
+ "receptors": {
+  "DRD2": {
+   "uniprot": "P14416",
+   "pdb_id": "7JVR",
+   "receptor_chain": "R",
+   "n_pocket_residues": 36,
+   "n_mapped": 36,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 11,
+   "n_mismatches_vs_uniprot": 0,
+   "anchor": {
+    "position": 114,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    90,
+    93,
+    106,
+    109,
+    110,
+    113,
+    114,
+    115,
+    117,
+    118,
+    119,
+    121,
+    165,
+    169,
+    174,
+    180,
+    181,
+    182,
+    183,
+    184,
+    188,
+    189,
+    192,
+    193,
+    196,
+    197,
+    385,
+    388,
+    389,
+    392,
+    404,
+    407,
+    408,
+    411,
+    414,
+    415
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "91",
+     "uniprot_pos": 91,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 90,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "94",
+     "uniprot_pos": 94,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 93,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "107",
+     "uniprot_pos": 107,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 106,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 110,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 109,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "111",
+     "uniprot_pos": 111,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 110,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "114",
+     "uniprot_pos": 114,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 113,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "115",
+     "uniprot_pos": 115,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 114,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "116",
+     "uniprot_pos": 116,
+     "uniprot_residue": "M",
+     "structure_residue": "M",
+     "esm2_residue_index_0based": 115,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 118,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 117,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "119",
+     "uniprot_pos": 119,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 118,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "120",
+     "uniprot_pos": 120,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 119,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "122",
+     "uniprot_pos": 122,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 121,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "166",
+     "uniprot_pos": 166,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 165,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "170",
+     "uniprot_pos": 170,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 169,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "175",
+     "uniprot_pos": 175,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 174,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "181",
+     "uniprot_pos": 181,
+     "uniprot_residue": "E",
+     "structure_residue": "E",
+     "esm2_residue_index_0based": 180,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "182",
+     "uniprot_pos": 182,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 181,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "183",
+     "uniprot_pos": 183,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 182,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "184",
+     "uniprot_pos": 184,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 183,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "185",
+     "uniprot_pos": 185,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 184,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "189",
+     "uniprot_pos": 189,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 188,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 190,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 189,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "193",
+     "uniprot_pos": 193,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 192,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "194",
+     "uniprot_pos": 194,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 193,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "197",
+     "uniprot_pos": 197,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 196,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "198",
+     "uniprot_pos": 198,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 197,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "386",
+     "uniprot_pos": 386,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 385,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "389",
+     "uniprot_pos": 389,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 388,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "390",
+     "uniprot_pos": 390,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 389,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "393",
+     "uniprot_pos": 393,
+     "uniprot_residue": "H",
+     "structure_residue": "H",
+     "esm2_residue_index_0based": 392,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "405",
+     "uniprot_pos": 405,
+     "uniprot_residue": "P",
+     "structure_residue": "P",
+     "esm2_residue_index_0based": 404,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "408",
+     "uniprot_pos": 408,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 407,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "409",
+     "uniprot_pos": 409,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 408,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "412",
+     "uniprot_pos": 412,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 411,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "415",
+     "uniprot_pos": 415,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 414,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "416",
+     "uniprot_pos": 416,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 415,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "DRD3": {
+   "uniprot": "P35462",
+   "pdb_id": "7CMV",
+   "receptor_chain": "R",
+   "n_pocket_residues": 29,
+   "n_mapped": 29,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 0,
+   "n_mismatches_vs_uniprot": 0,
+   "anchor": {
+    "position": 110,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    106,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    117,
+    163,
+    167,
+    182,
+    187,
+    188,
+    189,
+    191,
+    192,
+    195,
+    340,
+    341,
+    344,
+    345,
+    348,
+    364,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "107",
+     "uniprot_pos": 107,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 106,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 110,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 109,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "111",
+     "uniprot_pos": 111,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 110,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "112",
+     "uniprot_pos": 112,
+     "uniprot_residue": "M",
+     "structure_residue": "M",
+     "esm2_residue_index_0based": 111,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 113,
+     "uniprot_residue": "M",
+     "structure_residue": "M",
+     "esm2_residue_index_0based": 112,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "114",
+     "uniprot_pos": 114,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 113,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "115",
+     "uniprot_pos": 115,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 114,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 118,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 117,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "164",
+     "uniprot_pos": 164,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 163,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "168",
+     "uniprot_pos": 168,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 167,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "183",
+     "uniprot_pos": 183,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 182,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "188",
+     "uniprot_pos": 188,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 187,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "189",
+     "uniprot_pos": 189,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 188,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 190,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 189,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "192",
+     "uniprot_pos": 192,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 191,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "193",
+     "uniprot_pos": 193,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 192,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "196",
+     "uniprot_pos": 196,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 195,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "341",
+     "uniprot_pos": 341,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 340,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "342",
+     "uniprot_pos": 342,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 341,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "345",
+     "uniprot_pos": 345,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 344,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "346",
+     "uniprot_pos": 346,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 345,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "349",
+     "uniprot_pos": 349,
+     "uniprot_residue": "H",
+     "structure_residue": "H",
+     "esm2_residue_index_0based": 348,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "365",
+     "uniprot_pos": 365,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 364,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "368",
+     "uniprot_pos": 368,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 367,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "369",
+     "uniprot_pos": 369,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 368,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "370",
+     "uniprot_pos": 370,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 369,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "371",
+     "uniprot_pos": 371,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 370,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "372",
+     "uniprot_pos": 372,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 371,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "373",
+     "uniprot_pos": 373,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 372,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "HTR1A": {
+   "uniprot": "P08908",
+   "pdb_id": "8FY8",
+   "receptor_chain": "R",
+   "n_pocket_residues": 28,
+   "n_mapped": 28,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 0,
+   "n_mismatches_vs_uniprot": 0,
+   "anchor": {
+    "position": 116,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    88,
+    115,
+    116,
+    117,
+    119,
+    120,
+    123,
+    166,
+    188,
+    189,
+    194,
+    195,
+    198,
+    199,
+    202,
+    203,
+    357,
+    360,
+    361,
+    364,
+    365,
+    368,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "89",
+     "uniprot_pos": 89,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 88,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "116",
+     "uniprot_pos": 116,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 115,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "117",
+     "uniprot_pos": 117,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 116,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 118,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 117,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "120",
+     "uniprot_pos": 120,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 119,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "121",
+     "uniprot_pos": 121,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 120,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "124",
+     "uniprot_pos": 124,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 123,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "167",
+     "uniprot_pos": 167,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 166,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "189",
+     "uniprot_pos": 189,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 188,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 190,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 189,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "195",
+     "uniprot_pos": 195,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 194,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "196",
+     "uniprot_pos": 196,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 195,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "199",
+     "uniprot_pos": 199,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 198,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "200",
+     "uniprot_pos": 200,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 199,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "203",
+     "uniprot_pos": 203,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 202,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "204",
+     "uniprot_pos": 204,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 203,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "358",
+     "uniprot_pos": 358,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 357,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "361",
+     "uniprot_pos": 361,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 360,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "362",
+     "uniprot_pos": 362,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 361,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "365",
+     "uniprot_pos": 365,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 364,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "366",
+     "uniprot_pos": 366,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 365,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "369",
+     "uniprot_pos": 369,
+     "uniprot_residue": "P",
+     "structure_residue": "P",
+     "esm2_residue_index_0based": 368,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "385",
+     "uniprot_pos": 385,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 384,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "386",
+     "uniprot_pos": 386,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 385,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "387",
+     "uniprot_pos": 387,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 386,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "388",
+     "uniprot_pos": 388,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 387,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "389",
+     "uniprot_pos": 389,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 388,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "390",
+     "uniprot_pos": 390,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 389,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "HTR2A": {
+   "uniprot": "P28223",
+   "pdb_id": "6A94",
+   "receptor_chain": "A",
+   "n_pocket_residues": 29,
+   "n_mapped": 29,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 23,
+   "n_mismatches_vs_uniprot": 0,
+   "anchor": {
+    "position": 155,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    126,
+    150,
+    151,
+    154,
+    155,
+    156,
+    158,
+    159,
+    162,
+    209,
+    226,
+    227,
+    228,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    241,
+    242,
+    331,
+    335,
+    338,
+    339,
+    342,
+    365,
+    369
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "127",
+     "uniprot_pos": 127,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 126,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "151",
+     "uniprot_pos": 151,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 150,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "152",
+     "uniprot_pos": 152,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 151,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "155",
+     "uniprot_pos": 155,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 154,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "156",
+     "uniprot_pos": 156,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 155,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "157",
+     "uniprot_pos": 157,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 156,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "159",
+     "uniprot_pos": 159,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 158,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "160",
+     "uniprot_pos": 160,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 159,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "163",
+     "uniprot_pos": 163,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 162,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "210",
+     "uniprot_pos": 210,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 209,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "227",
+     "uniprot_pos": 227,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 226,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "228",
+     "uniprot_pos": 228,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 227,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "229",
+     "uniprot_pos": 229,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 228,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "234",
+     "uniprot_pos": 234,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 233,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "235",
+     "uniprot_pos": 235,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 234,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "236",
+     "uniprot_pos": 236,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 235,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "237",
+     "uniprot_pos": 237,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 236,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "238",
+     "uniprot_pos": 238,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 237,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "239",
+     "uniprot_pos": 239,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 238,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "240",
+     "uniprot_pos": 240,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 239,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "242",
+     "uniprot_pos": 242,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 241,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "243",
+     "uniprot_pos": 243,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 242,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "332",
+     "uniprot_pos": 332,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 331,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "336",
+     "uniprot_pos": 336,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 335,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "339",
+     "uniprot_pos": 339,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 338,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "340",
+     "uniprot_pos": 340,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 339,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "343",
+     "uniprot_pos": 343,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 342,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "366",
+     "uniprot_pos": 366,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 365,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "370",
+     "uniprot_pos": 370,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 369,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "CHRM1": {
+   "uniprot": "P11229",
+   "pdb_id": "6ZFZ",
+   "receptor_chain": "A",
+   "n_pocket_residues": 30,
+   "n_mapped": 30,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 19,
+   "n_mismatches_vs_uniprot": 2,
+   "anchor": {
+    "position": 105,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    76,
+    77,
+    78,
+    80,
+    81,
+    84,
+    90,
+    96,
+    97,
+    100,
+    101,
+    104,
+    105,
+    106,
+    108,
+    109,
+    110,
+    112,
+    156,
+    177,
+    178,
+    191,
+    195,
+    377,
+    380,
+    402,
+    403,
+    404,
+    406,
+    407
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "77",
+     "uniprot_pos": 77,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 76,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "78",
+     "uniprot_pos": 78,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 77,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "79",
+     "uniprot_pos": 79,
+     "uniprot_residue": "M",
+     "structure_residue": "M",
+     "esm2_residue_index_0based": 78,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "81",
+     "uniprot_pos": 81,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 80,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "82",
+     "uniprot_pos": 82,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 81,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "85",
+     "uniprot_pos": 85,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 84,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "91",
+     "uniprot_pos": 91,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 90,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "97",
+     "uniprot_pos": 97,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 96,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "98",
+     "uniprot_pos": 98,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 97,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "101",
+     "uniprot_pos": 101,
+     "uniprot_residue": "W",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 100,
+     "in_paper1_pocket": false,
+     "matches_uniprot": false
+    },
+    {
+     "auth_seq_id": "102",
+     "uniprot_pos": 102,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 101,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "105",
+     "uniprot_pos": 105,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 104,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "106",
+     "uniprot_pos": 106,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 105,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "107",
+     "uniprot_pos": 107,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 106,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "109",
+     "uniprot_pos": 109,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 108,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 110,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 109,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "111",
+     "uniprot_pos": 111,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 110,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 113,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 112,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "157",
+     "uniprot_pos": 157,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 156,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "178",
+     "uniprot_pos": 178,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 177,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "179",
+     "uniprot_pos": 179,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 178,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "192",
+     "uniprot_pos": 192,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 191,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "196",
+     "uniprot_pos": 196,
+     "uniprot_residue": "A",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 195,
+     "in_paper1_pocket": false,
+     "matches_uniprot": false
+    },
+    {
+     "auth_seq_id": "378",
+     "uniprot_pos": 378,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 377,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "381",
+     "uniprot_pos": 381,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 380,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "403",
+     "uniprot_pos": 403,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 402,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "404",
+     "uniprot_pos": 404,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 403,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "405",
+     "uniprot_pos": 405,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 404,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "407",
+     "uniprot_pos": 407,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 406,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "408",
+     "uniprot_pos": 408,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 407,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "ADRA2A": {
+   "uniprot": "P08913",
+   "pdb_id": "6KUX",
+   "receptor_chain": "A",
+   "n_pocket_residues": 24,
+   "n_mapped": 24,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 0,
+   "n_mismatches_vs_uniprot": 0,
+   "anchor": {
+    "position": 128,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    100,
+    104,
+    107,
+    123,
+    124,
+    127,
+    128,
+    131,
+    132,
+    202,
+    203,
+    204,
+    205,
+    214,
+    215,
+    218,
+    219,
+    401,
+    404,
+    405,
+    408,
+    422,
+    426,
+    430
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "86",
+     "uniprot_pos": 101,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 100,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "90",
+     "uniprot_pos": 105,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 104,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "93",
+     "uniprot_pos": 108,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 107,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "109",
+     "uniprot_pos": 124,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 123,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 125,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 124,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 128,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 127,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "114",
+     "uniprot_pos": 129,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 128,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "117",
+     "uniprot_pos": 132,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 131,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 133,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 132,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "188",
+     "uniprot_pos": 203,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 202,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "189",
+     "uniprot_pos": 204,
+     "uniprot_residue": "E",
+     "structure_residue": "E",
+     "esm2_residue_index_0based": 203,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 205,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 204,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "191",
+     "uniprot_pos": 206,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 205,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "200",
+     "uniprot_pos": 215,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 214,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "201",
+     "uniprot_pos": 216,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 215,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "204",
+     "uniprot_pos": 219,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 218,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "205",
+     "uniprot_pos": 220,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 219,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "387",
+     "uniprot_pos": 402,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 401,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "390",
+     "uniprot_pos": 405,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 404,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "391",
+     "uniprot_pos": 406,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 405,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "394",
+     "uniprot_pos": 409,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 408,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "408",
+     "uniprot_pos": 423,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 422,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "412",
+     "uniprot_pos": 427,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 426,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "416",
+     "uniprot_pos": 431,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 430,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "ADRB2": {
+   "uniprot": "P07550",
+   "pdb_id": "2RH1",
+   "receptor_chain": "A",
+   "n_pocket_residues": 27,
+   "n_mapped": 27,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 0,
+   "n_mismatches_vs_uniprot": 0,
+   "anchor": {
+    "position": 113,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    81,
+    85,
+    108,
+    109,
+    112,
+    113,
+    114,
+    116,
+    117,
+    190,
+    192,
+    194,
+    198,
+    199,
+    200,
+    202,
+    203,
+    204,
+    206,
+    207,
+    285,
+    288,
+    289,
+    292,
+    307,
+    311,
+    315
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "82",
+     "uniprot_pos": 82,
+     "uniprot_residue": "M",
+     "structure_residue": "M",
+     "esm2_residue_index_0based": 81,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "86",
+     "uniprot_pos": 86,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 85,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "109",
+     "uniprot_pos": 109,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 108,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 110,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 109,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 113,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 112,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "114",
+     "uniprot_pos": 114,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 113,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "115",
+     "uniprot_pos": 115,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 114,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "117",
+     "uniprot_pos": 117,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 116,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 118,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 117,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "191",
+     "uniprot_pos": 191,
+     "uniprot_residue": "C",
+     "structure_residue": "C",
+     "esm2_residue_index_0based": 190,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "193",
+     "uniprot_pos": 193,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 192,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "195",
+     "uniprot_pos": 195,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 194,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "199",
+     "uniprot_pos": 199,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 198,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "200",
+     "uniprot_pos": 200,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 199,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "201",
+     "uniprot_pos": 201,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 200,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "203",
+     "uniprot_pos": 203,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 202,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "204",
+     "uniprot_pos": 204,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 203,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "205",
+     "uniprot_pos": 205,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 204,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "207",
+     "uniprot_pos": 207,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 206,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "208",
+     "uniprot_pos": 208,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 207,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "286",
+     "uniprot_pos": 286,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 285,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "289",
+     "uniprot_pos": 289,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 288,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "290",
+     "uniprot_pos": 290,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 289,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "293",
+     "uniprot_pos": 293,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 292,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "308",
+     "uniprot_pos": 308,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 307,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "312",
+     "uniprot_pos": 312,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 311,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "316",
+     "uniprot_pos": 316,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 315,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "HRH1": {
+   "uniprot": "P35367",
+   "pdb_id": "8X5Y",
+   "receptor_chain": "B",
+   "n_pocket_residues": 33,
+   "n_mapped": 33,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 0,
+   "n_mismatches_vs_uniprot": 0,
+   "anchor": {
+    "position": 107,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    79,
+    83,
+    86,
+    87,
+    102,
+    103,
+    106,
+    107,
+    108,
+    110,
+    111,
+    112,
+    114,
+    157,
+    183,
+    189,
+    190,
+    193,
+    194,
+    195,
+    197,
+    198,
+    202,
+    423,
+    427,
+    430,
+    431,
+    434,
+    449,
+    450,
+    453,
+    454,
+    457
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "80",
+     "uniprot_pos": 80,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 79,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "84",
+     "uniprot_pos": 84,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 83,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "87",
+     "uniprot_pos": 87,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 86,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "88",
+     "uniprot_pos": 88,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 87,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "103",
+     "uniprot_pos": 103,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 102,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "104",
+     "uniprot_pos": 104,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 103,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "107",
+     "uniprot_pos": 107,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 106,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "108",
+     "uniprot_pos": 108,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 107,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "109",
+     "uniprot_pos": 109,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 108,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "111",
+     "uniprot_pos": 111,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 110,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "112",
+     "uniprot_pos": 112,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 111,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 113,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 112,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "115",
+     "uniprot_pos": 115,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 114,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "158",
+     "uniprot_pos": 158,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 157,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "184",
+     "uniprot_pos": 184,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 183,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 190,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 189,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "191",
+     "uniprot_pos": 191,
+     "uniprot_residue": "K",
+     "structure_residue": "K",
+     "esm2_residue_index_0based": 190,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "194",
+     "uniprot_pos": 194,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 193,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "195",
+     "uniprot_pos": 195,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 194,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "196",
+     "uniprot_pos": 196,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 195,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "198",
+     "uniprot_pos": 198,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 197,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "199",
+     "uniprot_pos": 199,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 198,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "203",
+     "uniprot_pos": 203,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 202,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "424",
+     "uniprot_pos": 424,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 423,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "428",
+     "uniprot_pos": 428,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 427,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "431",
+     "uniprot_pos": 431,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 430,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "432",
+     "uniprot_pos": 432,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 431,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "435",
+     "uniprot_pos": 435,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 434,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "450",
+     "uniprot_pos": 450,
+     "uniprot_residue": "H",
+     "structure_residue": "H",
+     "esm2_residue_index_0based": 449,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "451",
+     "uniprot_pos": 451,
+     "uniprot_residue": "M",
+     "structure_residue": "M",
+     "esm2_residue_index_0based": 450,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "454",
+     "uniprot_pos": 454,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 453,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "455",
+     "uniprot_pos": 455,
+     "uniprot_residue": "W",
+     "structure_residue": "W",
+     "esm2_residue_index_0based": 454,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "458",
+     "uniprot_pos": 458,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 457,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "GABRA1": {
+   "uniprot": "P14867",
+   "pdb_id": "6HUJ",
+   "receptor_chain": "A",
+   "n_pocket_residues": 21,
+   "n_mapped": 21,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 8,
+   "n_mismatches_vs_uniprot": 0,
+   "anchor": null,
+   "esm2_residue_indices_0based": [
+    275,
+    325,
+    328,
+    329,
+    332,
+    333,
+    336,
+    337,
+    338,
+    339,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418,
+    419,
+    421,
+    422,
+    426
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "249",
+     "uniprot_pos": 276,
+     "uniprot_residue": "R",
+     "structure_residue": "R",
+     "esm2_residue_index_0based": 275,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "299",
+     "uniprot_pos": 326,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 325,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "302",
+     "uniprot_pos": 329,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 328,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "303",
+     "uniprot_pos": 330,
+     "uniprot_residue": "E",
+     "structure_residue": "E",
+     "esm2_residue_index_0based": 329,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "306",
+     "uniprot_pos": 333,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 332,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "307",
+     "uniprot_pos": 334,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 333,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "310",
+     "uniprot_pos": 337,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 336,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "311",
+     "uniprot_pos": 338,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 337,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "312",
+     "uniprot_pos": 339,
+     "uniprot_residue": "K",
+     "structure_residue": "K",
+     "esm2_residue_index_0based": 338,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "313",
+     "uniprot_pos": 340,
+     "uniprot_residue": "R",
+     "structure_residue": "R",
+     "esm2_residue_index_0based": 339,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "386",
+     "uniprot_pos": 413,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 412,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "387",
+     "uniprot_pos": 414,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 413,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "388",
+     "uniprot_pos": 415,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 414,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "389",
+     "uniprot_pos": 416,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 415,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "390",
+     "uniprot_pos": 417,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 416,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "391",
+     "uniprot_pos": 418,
+     "uniprot_residue": "K",
+     "structure_residue": "K",
+     "esm2_residue_index_0based": 417,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "392",
+     "uniprot_pos": 419,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 418,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "393",
+     "uniprot_pos": 420,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 419,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "395",
+     "uniprot_pos": 422,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 421,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "396",
+     "uniprot_pos": 423,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 422,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "400",
+     "uniprot_pos": 427,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 426,
+     "in_paper1_pocket": true,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "SERT": {
+   "uniprot": "P31645",
+   "pdb_id": "5I6X",
+   "receptor_chain": "A",
+   "n_pocket_residues": 36,
+   "n_mapped": 36,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 0,
+   "n_mismatches_vs_uniprot": 1,
+   "anchor": {
+    "position": 98,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    93,
+    94,
+    95,
+    96,
+    97,
+    100,
+    167,
+    168,
+    169,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    340,
+    342,
+    367,
+    434,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    445,
+    496,
+    497,
+    500
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "94",
+     "uniprot_pos": 94,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 93,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "95",
+     "uniprot_pos": 95,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 94,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "96",
+     "uniprot_pos": 96,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 95,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "97",
+     "uniprot_pos": 97,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 96,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "98",
+     "uniprot_pos": 98,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 97,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "101",
+     "uniprot_pos": 101,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 100,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "168",
+     "uniprot_pos": 168,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 167,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "169",
+     "uniprot_pos": 169,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 168,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "170",
+     "uniprot_pos": 170,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 169,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "172",
+     "uniprot_pos": 172,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 171,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "173",
+     "uniprot_pos": 173,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 172,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "174",
+     "uniprot_pos": 174,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 173,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "175",
+     "uniprot_pos": 175,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 174,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "176",
+     "uniprot_pos": 176,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 175,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "177",
+     "uniprot_pos": 177,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 176,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "334",
+     "uniprot_pos": 334,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 333,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "335",
+     "uniprot_pos": 335,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 334,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "336",
+     "uniprot_pos": 336,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 335,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "337",
+     "uniprot_pos": 337,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 336,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "338",
+     "uniprot_pos": 338,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 337,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "339",
+     "uniprot_pos": 339,
+     "uniprot_residue": "P",
+     "structure_residue": "P",
+     "esm2_residue_index_0based": 338,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "341",
+     "uniprot_pos": 341,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 340,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "343",
+     "uniprot_pos": 343,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 342,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "368",
+     "uniprot_pos": 368,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 367,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "435",
+     "uniprot_pos": 435,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 434,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "437",
+     "uniprot_pos": 437,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 436,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "438",
+     "uniprot_pos": 438,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 437,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "439",
+     "uniprot_pos": 439,
+     "uniprot_residue": "T",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 438,
+     "in_paper1_pocket": false,
+     "matches_uniprot": false
+    },
+    {
+     "auth_seq_id": "440",
+     "uniprot_pos": 440,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 439,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "441",
+     "uniprot_pos": 441,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 440,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "442",
+     "uniprot_pos": 442,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 441,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "443",
+     "uniprot_pos": 443,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 442,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "446",
+     "uniprot_pos": 446,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 445,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "497",
+     "uniprot_pos": 497,
+     "uniprot_residue": "T",
+     "structure_residue": "T",
+     "esm2_residue_index_0based": 496,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "498",
+     "uniprot_pos": 498,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 497,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "501",
+     "uniprot_pos": 501,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 500,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    }
+   ]
+  },
+  "DAT": {
+   "uniprot": "Q01959",
+   "pdb_id": "8Y2D",
+   "receptor_chain": "A",
+   "n_pocket_residues": 28,
+   "n_mapped": 28,
+   "n_unmapped": 0,
+   "unmapped": [],
+   "n_in_paper1_pocket": 0,
+   "n_mismatches_vs_uniprot": 0,
+   "anchor": {
+    "position": 79,
+    "residue": "D",
+    "present": true
+   },
+   "esm2_residue_indices_0based": [
+    75,
+    76,
+    78,
+    79,
+    80,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    155,
+    156,
+    319,
+    320,
+    321,
+    322,
+    325,
+    327,
+    418,
+    421,
+    422,
+    423,
+    424,
+    425,
+    426,
+    429
+   ],
+   "mapping": [
+    {
+     "auth_seq_id": "76",
+     "uniprot_pos": 76,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 75,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "77",
+     "uniprot_pos": 77,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 76,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "79",
+     "uniprot_pos": 79,
+     "uniprot_residue": "D",
+     "structure_residue": "D",
+     "esm2_residue_index_0based": 78,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "80",
+     "uniprot_pos": 80,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 79,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "81",
+     "uniprot_pos": 81,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 80,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "148",
+     "uniprot_pos": 148,
+     "uniprot_residue": "I",
+     "structure_residue": "I",
+     "esm2_residue_index_0based": 147,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "149",
+     "uniprot_pos": 149,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 148,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "150",
+     "uniprot_pos": 150,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 149,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "151",
+     "uniprot_pos": 151,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 150,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "152",
+     "uniprot_pos": 152,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 151,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "153",
+     "uniprot_pos": 153,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 152,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "154",
+     "uniprot_pos": 154,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 153,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "156",
+     "uniprot_pos": 156,
+     "uniprot_residue": "Y",
+     "structure_residue": "Y",
+     "esm2_residue_index_0based": 155,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "157",
+     "uniprot_pos": 157,
+     "uniprot_residue": "N",
+     "structure_residue": "N",
+     "esm2_residue_index_0based": 156,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "320",
+     "uniprot_pos": 320,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 319,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "321",
+     "uniprot_pos": 321,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 320,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "322",
+     "uniprot_pos": 322,
+     "uniprot_residue": "L",
+     "structure_residue": "L",
+     "esm2_residue_index_0based": 321,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "323",
+     "uniprot_pos": 323,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 322,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "326",
+     "uniprot_pos": 326,
+     "uniprot_residue": "F",
+     "structure_residue": "F",
+     "esm2_residue_index_0based": 325,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "328",
+     "uniprot_pos": 328,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 327,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "419",
+     "uniprot_pos": 419,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 418,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "422",
+     "uniprot_pos": 422,
+     "uniprot_residue": "S",
+     "structure_residue": "S",
+     "esm2_residue_index_0based": 421,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "423",
+     "uniprot_pos": 423,
+     "uniprot_residue": "A",
+     "structure_residue": "A",
+     "esm2_residue_index_0based": 422,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "424",
+     "uniprot_pos": 424,
+     "uniprot_residue": "M",
+     "structure_residue": "M",
+     "esm2_residue_index_0based": 423,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "425",
+     "uniprot_pos": 425,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 424,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "426",
+     "uniprot_pos": 426,
+     "uniprot_residue": "G",
+     "structure_residue": "G",
+     "esm2_residue_index_0based": 425,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "427",
+     "uniprot_pos": 427,
+     "uniprot_residue": "M",
+     "structure_residue": "M",
+     "esm2_residue_index_0based": 426,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    },
+    {
+     "auth_seq_id": "430",
+     "uniprot_pos": 430,
+     "uniprot_residue": "V",
+     "structure_residue": "V",
+     "esm2_residue_index_0based": 429,
+     "in_paper1_pocket": false,
+     "matches_uniprot": true
+    }
+   ]
+  }
+ },
+ "totals": {
+  "n_receptors": 11,
+  "total_unmapped": 0,
+  "anchor_failures": []
+ }
+}

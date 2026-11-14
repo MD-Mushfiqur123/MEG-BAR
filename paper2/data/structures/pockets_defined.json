@@ -1,0 +1,2404 @@
+{
+ "purpose": "Paper 2 Phase 7 - orthosteric pockets from reference structures",
+ "generated_utc": "2026-11-14T01:56:21Z",
+ "pocket_radius_a": 6.5,
+ "selection_rule": "if Paper 1 pocket annotation exists: ligand whose 6.5 A pocket maximizes overlap with it (UniProt numbering); otherwise the ligand whose pocket contains the conserved anchor residue (Asp3.32 / SERT D98 / DAT D79)",
+ "receptors": {
+  "DRD2": {
+   "uniprot": "P14416",
+   "pdb_id": "7JVR",
+   "receptor_chain": "R",
+   "chain_length_in_structure": 269,
+   "chain_alignment_identity": 1.0,
+   "chain_alignment_coverage": 0.6072,
+   "selection_rule": "anchor_first_D114+paper1_pocket_overlap",
+   "ligand": {
+    "comp_id": "08Y",
+    "name": "bromoergocryptine",
+    "n_ligand_atoms": 43,
+    "n_pocket_residues": 36,
+    "n_mapped_to_uniprot": 36,
+    "overlap_with_paper1_pocket": 11,
+    "frac_of_paper1_pocket": 0.44,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "08Y",
+     "name": "bromoergocryptine",
+     "n_ligand_atoms": 43,
+     "n_pocket_residues": 36,
+     "n_mapped_to_uniprot": 36,
+     "overlap_with_paper1_pocket": 11,
+     "frac_of_paper1_pocket": 0.44,
+     "contains_anchor": true
+    }
+   ],
+   "n_pocket_residues": 36,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "91",
+     "uniprot_pos": 91,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "94",
+     "uniprot_pos": 94,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "107",
+     "uniprot_pos": 107,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 110,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "111",
+     "uniprot_pos": 111,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "114",
+     "uniprot_pos": 114,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "115",
+     "uniprot_pos": 115,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "116",
+     "uniprot_pos": 116,
+     "residue": "MET"
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 118,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "119",
+     "uniprot_pos": 119,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "120",
+     "uniprot_pos": 120,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "122",
+     "uniprot_pos": 122,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "166",
+     "uniprot_pos": 166,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "170",
+     "uniprot_pos": 170,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "175",
+     "uniprot_pos": 175,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "181",
+     "uniprot_pos": 181,
+     "residue": "GLU"
+    },
+    {
+     "auth_seq_id": "182",
+     "uniprot_pos": 182,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "183",
+     "uniprot_pos": 183,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "184",
+     "uniprot_pos": 184,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "185",
+     "uniprot_pos": 185,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "189",
+     "uniprot_pos": 189,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 190,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "193",
+     "uniprot_pos": 193,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "194",
+     "uniprot_pos": 194,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "197",
+     "uniprot_pos": 197,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "198",
+     "uniprot_pos": 198,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "386",
+     "uniprot_pos": 386,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "389",
+     "uniprot_pos": 389,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "390",
+     "uniprot_pos": 390,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "393",
+     "uniprot_pos": 393,
+     "residue": "HIS"
+    },
+    {
+     "auth_seq_id": "405",
+     "uniprot_pos": 405,
+     "residue": "PRO"
+    },
+    {
+     "auth_seq_id": "408",
+     "uniprot_pos": 408,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "409",
+     "uniprot_pos": 409,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "412",
+     "uniprot_pos": 412,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "415",
+     "uniprot_pos": 415,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "416",
+     "uniprot_pos": 416,
+     "residue": "TYR"
+    }
+   ],
+   "interface_other_chains": {}
+  },
+  "DRD3": {
+   "uniprot": "P35462",
+   "pdb_id": "7CMV",
+   "receptor_chain": "R",
+   "chain_length_in_structure": 272,
+   "chain_alignment_identity": 1.0,
+   "chain_alignment_coverage": 0.68,
+   "selection_rule": "anchor_first_D110",
+   "ligand": {
+    "comp_id": "G6O",
+    "name": "(4aR,10bR)-4-propyl-3,4a,5,10b-tetrahydro-2H-chromeno[4,3-b][1,4]oxazin-9-ol",
+    "n_ligand_atoms": 18,
+    "n_pocket_residues": 29,
+    "n_mapped_to_uniprot": 29,
+    "overlap_with_paper1_pocket": 0,
+    "frac_of_paper1_pocket": 0.0,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "G6O",
+     "name": "(4aR,10bR)-4-propyl-3,4a,5,10b-tetrahydro-2H-chromeno[4,3-b][1,4]oxazin-9-ol",
+     "n_ligand_atoms": 18,
+     "n_pocket_residues": 29,
+     "n_mapped_to_uniprot": 29,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": true
+    }
+   ],
+   "n_pocket_residues": 29,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "107",
+     "uniprot_pos": 107,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 110,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "111",
+     "uniprot_pos": 111,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "112",
+     "uniprot_pos": 112,
+     "residue": "MET"
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 113,
+     "residue": "MET"
+    },
+    {
+     "auth_seq_id": "114",
+     "uniprot_pos": 114,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "115",
+     "uniprot_pos": 115,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 118,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "164",
+     "uniprot_pos": 164,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "168",
+     "uniprot_pos": 168,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "183",
+     "uniprot_pos": 183,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "188",
+     "uniprot_pos": 188,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "189",
+     "uniprot_pos": 189,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 190,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "192",
+     "uniprot_pos": 192,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "193",
+     "uniprot_pos": 193,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "196",
+     "uniprot_pos": 196,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "341",
+     "uniprot_pos": 341,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "342",
+     "uniprot_pos": 342,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "345",
+     "uniprot_pos": 345,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "346",
+     "uniprot_pos": 346,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "349",
+     "uniprot_pos": 349,
+     "residue": "HIS"
+    },
+    {
+     "auth_seq_id": "365",
+     "uniprot_pos": 365,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "368",
+     "uniprot_pos": 368,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "369",
+     "uniprot_pos": 369,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "370",
+     "uniprot_pos": 370,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "371",
+     "uniprot_pos": 371,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "372",
+     "uniprot_pos": 372,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "373",
+     "uniprot_pos": 373,
+     "residue": "TYR"
+    }
+   ],
+   "interface_other_chains": {}
+  },
+  "HTR1A": {
+   "uniprot": "P08908",
+   "pdb_id": "8FY8",
+   "receptor_chain": "R",
+   "chain_length_in_structure": 286,
+   "chain_alignment_identity": 0.9965,
+   "chain_alignment_coverage": 0.6777,
+   "selection_rule": "anchor_first_D116",
+   "ligand": {
+    "comp_id": "YFW",
+    "name": "2-(5-methoxy-1H-indol-3-yl)-N,N-dimethylethan-1-amine",
+    "n_ligand_atoms": 16,
+    "n_pocket_residues": 28,
+    "n_mapped_to_uniprot": 28,
+    "overlap_with_paper1_pocket": 0,
+    "frac_of_paper1_pocket": 0.0,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "YFW",
+     "name": "2-(5-methoxy-1H-indol-3-yl)-N,N-dimethylethan-1-amine",
+     "n_ligand_atoms": 16,
+     "n_pocket_residues": 28,
+     "n_mapped_to_uniprot": 28,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": true
+    },
+    {
+     "comp_id": "J40",
+     "name": "[(2R)-1-[oxidanyl-[(2R,3R,5S,6R)-2,3,5,6-tetrakis(oxidanyl)-4-phosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-3-tetradecanoyloxy-propan-2-yl] (5E,8E)-hexadeca-5,8,11,14-tetraenoate",
+     "n_ligand_atoms": 57,
+     "n_pocket_residues": 27,
+     "n_mapped_to_uniprot": 27,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "Y01",
+     "name": "CHOLESTEROL HEMISUCCINATE",
+     "n_ligand_atoms": 70,
+     "n_pocket_residues": 36,
+     "n_mapped_to_uniprot": 36,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    }
+   ],
+   "n_pocket_residues": 28,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "89",
+     "uniprot_pos": 89,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "116",
+     "uniprot_pos": 116,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "117",
+     "uniprot_pos": 117,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 118,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "120",
+     "uniprot_pos": 120,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "121",
+     "uniprot_pos": 121,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "124",
+     "uniprot_pos": 124,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "167",
+     "uniprot_pos": 167,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "189",
+     "uniprot_pos": 189,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 190,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "195",
+     "uniprot_pos": 195,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "196",
+     "uniprot_pos": 196,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "199",
+     "uniprot_pos": 199,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "200",
+     "uniprot_pos": 200,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "203",
+     "uniprot_pos": 203,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "204",
+     "uniprot_pos": 204,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "358",
+     "uniprot_pos": 358,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "361",
+     "uniprot_pos": 361,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "362",
+     "uniprot_pos": 362,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "365",
+     "uniprot_pos": 365,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "366",
+     "uniprot_pos": 366,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "369",
+     "uniprot_pos": 369,
+     "residue": "PRO"
+    },
+    {
+     "auth_seq_id": "385",
+     "uniprot_pos": 385,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "386",
+     "uniprot_pos": 386,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "387",
+     "uniprot_pos": 387,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "388",
+     "uniprot_pos": 388,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "389",
+     "uniprot_pos": 389,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "390",
+     "uniprot_pos": 390,
+     "residue": "TYR"
+    }
+   ],
+   "interface_other_chains": {}
+  },
+  "HTR2A": {
+   "uniprot": "P28223",
+   "pdb_id": "6A94",
+   "receptor_chain": "A",
+   "chain_length_in_structure": 370,
+   "chain_alignment_identity": 0.9121,
+   "chain_alignment_coverage": 0.7006,
+   "selection_rule": "anchor_first_D155+paper1_pocket_overlap",
+   "ligand": {
+    "comp_id": "ZOT",
+    "name": "2-(3-chloranylbenzo[b][1]benzothiepin-5-yl)oxy-N,N-dimethyl-ethanamine",
+    "n_ligand_atoms": 44,
+    "n_pocket_residues": 29,
+    "n_mapped_to_uniprot": 29,
+    "overlap_with_paper1_pocket": 23,
+    "frac_of_paper1_pocket": 0.1797,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "ZOT",
+     "name": "2-(3-chloranylbenzo[b][1]benzothiepin-5-yl)oxy-N,N-dimethyl-ethanamine",
+     "n_ligand_atoms": 44,
+     "n_pocket_residues": 29,
+     "n_mapped_to_uniprot": 29,
+     "overlap_with_paper1_pocket": 23,
+     "frac_of_paper1_pocket": 0.1797,
+     "contains_anchor": true
+    },
+    {
+     "comp_id": "CLR",
+     "name": "CHOLESTEROL",
+     "n_ligand_atoms": 56,
+     "n_pocket_residues": 19,
+     "n_mapped_to_uniprot": 19,
+     "overlap_with_paper1_pocket": 14,
+     "frac_of_paper1_pocket": 0.1094,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "A6L",
+     "name": "2,3-dihydroxypropyl (9Z)-octadec-9-enoate",
+     "n_ligand_atoms": 20,
+     "n_pocket_residues": 12,
+     "n_mapped_to_uniprot": 12,
+     "overlap_with_paper1_pocket": 4,
+     "frac_of_paper1_pocket": 0.0312,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "PLM",
+     "name": "PALMITIC ACID",
+     "n_ligand_atoms": 10,
+     "n_pocket_residues": 4,
+     "n_mapped_to_uniprot": 4,
+     "overlap_with_paper1_pocket": 2,
+     "frac_of_paper1_pocket": 0.0156,
+     "contains_anchor": false
+    }
+   ],
+   "n_pocket_residues": 29,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "127",
+     "uniprot_pos": 127,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "151",
+     "uniprot_pos": 151,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "152",
+     "uniprot_pos": 152,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "155",
+     "uniprot_pos": 155,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "156",
+     "uniprot_pos": 156,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "157",
+     "uniprot_pos": 157,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "159",
+     "uniprot_pos": 159,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "160",
+     "uniprot_pos": 160,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "163",
+     "uniprot_pos": 163,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "210",
+     "uniprot_pos": 210,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "227",
+     "uniprot_pos": 227,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "228",
+     "uniprot_pos": 228,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "229",
+     "uniprot_pos": 229,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "234",
+     "uniprot_pos": 234,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "235",
+     "uniprot_pos": 235,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "236",
+     "uniprot_pos": 236,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "237",
+     "uniprot_pos": 237,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "238",
+     "uniprot_pos": 238,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "239",
+     "uniprot_pos": 239,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "240",
+     "uniprot_pos": 240,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "242",
+     "uniprot_pos": 242,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "243",
+     "uniprot_pos": 243,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "332",
+     "uniprot_pos": 332,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "336",
+     "uniprot_pos": 336,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "339",
+     "uniprot_pos": 339,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "340",
+     "uniprot_pos": 340,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "343",
+     "uniprot_pos": 343,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "366",
+     "uniprot_pos": 366,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "370",
+     "uniprot_pos": 370,
+     "residue": "TYR"
+    }
+   ],
+   "interface_other_chains": {
+    "B": [
+     {
+      "auth_seq_id": "127",
+      "residue": "VAL"
+     },
+     {
+      "auth_seq_id": "151",
+      "residue": "TRP"
+     },
+     {
+      "auth_seq_id": "152",
+      "residue": "ILE"
+     },
+     {
+      "auth_seq_id": "155",
+      "residue": "ASP"
+     },
+     {
+      "auth_seq_id": "156",
+      "residue": "VAL"
+     },
+     {
+      "auth_seq_id": "157",
+      "residue": "LEU"
+     },
+     {
+      "auth_seq_id": "158",
+      "residue": "PHE"
+     },
+     {
+      "auth_seq_id": "159",
+      "residue": "SER"
+     },
+     {
+      "auth_seq_id": "160",
+      "residue": "THR"
+     },
+     {
+      "auth_seq_id": "161",
+      "residue": "ALA"
+     },
+     {
+      "auth_seq_id": "162",
+      "residue": "LYS"
+     },
+     {
+      "auth_seq_id": "163",
+      "residue": "ILE"
+     },
+     {
+      "auth_seq_id": "210",
+      "residue": "ILE"
+     },
+     {
+      "auth_seq_id": "227",
+      "residue": "CYS"
+     },
+     {
+      "auth_seq_id": "228",
+      "residue": "LEU"
+     },
+     {
+      "auth_seq_id": "229",
+      "residue": "LEU"
+     },
+     {
+      "auth_seq_id": "231",
+      "residue": "ASP"
+     },
+     {
+      "auth_seq_id": "234",
+      "residue": "PHE"
+     },
+     {
+      "auth_seq_id": "235",
+      "residue": "VAL"
+     },
+     {
+      "auth_seq_id": "236",
+      "residue": "LEU"
+     },
+     {
+      "auth_seq_id": "237",
+      "residue": "ILE"
+     },
+     {
+      "auth_seq_id": "238",
+      "residue": "GLY"
+     },
+     {
+      "auth_seq_id": "239",
+      "residue": "SER"
+     },
+     {
+      "auth_seq_id": "242",
+      "residue": "SER"
+     },
+     {
+      "auth_seq_id": "243",
+      "residue": "PHE"
+     },
+     {
+      "auth_seq_id": "332",
+      "residue": "PHE"
+     },
+     {
+      "auth_seq_id": "336",
+      "residue": "TRP"
+     },
+     {
+      "auth_seq_id": "339",
+      "residue": "PHE"
+     },
+     {
+      "auth_seq_id": "340",
+      "residue": "PHE"
+     },
+     {
+      "auth_seq_id": "343",
+      "residue": "ASN"
+     },
+     {
+      "auth_seq_id": "366",
+      "residue": "VAL"
+     },
+     {
+      "auth_seq_id": "370",
+      "residue": "TYR"
+     }
+    ]
+   }
+  },
+  "CHRM1": {
+   "uniprot": "P11229",
+   "pdb_id": "6ZFZ",
+   "receptor_chain": "A",
+   "chain_length_in_structure": 446,
+   "chain_alignment_identity": 0.7419,
+   "chain_alignment_coverage": 0.8761,
+   "selection_rule": "anchor_first_D105+paper1_pocket_overlap",
+   "ligand": {
+    "comp_id": "QJT",
+    "name": "1-[3-(4-butylpiperidin-1-yl)propyl]-3,4-dihydroquinolin-2-one",
+    "n_ligand_atoms": 24,
+    "n_pocket_residues": 30,
+    "n_mapped_to_uniprot": 30,
+    "overlap_with_paper1_pocket": 19,
+    "frac_of_paper1_pocket": 0.1484,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "QJT",
+     "name": "1-[3-(4-butylpiperidin-1-yl)propyl]-3,4-dihydroquinolin-2-one",
+     "n_ligand_atoms": 24,
+     "n_pocket_residues": 30,
+     "n_mapped_to_uniprot": 30,
+     "overlap_with_paper1_pocket": 19,
+     "frac_of_paper1_pocket": 0.1484,
+     "contains_anchor": true
+    },
+    {
+     "comp_id": "OLA",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 160,
+     "n_pocket_residues": 73,
+     "n_mapped_to_uniprot": 72,
+     "overlap_with_paper1_pocket": 36,
+     "frac_of_paper1_pocket": 0.2812,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "OLC",
+     "name": "(2R)-2,3-dihydroxypropyl (9Z)-octadec-9-enoate",
+     "n_ligand_atoms": 25,
+     "n_pocket_residues": 19,
+     "n_mapped_to_uniprot": 19,
+     "overlap_with_paper1_pocket": 13,
+     "frac_of_paper1_pocket": 0.1016,
+     "contains_anchor": false
+    }
+   ],
+   "n_pocket_residues": 30,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "77",
+     "uniprot_pos": 77,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "78",
+     "uniprot_pos": 78,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "79",
+     "uniprot_pos": 79,
+     "residue": "MET"
+    },
+    {
+     "auth_seq_id": "81",
+     "uniprot_pos": 81,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "82",
+     "uniprot_pos": 82,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "85",
+     "uniprot_pos": 85,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "91",
+     "uniprot_pos": 91,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "97",
+     "uniprot_pos": 97,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "98",
+     "uniprot_pos": 98,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "101",
+     "uniprot_pos": 101,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "102",
+     "uniprot_pos": 102,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "105",
+     "uniprot_pos": 105,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "106",
+     "uniprot_pos": 106,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "107",
+     "uniprot_pos": 107,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "109",
+     "uniprot_pos": 109,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 110,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "111",
+     "uniprot_pos": 111,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 113,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "157",
+     "uniprot_pos": 157,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "178",
+     "uniprot_pos": 178,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "179",
+     "uniprot_pos": 179,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "192",
+     "uniprot_pos": 192,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "196",
+     "uniprot_pos": 196,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "378",
+     "uniprot_pos": 378,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "381",
+     "uniprot_pos": 381,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "403",
+     "uniprot_pos": 403,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "404",
+     "uniprot_pos": 404,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "405",
+     "uniprot_pos": 405,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "407",
+     "uniprot_pos": 407,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "408",
+     "uniprot_pos": 408,
+     "residue": "TYR"
+    }
+   ],
+   "interface_other_chains": {}
+  },
+  "ADRA2A": {
+   "uniprot": "P08913",
+   "pdb_id": "6KUX",
+   "receptor_chain": "A",
+   "chain_length_in_structure": 375,
+   "chain_alignment_identity": 0.8,
+   "chain_alignment_coverage": 0.7957,
+   "selection_rule": "anchor_first_D128",
+   "ligand": {
+    "comp_id": "E3F",
+    "name": "(8~{a}~{R},12~{a}~{S},13~{a}~{S})-12-ethylsulfonyl-3-methoxy-5,6,8,8~{a},9,10,11,12~{a},13,13~{a}-decahydroisoquinolino[2,1-g][1,6]naphthyridine",
+    "n_ligand_atoms": 25,
+    "n_pocket_residues": 24,
+    "n_mapped_to_uniprot": 24,
+    "overlap_with_paper1_pocket": 0,
+    "frac_of_paper1_pocket": 0.0,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "E3F",
+     "name": "(8~{a}~{R},12~{a}~{S},13~{a}~{S})-12-ethylsulfonyl-3-methoxy-5,6,8,8~{a},9,10,11,12~{a},13,13~{a}-decahydroisoquinolino[2,1-g][1,6]naphthyridine",
+     "n_ligand_atoms": 25,
+     "n_pocket_residues": 24,
+     "n_mapped_to_uniprot": 24,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": true
+    },
+    {
+     "comp_id": "OLA",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 6,
+     "n_pocket_residues": 6,
+     "n_mapped_to_uniprot": 6,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    }
+   ],
+   "n_pocket_residues": 24,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "86",
+     "uniprot_pos": 101,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "90",
+     "uniprot_pos": 105,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "93",
+     "uniprot_pos": 108,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "109",
+     "uniprot_pos": 124,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 125,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 128,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "114",
+     "uniprot_pos": 129,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "117",
+     "uniprot_pos": 132,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 133,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "188",
+     "uniprot_pos": 203,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "189",
+     "uniprot_pos": 204,
+     "residue": "GLU"
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 205,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "191",
+     "uniprot_pos": 206,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "200",
+     "uniprot_pos": 215,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "201",
+     "uniprot_pos": 216,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "204",
+     "uniprot_pos": 219,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "205",
+     "uniprot_pos": 220,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "387",
+     "uniprot_pos": 402,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "390",
+     "uniprot_pos": 405,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "391",
+     "uniprot_pos": 406,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "394",
+     "uniprot_pos": 409,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "408",
+     "uniprot_pos": 423,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "412",
+     "uniprot_pos": 427,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "416",
+     "uniprot_pos": 431,
+     "residue": "TYR"
+    }
+   ],
+   "interface_other_chains": {}
+  },
+  "ADRB2": {
+   "uniprot": "P07550",
+   "pdb_id": "2RH1",
+   "receptor_chain": "A",
+   "chain_length_in_structure": 442,
+   "chain_alignment_identity": 0.9682,
+   "chain_alignment_coverage": 0.7603,
+   "selection_rule": "anchor_first_D113",
+   "ligand": {
+    "comp_id": "CAU",
+    "name": "(2S)-1-(9H-Carbazol-4-yloxy)-3-(isopropylamino)propan-2-ol",
+    "n_ligand_atoms": 22,
+    "n_pocket_residues": 27,
+    "n_mapped_to_uniprot": 27,
+    "overlap_with_paper1_pocket": 0,
+    "frac_of_paper1_pocket": 0.0,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "CAU",
+     "name": "(2S)-1-(9H-Carbazol-4-yloxy)-3-(isopropylamino)propan-2-ol",
+     "n_ligand_atoms": 22,
+     "n_pocket_residues": 27,
+     "n_mapped_to_uniprot": 27,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": true
+    },
+    {
+     "comp_id": "12P",
+     "name": "DODECAETHYLENE GLYCOL",
+     "n_ligand_atoms": 21,
+     "n_pocket_residues": 15,
+     "n_mapped_to_uniprot": 1,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "ACM",
+     "name": "ACETAMIDE",
+     "n_ligand_atoms": 4,
+     "n_pocket_residues": 9,
+     "n_mapped_to_uniprot": 6,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "BU1",
+     "name": "1,4-BUTANEDIOL",
+     "n_ligand_atoms": 12,
+     "n_pocket_residues": 29,
+     "n_mapped_to_uniprot": 28,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "CLR",
+     "name": "CHOLESTEROL",
+     "n_ligand_atoms": 84,
+     "n_pocket_residues": 39,
+     "n_mapped_to_uniprot": 39,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "PLM",
+     "name": "PALMITIC ACID",
+     "n_ligand_atoms": 17,
+     "n_pocket_residues": 5,
+     "n_mapped_to_uniprot": 5,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    }
+   ],
+   "n_pocket_residues": 27,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "82",
+     "uniprot_pos": 82,
+     "residue": "MET"
+    },
+    {
+     "auth_seq_id": "86",
+     "uniprot_pos": 86,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "109",
+     "uniprot_pos": 109,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "110",
+     "uniprot_pos": 110,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 113,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "114",
+     "uniprot_pos": 114,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "115",
+     "uniprot_pos": 115,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "117",
+     "uniprot_pos": 117,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "118",
+     "uniprot_pos": 118,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "191",
+     "uniprot_pos": 191,
+     "residue": "CYS"
+    },
+    {
+     "auth_seq_id": "193",
+     "uniprot_pos": 193,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "195",
+     "uniprot_pos": 195,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "199",
+     "uniprot_pos": 199,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "200",
+     "uniprot_pos": 200,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "201",
+     "uniprot_pos": 201,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "203",
+     "uniprot_pos": 203,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "204",
+     "uniprot_pos": 204,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "205",
+     "uniprot_pos": 205,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "207",
+     "uniprot_pos": 207,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "208",
+     "uniprot_pos": 208,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "286",
+     "uniprot_pos": 286,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "289",
+     "uniprot_pos": 289,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "290",
+     "uniprot_pos": 290,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "293",
+     "uniprot_pos": 293,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "308",
+     "uniprot_pos": 308,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "312",
+     "uniprot_pos": 312,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "316",
+     "uniprot_pos": 316,
+     "residue": "TYR"
+    }
+   ],
+   "interface_other_chains": {}
+  },
+  "HRH1": {
+   "uniprot": "P35367",
+   "pdb_id": "8X5Y",
+   "receptor_chain": "B",
+   "chain_length_in_structure": 274,
+   "chain_alignment_identity": 1.0,
+   "chain_alignment_coverage": 0.5626,
+   "selection_rule": "anchor_first_D107",
+   "ligand": {
+    "comp_id": "XB7",
+    "name": "1-[(4-fluorophenyl)methyl]-N-{1-[2-(4-methoxyphenyl)ethyl]piperidin-4-yl}-1H-benzimidazol-2-amine",
+    "n_ligand_atoms": 34,
+    "n_pocket_residues": 33,
+    "n_mapped_to_uniprot": 33,
+    "overlap_with_paper1_pocket": 0,
+    "frac_of_paper1_pocket": 0.0,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "XB7",
+     "name": "1-[(4-fluorophenyl)methyl]-N-{1-[2-(4-methoxyphenyl)ethyl]piperidin-4-yl}-1H-benzimidazol-2-amine",
+     "n_ligand_atoms": 34,
+     "n_pocket_residues": 33,
+     "n_mapped_to_uniprot": 33,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": true
+    }
+   ],
+   "n_pocket_residues": 33,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "80",
+     "uniprot_pos": 80,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "84",
+     "uniprot_pos": 84,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "87",
+     "uniprot_pos": 87,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "88",
+     "uniprot_pos": 88,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "103",
+     "uniprot_pos": 103,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "104",
+     "uniprot_pos": 104,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "107",
+     "uniprot_pos": 107,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "108",
+     "uniprot_pos": 108,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "109",
+     "uniprot_pos": 109,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "111",
+     "uniprot_pos": 111,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "112",
+     "uniprot_pos": 112,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "113",
+     "uniprot_pos": 113,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "115",
+     "uniprot_pos": 115,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "158",
+     "uniprot_pos": 158,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "184",
+     "uniprot_pos": 184,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "190",
+     "uniprot_pos": 190,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "191",
+     "uniprot_pos": 191,
+     "residue": "LYS"
+    },
+    {
+     "auth_seq_id": "194",
+     "uniprot_pos": 194,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "195",
+     "uniprot_pos": 195,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "196",
+     "uniprot_pos": 196,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "198",
+     "uniprot_pos": 198,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "199",
+     "uniprot_pos": 199,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "203",
+     "uniprot_pos": 203,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "424",
+     "uniprot_pos": 424,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "428",
+     "uniprot_pos": 428,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "431",
+     "uniprot_pos": 431,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "432",
+     "uniprot_pos": 432,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "435",
+     "uniprot_pos": 435,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "450",
+     "uniprot_pos": 450,
+     "residue": "HIS"
+    },
+    {
+     "auth_seq_id": "451",
+     "uniprot_pos": 451,
+     "residue": "MET"
+    },
+    {
+     "auth_seq_id": "454",
+     "uniprot_pos": 454,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "455",
+     "uniprot_pos": 455,
+     "residue": "TRP"
+    },
+    {
+     "auth_seq_id": "458",
+     "uniprot_pos": 458,
+     "residue": "TYR"
+    }
+   ],
+   "interface_other_chains": {}
+  },
+  "GABRA1": {
+   "uniprot": "P14867",
+   "pdb_id": "6HUJ",
+   "receptor_chain": "A",
+   "chain_length_in_structure": 347,
+   "chain_alignment_identity": 1.0,
+   "chain_alignment_coverage": 0.761,
+   "selection_rule": "paper1_pocket_overlap",
+   "ligand": {
+    "comp_id": "PIO",
+    "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate",
+    "n_ligand_atoms": 93,
+    "n_pocket_residues": 21,
+    "n_mapped_to_uniprot": 21,
+    "overlap_with_paper1_pocket": 8,
+    "frac_of_paper1_pocket": 0.0792,
+    "contains_anchor": false
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "PIO",
+     "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate",
+     "n_ligand_atoms": 93,
+     "n_pocket_residues": 21,
+     "n_mapped_to_uniprot": 21,
+     "overlap_with_paper1_pocket": 8,
+     "frac_of_paper1_pocket": 0.0792,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "RI5",
+     "name": "(1aR,2aR,3S,6R,6aS,8aS,8bR,9R)-2a-hydroxy-8b-methyl-9-(prop-1-en-2-yl)hexahydro-3,6-methano-1,5,7-trioxacyclopenta[ij]c yclopropa[a]azulene-4,8(3H)-dione",
+     "n_ligand_atoms": 21,
+     "n_pocket_residues": 7,
+     "n_mapped_to_uniprot": 7,
+     "overlap_with_paper1_pocket": 7,
+     "frac_of_paper1_pocket": 0.0693,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "ABU",
+     "name": "GAMMA-AMINO-BUTANOIC ACID",
+     "n_ligand_atoms": 14,
+     "n_pocket_residues": 7,
+     "n_mapped_to_uniprot": 7,
+     "overlap_with_paper1_pocket": 5,
+     "frac_of_paper1_pocket": 0.0495,
+     "contains_anchor": false
+    }
+   ],
+   "n_pocket_residues": 21,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "249",
+     "uniprot_pos": 276,
+     "residue": "ARG"
+    },
+    {
+     "auth_seq_id": "299",
+     "uniprot_pos": 326,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "302",
+     "uniprot_pos": 329,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "303",
+     "uniprot_pos": 330,
+     "residue": "GLU"
+    },
+    {
+     "auth_seq_id": "306",
+     "uniprot_pos": 333,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "307",
+     "uniprot_pos": 334,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "310",
+     "uniprot_pos": 337,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "311",
+     "uniprot_pos": 338,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "312",
+     "uniprot_pos": 339,
+     "residue": "LYS"
+    },
+    {
+     "auth_seq_id": "313",
+     "uniprot_pos": 340,
+     "residue": "ARG"
+    },
+    {
+     "auth_seq_id": "386",
+     "uniprot_pos": 413,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "387",
+     "uniprot_pos": 414,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "388",
+     "uniprot_pos": 415,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "389",
+     "uniprot_pos": 416,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "390",
+     "uniprot_pos": 417,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "391",
+     "uniprot_pos": 418,
+     "residue": "LYS"
+    },
+    {
+     "auth_seq_id": "392",
+     "uniprot_pos": 419,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "393",
+     "uniprot_pos": 420,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "395",
+     "uniprot_pos": 422,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "396",
+     "uniprot_pos": 423,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "400",
+     "uniprot_pos": 427,
+     "residue": "PHE"
+    }
+   ],
+   "interface_other_chains": {
+    "D": [
+     {
+      "auth_seq_id": "249",
+      "residue": "ARG"
+     },
+     {
+      "auth_seq_id": "299",
+      "residue": "SER"
+     },
+     {
+      "auth_seq_id": "302",
+      "residue": "ILE"
+     },
+     {
+      "auth_seq_id": "303",
+      "residue": "GLU"
+     },
+     {
+      "auth_seq_id": "306",
+      "residue": "THR"
+     },
+     {
+      "auth_seq_id": "307",
+      "residue": "VAL"
+     },
+     {
+      "auth_seq_id": "310",
+      "residue": "PHE"
+     },
+     {
+      "auth_seq_id": "311",
+      "residue": "THR"
+     },
+     {
+      "auth_seq_id": "312",
+      "residue": "LYS"
+     },
+     {
+      "auth_seq_id": "313",
+      "residue": "ARG"
+     },
+     {
+      "auth_seq_id": "385",
+      "residue": "THR"
+     },
+     {
+      "auth_seq_id": "386",
+      "residue": "PHE"
+     },
+     {
+      "auth_seq_id": "387",
+      "residue": "ASN"
+     },
+     {
+      "auth_seq_id": "388",
+      "residue": "SER"
+     },
+     {
+      "auth_seq_id": "389",
+      "residue": "VAL"
+     },
+     {
+      "auth_seq_id": "390",
+      "residue": "SER"
+     },
+     {
+      "auth_seq_id": "391",
+      "residue": "LYS"
+     },
+     {
+      "auth_seq_id": "392",
+      "residue": "ILE"
+     },
+     {
+      "auth_seq_id": "393",
+      "residue": "ASP"
+     },
+     {
+      "auth_seq_id": "395",
+      "residue": "LEU"
+     },
+     {
+      "auth_seq_id": "396",
+      "residue": "SER"
+     },
+     {
+      "auth_seq_id": "399",
+      "residue": "ALA"
+     },
+     {
+      "auth_seq_id": "400",
+      "residue": "PHE"
+     }
+    ]
+   }
+  },
+  "SERT": {
+   "uniprot": "P31645",
+   "pdb_id": "5I6X",
+   "receptor_chain": "A",
+   "chain_length_in_structure": 544,
+   "chain_alignment_identity": 0.9908,
+   "chain_alignment_coverage": 0.8635,
+   "selection_rule": "anchor_first_D98",
+   "ligand": {
+    "comp_id": "8PR",
+    "name": "Paroxetine",
+    "n_ligand_atoms": 24,
+    "n_pocket_residues": 36,
+    "n_mapped_to_uniprot": 36,
+    "overlap_with_paper1_pocket": 0,
+    "frac_of_paper1_pocket": 0.0,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "8PR",
+     "name": "Paroxetine",
+     "n_ligand_atoms": 24,
+     "n_pocket_residues": 36,
+     "n_mapped_to_uniprot": 36,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": true
+    },
+    {
+     "comp_id": "CLR",
+     "name": "CHOLESTEROL",
+     "n_ligand_atoms": 28,
+     "n_pocket_residues": 11,
+     "n_mapped_to_uniprot": 11,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "LMT",
+     "name": "DODECYL-BETA-D-MALTOSIDE",
+     "n_ligand_atoms": 22,
+     "n_pocket_residues": 27,
+     "n_mapped_to_uniprot": 27,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "NAG",
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose",
+     "n_ligand_atoms": 28,
+     "n_pocket_residues": 13,
+     "n_mapped_to_uniprot": 13,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    }
+   ],
+   "n_pocket_residues": 36,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "94",
+     "uniprot_pos": 94,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "95",
+     "uniprot_pos": 95,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "96",
+     "uniprot_pos": 96,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "97",
+     "uniprot_pos": 97,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "98",
+     "uniprot_pos": 98,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "101",
+     "uniprot_pos": 101,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "168",
+     "uniprot_pos": 168,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "169",
+     "uniprot_pos": 169,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "170",
+     "uniprot_pos": 170,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "172",
+     "uniprot_pos": 172,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "173",
+     "uniprot_pos": 173,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "174",
+     "uniprot_pos": 174,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "175",
+     "uniprot_pos": 175,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "176",
+     "uniprot_pos": 176,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "177",
+     "uniprot_pos": 177,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "334",
+     "uniprot_pos": 334,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "335",
+     "uniprot_pos": 335,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "336",
+     "uniprot_pos": 336,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "337",
+     "uniprot_pos": 337,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "338",
+     "uniprot_pos": 338,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "339",
+     "uniprot_pos": 339,
+     "residue": "PRO"
+    },
+    {
+     "auth_seq_id": "341",
+     "uniprot_pos": 341,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "343",
+     "uniprot_pos": 343,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "368",
+     "uniprot_pos": 368,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "435",
+     "uniprot_pos": 435,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "437",
+     "uniprot_pos": 437,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "438",
+     "uniprot_pos": 438,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "439",
+     "uniprot_pos": 439,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "440",
+     "uniprot_pos": 440,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "441",
+     "uniprot_pos": 441,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "442",
+     "uniprot_pos": 442,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "443",
+     "uniprot_pos": 443,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "446",
+     "uniprot_pos": 446,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "497",
+     "uniprot_pos": 497,
+     "residue": "THR"
+    },
+    {
+     "auth_seq_id": "498",
+     "uniprot_pos": 498,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "501",
+     "uniprot_pos": 501,
+     "residue": "VAL"
+    }
+   ],
+   "interface_other_chains": {}
+  },
+  "DAT": {
+   "uniprot": "Q01959",
+   "pdb_id": "8Y2D",
+   "receptor_chain": "A",
+   "chain_length_in_structure": 528,
+   "chain_alignment_identity": 1.0,
+   "chain_alignment_coverage": 0.8516,
+   "selection_rule": "anchor_first_D79",
+   "ligand": {
+    "comp_id": "LDP",
+    "name": "L-DOPAMINE",
+    "n_ligand_atoms": 11,
+    "n_pocket_residues": 28,
+    "n_mapped_to_uniprot": 28,
+    "overlap_with_paper1_pocket": 0,
+    "frac_of_paper1_pocket": 0.0,
+    "contains_anchor": true
+   },
+   "ligand_scores": [
+    {
+     "comp_id": "LDP",
+     "name": "L-DOPAMINE",
+     "n_ligand_atoms": 11,
+     "n_pocket_residues": 28,
+     "n_mapped_to_uniprot": 28,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": true
+    }
+   ],
+   "n_pocket_residues": 28,
+   "pocket_residues": [
+    {
+     "auth_seq_id": "76",
+     "uniprot_pos": 76,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "77",
+     "uniprot_pos": 77,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "79",
+     "uniprot_pos": 79,
+     "residue": "ASP"
+    },
+    {
+     "auth_seq_id": "80",
+     "uniprot_pos": 80,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "81",
+     "uniprot_pos": 81,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "148",
+     "uniprot_pos": 148,
+     "residue": "ILE"
+    },
+    {
+     "auth_seq_id": "149",
+     "uniprot_pos": 149,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "150",
+     "uniprot_pos": 150,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "151",
+     "uniprot_pos": 151,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "152",
+     "uniprot_pos": 152,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "153",
+     "uniprot_pos": 153,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "154",
+     "uniprot_pos": 154,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "156",
+     "uniprot_pos": 156,
+     "residue": "TYR"
+    },
+    {
+     "auth_seq_id": "157",
+     "uniprot_pos": 157,
+     "residue": "ASN"
+    },
+    {
+     "auth_seq_id": "320",
+     "uniprot_pos": 320,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "321",
+     "uniprot_pos": 321,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "322",
+     "uniprot_pos": 322,
+     "residue": "LEU"
+    },
+    {
+     "auth_seq_id": "323",
+     "uniprot_pos": 323,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "326",
+     "uniprot_pos": 326,
+     "residue": "PHE"
+    },
+    {
+     "auth_seq_id": "328",
+     "uniprot_pos": 328,
+     "residue": "VAL"
+    },
+    {
+     "auth_seq_id": "419",
+     "uniprot_pos": 419,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "422",
+     "uniprot_pos": 422,
+     "residue": "SER"
+    },
+    {
+     "auth_seq_id": "423",
+     "uniprot_pos": 423,
+     "residue": "ALA"
+    },
+    {
+     "auth_seq_id": "424",
+     "uniprot_pos": 424,
+     "residue": "MET"
+    },
+    {
+     "auth_seq_id": "425",
+     "uniprot_pos": 425,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "426",
+     "uniprot_pos": 426,
+     "residue": "GLY"
+    },
+    {
+     "auth_seq_id": "427",
+     "uniprot_pos": 427,
+     "residue": "MET"
+    },
+    {
+     "auth_seq_id": "430",
+     "uniprot_pos": 430,
+     "residue": "VAL"
+    }
+   ],
+   "interface_other_chains": {}
+  }
+ }
+}
