@@ -110,6 +110,16 @@ Regenerate the TOC graphic with
 `python3 paper2/scripts/35_toc_graphic.py` (reads the frozen statistics
 artefact; no numbers are hard-coded).
 
+## Submission record
+
+- **Paper 2** submitted to Journal of Chemical Information and
+  Modeling (ACS) on 2026-11-14: Manuscript ID `ci-2026-04232n`,
+  Submission ID `E94059A8-EE65-4643-B2A1-53B70E14449F`.
+- Preprint archived at https://doi.org/10.6084/m9.figshare.35010655.
+- Companion **Paper 1** under review at the same journal:
+  Manuscript ID `ci-2026-04206a`, preprint
+  https://doi.org/10.6084/m9.figshare.35002837.
+
 ## Non-negotiables
 
 1. Zero simulation; measured or explicitly "not run".
