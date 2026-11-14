@@ -1,0 +1,862 @@
+{
+ "phase": 15,
+ "generated_utc": "2026-11-14T02:24:40Z",
+ "receptors": {
+  "ADRA2A": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.79"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "24 vs 24"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "111 vs 111"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 85.7]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D128"
+   }
+  },
+  "ADRB2": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.81"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "27 vs 27"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "150 vs 150"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 98.6]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D113"
+   }
+  },
+  "CHRM1": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.83"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "30 vs 30"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "167 vs 167"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 101.8]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D105"
+   }
+  },
+  "DAT": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.79"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "28 vs 28"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "176 vs 176"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 57.8]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D79"
+   }
+  },
+  "DRD2": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.80"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "36 vs 36"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "200 vs 200"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 103.3]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D114"
+   }
+  },
+  "DRD3": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.80"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "29 vs 29"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "169 vs 169"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 100.8]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D110"
+   }
+  },
+  "GABRA1": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.78"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "21 vs 21"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "104 vs 104"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 185.2]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   }
+  },
+  "HRH1": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.79"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "33 vs 33"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "184 vs 184"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 72.2]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D107"
+   }
+  },
+  "HTR1A": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.80"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "28 vs 28"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "166 vs 166"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 62.3]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D116"
+   }
+  },
+  "HTR2A": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.79"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "29 vs 29"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "164 vs 164"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 115.5]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D155"
+   }
+  },
+  "SERT": {
+   "ca_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "ca_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_symmetric": {
+    "ok": true,
+    "detail": "max_asym=0.00e+00"
+   },
+   "heavy_min_matrix_zero_diagonal": {
+    "ok": true,
+    "detail": ""
+   },
+   "heavy_min_matrix_finite": {
+    "ok": true,
+    "detail": ""
+   },
+   "ca_positive_offdiag": {
+    "ok": true,
+    "detail": "min=3.70"
+   },
+   "contacts_nested": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_4_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "contact_8_matches_distance": {
+    "ok": true,
+    "detail": ""
+   },
+   "graph_node_count": {
+    "ok": true,
+    "detail": "36 vs 36"
+   },
+   "graph_node_dim": {
+    "ok": true,
+    "detail": "1301"
+   },
+   "graph_edges_match_contact_8": {
+    "ok": true,
+    "detail": "241 vs 241"
+   },
+   "graph_edge_attr_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "esm2_indices_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "plddt_in_range": {
+    "ok": true,
+    "detail": ""
+   },
+   "sasa_in_range": {
+    "ok": true,
+    "detail": "[0.0, 81.5]"
+   },
+   "sasa_len_matches": {
+    "ok": true,
+    "detail": ""
+   },
+   "anchor_present": {
+    "ok": true,
+    "detail": "D98"
+   }
+  }
+ },
+ "failures": [],
+ "all_passed": true
+}

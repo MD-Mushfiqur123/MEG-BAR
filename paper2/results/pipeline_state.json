@@ -3,32 +3,62 @@
   "phase_06_afdb_models": {
    "status": "done",
    "script": "06_afdb_models.py",
-   "finished_utc": "2026-11-14T02:02:10Z",
-   "runtime_s": 2.7
+   "finished_utc": "2026-11-14T02:23:04Z",
+   "runtime_s": 2.5
   },
   "phase_07_pocket_definition": {
    "status": "done",
    "script": "07_pocket_definition.py",
-   "finished_utc": "2026-11-14T02:02:12Z",
-   "runtime_s": 2.8
+   "finished_utc": "2026-11-14T02:23:07Z",
+   "runtime_s": 2.7
   },
   "phase_08_residue_mapping": {
    "status": "done",
    "script": "08_residue_mapping.py",
-   "finished_utc": "2026-11-14T02:02:13Z",
+   "finished_utc": "2026-11-14T02:23:07Z",
    "runtime_s": 0.1
   },
   "phase_10_manifest": {
    "status": "done",
    "script": "10_manifest.py",
-   "finished_utc": "2026-11-14T02:02:14Z",
+   "finished_utc": "2026-11-14T02:24:40Z",
    "runtime_s": 0.1
   },
   "phase_09_pair_mapping": {
    "status": "done",
    "script": "09_pair_mapping.py",
-   "finished_utc": "2026-11-14T02:02:13Z",
+   "finished_utc": "2026-11-14T02:23:08Z",
    "runtime_s": 1.0
+  },
+  "phase_11_distance_matrices": {
+   "status": "done",
+   "script": "11_distance_matrices.py",
+   "finished_utc": "2026-11-14T02:24:09Z",
+   "runtime_s": 1.1
+  },
+  "phase_12_contact_maps": {
+   "status": "done",
+   "script": "12_contact_maps.py",
+   "finished_utc": "2026-11-14T02:24:09Z",
+   "runtime_s": 0.2
+  },
+  "phase_13_pocket_graphs": {
+   "status": "done",
+   "script": "13_pocket_graphs.py",
+   "finished_utc": "2026-11-14T02:24:09Z",
+   "runtime_s": 0.5
+  },
+  "phase_14_geometric_descriptors": {
+   "status": "done",
+   "script": "14_geometric_descriptors.py",
+   "finished_utc": "2026-11-14T02:24:39Z",
+   "runtime_s": 30.2
+  },
+  "phase_15_feature_validation": {
+   "status": "done",
+   "script": "15_feature_validation.py",
+   "finished_utc": "2026-11-14T02:24:40Z",
+   "runtime_s": 0.5
   }
  }
 }

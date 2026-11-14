@@ -1,0 +1,74 @@
+{
+ "phase": 11,
+ "purpose": "pocket CA + heavy-atom min distance matrices",
+ "generated_utc": "2026-11-14T02:24:08Z",
+ "order": "pocket residues sorted by UniProt position (Phase 8)",
+ "receptors": {
+  "ADRA2A": {
+   "n_pocket_residues": 24,
+   "ca_matrix_mean_a": 13.0,
+   "heavy_min_max_a": 21.85,
+   "file": "ADRA2A_distances.npz"
+  },
+  "ADRB2": {
+   "n_pocket_residues": 27,
+   "ca_matrix_mean_a": 12.95,
+   "heavy_min_max_a": 20.41,
+   "file": "ADRB2_distances.npz"
+  },
+  "CHRM1": {
+   "n_pocket_residues": 30,
+   "ca_matrix_mean_a": 13.59,
+   "heavy_min_max_a": 21.31,
+   "file": "CHRM1_distances.npz"
+  },
+  "DAT": {
+   "n_pocket_residues": 28,
+   "ca_matrix_mean_a": 11.14,
+   "heavy_min_max_a": 17.17,
+   "file": "DAT_distances.npz"
+  },
+  "DRD2": {
+   "n_pocket_residues": 36,
+   "ca_matrix_mean_a": 14.18,
+   "heavy_min_max_a": 24.02,
+   "file": "DRD2_distances.npz"
+  },
+  "DRD3": {
+   "n_pocket_residues": 29,
+   "ca_matrix_mean_a": 12.55,
+   "heavy_min_max_a": 19.0,
+   "file": "DRD3_distances.npz"
+  },
+  "GABRA1": {
+   "n_pocket_residues": 21,
+   "ca_matrix_mean_a": 11.92,
+   "heavy_min_max_a": 23.66,
+   "file": "GABRA1_distances.npz"
+  },
+  "HRH1": {
+   "n_pocket_residues": 33,
+   "ca_matrix_mean_a": 14.49,
+   "heavy_min_max_a": 24.75,
+   "file": "HRH1_distances.npz"
+  },
+  "HTR1A": {
+   "n_pocket_residues": 28,
+   "ca_matrix_mean_a": 12.3,
+   "heavy_min_max_a": 18.38,
+   "file": "HTR1A_distances.npz"
+  },
+  "HTR2A": {
+   "n_pocket_residues": 29,
+   "ca_matrix_mean_a": 12.7,
+   "heavy_min_max_a": 19.88,
+   "file": "HTR2A_distances.npz"
+  },
+  "SERT": {
+   "n_pocket_residues": 36,
+   "ca_matrix_mean_a": 12.56,
+   "heavy_min_max_a": 19.45,
+   "file": "SERT_distances.npz"
+  }
+ }
+}

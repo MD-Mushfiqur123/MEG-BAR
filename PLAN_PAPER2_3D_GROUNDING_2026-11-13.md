@@ -121,7 +121,7 @@ A phase is "done" only when its exit criteria pass and its outputs are committed
 
 ---
 
-## Stage 2 — 3D Feature Engineering (Phases 11–15)
+## Stage 2 — 3D Feature Engineering (Phases 11–15) — COMPLETE (2026-11-14)
 
 ### Phase 11 — Distance matrices
 - **Objective:** the core geometric representation.
@@ -380,3 +380,4 @@ Stage 1 complete (Phases 5–10).
 
 - 2026-11-13 — v2: phases expanded with Objective/Tasks/Inputs/Outputs/Exit-criteria/Risks detail; no scientific content changed; Stage 0 marked complete (Phases 1–4).
 - 2026-11-14 — Stage 1 automation: `paper2/scripts/run_stage1.py` + `Makefile` added; Phase 6 resolves AFDB model URLs via the AFDB API (fixed-version URLs now 404); Phase 7 selects the orthosteric ligand by anchor-first scoring then Paper 1 pocket overlap. Anchor correction: HTR1A D116 (not D82) and ADRA2A D128 (not D113), sequence-derived from the DRY motif and structurally validated — see `paper2/DEFECT_REGISTER.md` #1. Phase 8 exit criteria (0 unmapped, 10/10 anchors) enforced by asserts and tests.
+- 2026-11-14 — Stage 2 executed (Phases 11–15). Deviations, all pre-decided or conservative: (a) Phase 13 graphs stored as framework-neutral numpy `.npz` (edge_index/edge_attr/x) instead of PyG/torch — CI installs numpy only; a torch loader trivially wraps these arrays in Stage 3. (b) Phase 14 descriptors computed with pure-numpy Shrake–Rupley (92 pts, 1.4 Å probe) + 0.5 Å voxelization instead of ProDy/FreeSASA — same tool applied identically to all receptors, method documented in the artefact. (c) Phase 7 ligand scoring refined to score each co-crystallized ligand *copy* independently so multi-protomer entries (6A94, 6HUJ) bind pockets to a single site — corrected HTR2A pocket radius 30.9 → 13.2 Å. (d) Phase 15 crystal-vs-AF RMSD comparison deferred to Phase 27 (crystal-vs-AF arm) where it has a decision rule attached; Phase 15's structural checks (symmetry, contacts, anchors, ranges) all pass — 208 checks, 0 failures.

@@ -66,9 +66,13 @@ def chain_residue_coords(atoms, chain):
     return per
 
 
-def ligand_atoms(hets, comp_id):
-    return [h for h in hets if h["comp_id"].upper() == comp_id.upper()
-            and h["element"].upper() != "H"]
+def ligand_copies(hets, comp_id):
+    """label_asym_id -> heavy atoms, one dict entry per co-crystallized copy."""
+    out = {}
+    for h in hets:
+        if h["comp_id"].upper() == comp_id.upper() and h["element"].upper() != "H":
+            out.setdefault(h["label_asym"], []).append(h)
+    return out
 
 
 def pocket_for_ligand(res_coords, ligs, radius=POCKET_RADIUS_A):
@@ -153,10 +157,11 @@ def main():
         "purpose": "Paper 2 Phase 7 - orthosteric pockets from reference structures",
         "generated_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "pocket_radius_a": POCKET_RADIUS_A,
-        "selection_rule": ("if Paper 1 pocket annotation exists: ligand whose 6.5 A pocket "
-                           "maximizes overlap with it (UniProt numbering); otherwise the "
-                           "ligand whose pocket contains the conserved anchor residue "
-                           "(Asp3.32 / SERT D98 / DAT D79)"),
+        "selection_rule": ("if Paper 1 pocket annotation exists: ligand copy whose 6.5 A "
+                           "pocket maximizes overlap with it (UniProt numbering); otherwise "
+                           "the ligand copy whose pocket contains the conserved anchor "
+                           "residue (Asp3.32 / SERT D98 / DAT D79); copies scored "
+                           "individually so multi-protomer entries pick one site"),
         "receptors": {},
     }
 
@@ -188,23 +193,22 @@ def main():
         anchor = ANCHORS.get(sym)
         for lig in primary["ligands"]:
             comp = lig["comp_id"]
-            ligs = ligand_atoms(hets, comp)
-            if not ligs:
-                continue
-            pocket_auth = pocket_for_ligand(res_coords, ligs)
-            mapped = {auth_to_uniprot[a] for a in pocket_auth if a in auth_to_uniprot}
-            overlap = sum(1 for p in mapped if p in p1_pocket)
-            anchor_hit = bool(anchor) and any(p == anchor[0] for p in mapped)
-            scored.append({
-                "comp_id": comp,
-                "name": lig["name"],
-                "n_ligand_atoms": len(ligs),
-                "n_pocket_residues": len(pocket_auth),
-                "n_mapped_to_uniprot": len(mapped),
-                "overlap_with_paper1_pocket": overlap,
-                "frac_of_paper1_pocket": round(overlap / len(p1_pocket), 4) if p1_pocket else 0.0,
-                "contains_anchor": anchor_hit,
-            })
+            for copy_id, ligs in sorted(ligand_copies(hets, comp).items()):
+                pocket_auth = pocket_for_ligand(res_coords, ligs)
+                mapped = {auth_to_uniprot[a] for a in pocket_auth if a in auth_to_uniprot}
+                overlap = sum(1 for p in mapped if p in p1_pocket)
+                anchor_hit = bool(anchor) and any(p == anchor[0] for p in mapped)
+                scored.append({
+                    "comp_id": comp,
+                    "copy": copy_id,
+                    "name": lig["name"],
+                    "n_ligand_atoms": len(ligs),
+                    "n_pocket_residues": len(pocket_auth),
+                    "n_mapped_to_uniprot": len(mapped),
+                    "overlap_with_paper1_pocket": overlap,
+                    "frac_of_paper1_pocket": round(overlap / len(p1_pocket), 4) if p1_pocket else 0.0,
+                    "contains_anchor": anchor_hit,
+                })
         if not scored:
             raise SystemExit(f"{sym}: no candidate ligand atoms found in {pdb_id}")
         if anchor:
@@ -223,7 +227,7 @@ def main():
             scored.sort(key=lambda s: (-s["n_pocket_residues"], s["comp_id"]))
         chosen = scored[0]
 
-        ligs = ligand_atoms(hets, chosen["comp_id"])
+        ligs = ligand_copies(hets, chosen["comp_id"])[chosen["copy"]]
         pocket_auth = pocket_for_ligand(res_coords, ligs)
         pocket_records = []
         for a in sorted(pocket_auth, key=lambda x: int(x) if x.isdigit() else 0):

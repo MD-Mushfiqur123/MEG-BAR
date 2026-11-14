@@ -1,6 +1,6 @@
 {
  "purpose": "Paper 2 Phase 9 - frozen ChEMBL pairs joined onto receptor structures",
- "generated_utc": "2026-11-14T02:02:13Z",
+ "generated_utc": "2026-11-14T02:23:08Z",
  "pair_construction": "identical to Paper 1 scripts/real/03_experiment.py: measured pChEMBL + SMILES present, median per (gene, molecule_chembl_id)",
  "totals": {
   "raw_records": 56637,

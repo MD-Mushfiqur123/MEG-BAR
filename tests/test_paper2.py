@@ -104,13 +104,65 @@ def test_phase9_pair_mapping_frozen():
     assert n_rows == 41271
 
 
+def test_stage2_distance_matrices_valid():
+    import numpy as np
+
+    for sym in ["DRD2", "DRD3", "HTR1A", "HTR2A", "CHRM1", "ADRA2A",
+                "ADRB2", "HRH1", "GABRA1", "SERT", "DAT"]:
+        z = np.load(os.path.join(PAPER2, "data", "features", f"{sym}_distances.npz"))
+        ca, hm = z["ca_matrix"], z["heavy_min_matrix"]
+        n = ca.shape[0]
+        assert n >= 10 and ca.shape == hm.shape == (n, n)
+        assert np.allclose(ca, ca.T, atol=1e-4) and np.allclose(hm, hm.T, atol=1e-4)
+        assert np.abs(np.diag(ca)).max() < 1e-5
+        assert np.isfinite(hm).all()
+
+
+def test_stage2_contact_maps_nested():
+    import numpy as np
+
+    z = np.load(os.path.join(PAPER2, "data", "features", "DRD2_contacts.npz"))
+    c4, c6, c8 = z["contact_4"], z["contact_6"], z["contact_8"]
+    assert (c8 >= c6).all() and (c6 >= c4).all()
+    assert c4.sum() < c6.sum() < c8.sum()
+
+
+def test_stage2_pocket_graphs_valid():
+    import numpy as np
+
+    for sym in ["DRD2", "SERT", "GABRA1"]:
+        g = np.load(os.path.join(PAPER2, "data", "features", f"{sym}_graph.npz"))
+        assert g["x"].shape[1] == 1301
+        assert g["edge_index"].shape[0] == 2
+        assert g["edge_index"].shape[1] == g["edge_attr"].shape[0] > 0
+        assert g["plddt"].min() >= 0 and g["plddt"].max() <= 100
+
+
+def test_stage2_geometry_descriptors_valid():
+    import numpy as np
+
+    d = _load(os.path.join("data", "features", "phase14_summary.json"))
+    assert len(d["receptors"]) == 11
+    for sym, v in d["receptors"].items():
+        assert v["volume_a3"] > 0, f"{sym} zero volume"
+        assert 0 < v["sphericity"] <= 1.0, f"{sym} sphericity {v['sphericity']}"
+
+
+def test_phase15_feature_validation_all_passed():
+    d = _load(os.path.join("data", "features", "feature_validation.json"))
+    assert d["all_passed"] is True
+    assert d["failures"] == []
+    assert len(d["receptors"]) == 11
+
+
 def test_phase10_manifest_covers_artefacts():
     import hashlib
 
     d = _load(os.path.join("data", "structures", "manifest.json"))
-    assert d["n_files"] >= 20
+    assert d["n_files"] >= 70
+    assert any(rel.startswith("features/") for rel in d["files"])
     for rel, e in d["files"].items():
         assert len(e["sha256"]) == 64, f"{rel} bad digest"
-        path = os.path.join(PAPER2, "data", "structures", rel)
+        path = os.path.join(PAPER2, "data", rel)
         with open(path, "rb") as f:
             assert hashlib.sha256(f.read()).hexdigest() == e["sha256"], f"{rel} hash mismatch"
