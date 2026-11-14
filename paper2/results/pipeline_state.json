@@ -59,6 +59,42 @@
    "script": "15_feature_validation.py",
    "finished_utc": "2026-11-14T02:24:40Z",
    "runtime_s": 0.5
+  },
+  "phase_16_arm_a_replication": {
+   "status": "done",
+   "script": "16_arm_a_replication.py",
+   "finished_utc": "2026-11-14T02:38:17Z",
+   "runtime_s": 3.7
+  },
+  "phase_17_arm_b_1d": {
+   "status": "done",
+   "script": "17_arm_b_1d.py",
+   "finished_utc": "2026-11-14T02:52:45Z",
+   "runtime_s": 3.7
+  },
+  "phase_18_arm_c_3d": {
+   "status": "done",
+   "script": "18_arm_c_3d.py",
+   "finished_utc": "2026-11-14T03:06:59Z",
+   "runtime_s": 805.8
+  },
+  "phase_19_arm_d_distbias": {
+   "status": "done",
+   "script": "19_arm_d_distbias.py",
+   "finished_utc": "2026-11-14T03:28:34Z",
+   "runtime_s": 1295.0
+  },
+  "phase_20_arm_e_wrongpocket": {
+   "status": "done",
+   "script": "20_arm_e_wrongpocket.py",
+   "finished_utc": "2026-11-14T03:42:08Z",
+   "runtime_s": 813.4
+  },
+  "phase_21_arm_f_shuffled": {
+   "status": "done",
+   "script": "21_arm_f_shuffled.py",
+   "finished_utc": "2026-11-14T03:55:50Z",
+   "runtime_s": 822.6
   }
  }
 }

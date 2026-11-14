@@ -165,7 +165,16 @@ A phase is "done" only when its exit criteria pass and its outputs are committed
 
 ---
 
-## Stage 3 — Models (Phases 16–21)
+## Stage 3 — Models (Phases 16–21) — **COMPLETE (2026-11-14)**
+
+> **Measured outcome (preview; formal statistics are Phase 25):** all six arms ran on
+> Paper 1's exact scaffold-disjoint protocol. Arm A regression guard: **PASS**, worst
+> per-receptor |delta| vs Paper 1's stored shared-MLP numbers = 0.000. Primary endpoint
+> preview (Arm C vs Arm E, 45 paired receptor-seed observations): mean delta r = +0.0003,
+> Wilcoxon p = 0.22 — **H2 is not supported**: explicit 3D pocket-graph grounding does
+> not beat the wrong-pocket-3D control. Arm C vs shuffled-coordinates (F): +0.011, p = 0.16.
+> Arm C vs 1D cross-attention (B): +0.017, p = 0.87. Per pre-registration decision rule 1,
+> this is a decisive negative result, reported as a finding.
 
 ### Phase 16 — Arm A (replication guard)
 - **Objective:** prove the harness reproduces Paper 1 exactly before adding anything new.
@@ -381,3 +390,18 @@ Stage 1 complete (Phases 5–10).
 - 2026-11-13 — v2: phases expanded with Objective/Tasks/Inputs/Outputs/Exit-criteria/Risks detail; no scientific content changed; Stage 0 marked complete (Phases 1–4).
 - 2026-11-14 — Stage 1 automation: `paper2/scripts/run_stage1.py` + `Makefile` added; Phase 6 resolves AFDB model URLs via the AFDB API (fixed-version URLs now 404); Phase 7 selects the orthosteric ligand by anchor-first scoring then Paper 1 pocket overlap. Anchor correction: HTR1A D116 (not D82) and ADRA2A D128 (not D113), sequence-derived from the DRY motif and structurally validated — see `paper2/DEFECT_REGISTER.md` #1. Phase 8 exit criteria (0 unmapped, 10/10 anchors) enforced by asserts and tests.
 - 2026-11-14 — Stage 2 executed (Phases 11–15). Deviations, all pre-decided or conservative: (a) Phase 13 graphs stored as framework-neutral numpy `.npz` (edge_index/edge_attr/x) instead of PyG/torch — CI installs numpy only; a torch loader trivially wraps these arrays in Stage 3. (b) Phase 14 descriptors computed with pure-numpy Shrake–Rupley (92 pts, 1.4 Å probe) + 0.5 Å voxelization instead of ProDy/FreeSASA — same tool applied identically to all receptors, method documented in the artefact. (c) Phase 7 ligand scoring refined to score each co-crystallized ligand *copy* independently so multi-protomer entries (6A94, 6HUJ) bind pockets to a single site — corrected HTR2A pocket radius 30.9 → 13.2 Å. (d) Phase 15 crystal-vs-AF RMSD comparison deferred to Phase 27 (crystal-vs-AF arm) where it has a decision rule attached; Phase 15's structural checks (symmetry, contacts, anchors, ranges) all pass — 208 checks, 0 failures.
+- 2026-11-14 — Stage 3 executed (Phases 16–21). Deviations: (a) arms share one
+  granular-resume store `paper2/results/stage3/arms_scaffold_results.json` instead of one
+  file per arm — guarantees the same-commit rule for C/E/F and simplifies paired
+  statistics. (b) Arm B conditioning uses the structure-derived 6.5 Å pockets (Phase 7/8)
+  for all 11 receptors, not Paper 1's UniProt-annotation pockets — required so B and C
+  condition on the identical residue set and differ only in geometry. Arm A (shared +
+  Ridge) reproduces Paper 1 exactly (regression guard PASS, worst |delta| 0.000). (c) Arm C
+  encoder = 2 rounds of distance-weighted message passing (exp(−d/3 Å), row-normalised,
+  self-loops) on node features [PCA-128 ESM-2, AA one-hot, pLDDT]; Arm D = 2-layer
+  distance-biased self-attention (learnable per-head scale, zero-init). (d) Mid-run defect:
+  Arm F initially consumed the true geometry due to a context-dispatch bug (C and F came out
+  identical); caught by the C-vs-F identity check, invalidated, fixed, rerun — see
+  `paper2/DEFECT_REGISTER.md` #4. (e) CHRM1 shows bimodal seeds across conditioning arms
+  (crossattn_1d: 0.21–0.24 vs 0.62–64; pocket3d: one seed at 0.274) — retained, not
+  trimmed; seed/split variance is Phase 30's subject.
