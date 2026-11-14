@@ -1,0 +1,50 @@
+{
+  "purpose": "Phase 24: minimum-data guard behaviour, both protocols",
+  "rule": "attention arms require n_train >= 800 (Paper 1 rule); shared and Ridge always run; skipped arms are reported as skipped, never substituted",
+  "scaffold_guard_skips": {
+    "ADRA2A": {
+      "crossattn_1d": "n_train=667 < MIN_TRAIN=800",
+      "pocket3d": "n_train=667 < MIN_TRAIN=800",
+      "dist_bias": "n_train=667 < MIN_TRAIN=800",
+      "pocket3d_wrongpocket": "n_train=667 < MIN_TRAIN=800",
+      "pocket3d_shuffled": "n_train=667 < MIN_TRAIN=800"
+    },
+    "GABRA1": {
+      "crossattn_1d": "n_train=216 < MIN_TRAIN=800",
+      "pocket3d": "n_train=216 < MIN_TRAIN=800",
+      "dist_bias": "n_train=216 < MIN_TRAIN=800",
+      "pocket3d_wrongpocket": "n_train=216 < MIN_TRAIN=800",
+      "pocket3d_shuffled": "n_train=216 < MIN_TRAIN=800"
+    }
+  },
+  "temporal_guard_skips": {
+    "ADRA2A": {
+      "crossattn_1d": "n_train=585 < MIN_TRAIN=800",
+      "pocket3d": "n_train=585 < MIN_TRAIN=800",
+      "dist_bias": "n_train=585 < MIN_TRAIN=800",
+      "pocket3d_wrongpocket": "n_train=585 < MIN_TRAIN=800",
+      "pocket3d_shuffled": "n_train=585 < MIN_TRAIN=800"
+    },
+    "ADRB2": {
+      "crossattn_1d": "n_train=720 < MIN_TRAIN=800",
+      "pocket3d": "n_train=720 < MIN_TRAIN=800",
+      "dist_bias": "n_train=720 < MIN_TRAIN=800",
+      "pocket3d_wrongpocket": "n_train=720 < MIN_TRAIN=800",
+      "pocket3d_shuffled": "n_train=720 < MIN_TRAIN=800"
+    }
+  },
+  "ridge_only_receptors": {
+    "ADRA2A": {
+      "ridge_r": 0.799600719856512,
+      "shared_mean_r": 0.710670908215327
+    },
+    "ADRB2": {
+      "ridge_r": 0.38490103124151936,
+      "shared_mean_r": 0.5414381587581806
+    },
+    "GABRA1": {
+      "ridge_r": 0.5321810911113691,
+      "shared_mean_r": 0.007868892721204864
+    }
+  }
+}

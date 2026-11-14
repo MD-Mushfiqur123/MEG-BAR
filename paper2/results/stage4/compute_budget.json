@@ -1,0 +1,71 @@
+{
+  "purpose": "Phase 26: CPU-only compute budget (measured from stores)",
+  "hardware": "CPU-only (no GPU); torch thread count = os.cpu_count()",
+  "scaffold_protocol": {
+    "crossattn_1d": {
+      "n_runs": 45,
+      "total_s": 580.0,
+      "mean_s": 12.9
+    },
+    "dist_bias": {
+      "n_runs": 45,
+      "total_s": 1288.1,
+      "mean_s": 28.6
+    },
+    "pocket3d": {
+      "n_runs": 45,
+      "total_s": 799.2,
+      "mean_s": 17.8
+    },
+    "pocket3d_shuffled": {
+      "n_runs": 45,
+      "total_s": 755.4,
+      "mean_s": 16.8
+    },
+    "pocket3d_wrongpocket": {
+      "n_runs": 45,
+      "total_s": 806.3,
+      "mean_s": 17.9
+    },
+    "shared": {
+      "n_runs": 55,
+      "total_s": 100.6,
+      "mean_s": 1.8
+    }
+  },
+  "temporal_protocol": {
+    "crossattn_1d": {
+      "n_runs": 40,
+      "total_s": 534.2,
+      "mean_s": 13.4
+    },
+    "dist_bias": {
+      "n_runs": 40,
+      "total_s": 1123.1,
+      "mean_s": 28.1
+    },
+    "pocket3d": {
+      "n_runs": 40,
+      "total_s": 751.8,
+      "mean_s": 18.8
+    },
+    "pocket3d_shuffled": {
+      "n_runs": 40,
+      "total_s": 781.5,
+      "mean_s": 19.5
+    },
+    "pocket3d_wrongpocket": {
+      "n_runs": 40,
+      "total_s": 828.2,
+      "mean_s": 20.7
+    },
+    "shared": {
+      "n_runs": 50,
+      "total_s": 92.2,
+      "mean_s": 1.8
+    }
+  },
+  "total_measured_training_seconds": 8440.6,
+  "total_measured_training_hours": 2.34,
+  "note": "excludes feature engineering (Stage 2, minutes) and any interrupted/retrained runs recorded in DEFECT_REGISTER.md #4"
+}

@@ -539,19 +539,71 @@ def pid_index(df, genes):
     return np.array([g2i[g] for g in df.gene], dtype=np.int64)
 
 
-def run_arms(arms, extra_meta=None):
-    """Shared entry point for the per-phase scripts: load frozen data, build
+def temporal_splits(df, SCAFF, genes, cutoff=2015, min_train=120):
+    """Paper 2's temporal protocol (pre-registered): train on documents older
+    than the cutoff, test on documents from the cutoff onward. The validation
+    block is a scaffold-disjoint 15% cut of the pre-cutoff pool (largest
+    scaffolds first, Paper 1's split function); the pre-cutoff test block is
+    folded back into training so only the post-cutoff era is ever tested.
+    Receptors with <120 pre-cutoff or <30 post-cutoff pairs are skipped
+    (GABRA1: 45 pre-2015 pairs - reported as skipped, never substituted)."""
+    import pandas as pd
+
+    out = {}
+    years = pd.to_numeric(df.document_year, errors='coerce').values
+    for g in genes:
+        idx = df.index[df.gene == g].values
+        yr = years[idx]
+        te = idx[yr >= cutoff]
+        pre = idx[yr < cutoff]
+        if len(pre) < min_train or len(te) < 30:
+            print('  %-8s temporal skipped (pre=%d post=%d)' % (g, len(pre), len(te)),
+                  flush=True)
+            continue
+        sp = scaffold_split(SCAFF[pre])
+        if sp is None:
+            print('  %-8s temporal skipped (too few pre-cutoff scaffolds)' % g, flush=True)
+            continue
+        tr = np.concatenate([pre[sp[0]], pre[sp[2]]])
+        out[g] = (tr, pre[sp[1]], te)
+    return out
+
+
+def run_arms(arms, extra_meta=None, protocol='E3', splits=None,
+             store_path=None, ctx=None, purpose=None, proto_desc=None):
+    """Shared entry point for the arm scripts: load frozen data, build
     contexts, run the requested arms across all receptors x seeds with
-    granular resume, and flush the store."""
+    granular resume, and flush the store.
+
+    protocol='E3' (default) uses the scaffold-disjoint splits;
+    protocol='E5' with splits=temporal_splits(...) writes the temporal store.
+    ctx overrides the crystal pocket contexts (Stage 5: AFDB geometry or
+    radius-sweep pockets); purpose/proto_desc override the store metadata.
+    """
     t0 = time.time()
     df, FP, y, SCAFF, genes = load_data()
-    ctx = load_pocket_contexts(genes)
+    if ctx is None:
+        ctx = load_pocket_contexts(genes)
     PIDX = pid_index(df, genes)
-    store = Store(STORE_PATH)
+    if splits is None:
+        splits = receptor_splits(df, SCAFF, genes)
+    if store_path is None:
+        store_path = STORE_PATH
+    store = Store(store_path)
+    if purpose is None:
+        if protocol == 'E3':
+            purpose = ('Paper 2 Stage 3: six model arms on Paper 1\'s exact '
+                       'scaffold-disjoint protocol (measured, no simulation)')
+            proto_desc = 'E3-equivalent Bemis-Murcko scaffold-disjoint within-receptor'
+        else:
+            purpose = ('Paper 2 Stage 4 Phase 23: six model arms on the temporal '
+                       'protocol, train pre-2015 / test 2015+ (measured)')
+            proto_desc = ('E5 temporal: train document_year < 2015, val = '
+                          'scaffold-disjoint 15% of the pre-cutoff pool, '
+                          'test document_year >= 2015')
     store.flush({
-        'purpose': 'Paper 2 Stage 3: six model arms on Paper 1\'s exact '
-                   'scaffold-disjoint protocol (measured, no simulation)',
-        'protocol': 'E3-equivalent Bemis-Murcko scaffold-disjoint within-receptor',
+        'purpose': purpose,
+        'protocol': proto_desc,
         'data': {'n_pairs': int(len(df)), 'n_genes': len(genes),
                  'pairs_source': 'paper2/data/structures/pairs_41271.csv',
                  'fp_source': 'data/real/ligand_fp_cache_expanded.npz',
@@ -561,16 +613,15 @@ def run_arms(arms, extra_meta=None):
         'hyperparameters': dict(CONFIG, dropout=DROPOUT, patience=PATIENCE,
                                 weight_decay=WEIGHT_DECAY, clip_norm=CLIP,
                                 optimizer='AdamW, cosine LR with 5% warmup'),
-        'pocket_pca': ctx['pca'],
-        'shuffle_permutations': ctx['perm'],
+        'pocket_pca': ctx.get('pca'),
+        'shuffle_permutations': ctx.get('perm'),
     })
     if extra_meta:
         store.data.update(extra_meta)
-    splits = receptor_splits(df, SCAFF, genes)
     for g, (tr, va, te) in splits.items():
         print('  %-8s n_tr=%d n_va=%d n_te=%d' % (g, len(tr), len(va), len(te)), flush=True)
-        store.run_receptor('E3|%s' % g, arms, tr, va, te, FP, y, PIDX, ctx)
+        store.run_receptor('%s|%s' % (protocol, g), arms, tr, va, te, FP, y, PIDX, ctx)
     store.flush()
     print('[OK] arms %s done in %.1fs -> %s'
-          % (arms, time.time() - t0, os.path.relpath(STORE_PATH, REPO)), flush=True)
+          % (arms, time.time() - t0, os.path.relpath(store_path, REPO)), flush=True)
     return store

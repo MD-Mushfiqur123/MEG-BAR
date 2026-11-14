@@ -1,0 +1,92 @@
+{
+ "phase": 31,
+ "alpha": 0.05,
+ "hypotheses": {
+  "H1": {
+   "statement": "3D-grounded model (C/D) > 1D cross-attention (B), E3",
+   "evidence": {
+    "n_pairs": 45,
+    "mean_diff": 0.01716,
+    "win_loss_tie": [
+     24,
+     21,
+     0
+    ],
+    "wilcoxon_p": 0.86686,
+    "bootstrap_ci95": [
+     -0.0018,
+     0.03979
+    ]
+   },
+   "supported": false
+  },
+  "H2": {
+   "statement": "C significantly outperforms wrong-pocket-3D (E), E3",
+   "evidence": {
+    "n_pairs": 45,
+    "mean_diff": 0.00025,
+    "win_loss_tie": [
+     18,
+     27,
+     0
+    ],
+    "wilcoxon_p": 0.22089,
+    "bootstrap_ci95": [
+     -0.02169,
+     0.02189
+    ]
+   },
+   "supported": false
+  },
+  "H3": {
+   "statement": "C outperforms shuffled-coordinate control (F), E3",
+   "evidence": {
+    "n_pairs": 45,
+    "mean_diff": 0.01116,
+    "win_loss_tie": [
+     24,
+     21,
+     0
+    ],
+    "wilcoxon_p": 0.15634,
+    "bootstrap_ci95": [
+     0.00041,
+     0.03014
+    ]
+   },
+   "supported": false
+  },
+  "H4": {
+   "statement": "AFDB-predicted structures give the same qualitative conclusion as crystal structures",
+   "evidence": {
+    "af_c_vs_e": {
+     "n_pairs": 45,
+     "mean_diff": -0.00017,
+     "wilcoxon_p": 0.63856,
+     "bootstrap_ci95": [
+      -0.02256,
+      0.02219
+     ]
+    },
+    "crystal_c_vs_e": {
+     "n_pairs": 45,
+     "mean_diff": 0.00025,
+     "win_loss_tie": [
+      18,
+      27,
+      0
+     ],
+     "wilcoxon_p": 0.22089,
+     "bootstrap_ci95": [
+      -0.02169,
+      0.02189
+     ]
+    },
+    "verdict_transfer": true,
+    "pooled_af_delta_vs_crystal": -0.00279
+   },
+   "supported": true
+  }
+ },
+ "decision": "PREREGISTRATION decision rule 1: H2 not supported -> decisive negative result. 1D embeddings, 3D geometry, and shuffled controls are statistically indistinguishable on measured data. Reported as a finding, not a failure."
+}
