@@ -1,8 +1,8 @@
 {
  "purpose": "Paper 2 Phase 7 - orthosteric pockets from reference structures",
- "generated_utc": "2026-11-14T02:02:10Z",
+ "generated_utc": "2026-11-14T02:23:04Z",
  "pocket_radius_a": 6.5,
- "selection_rule": "if Paper 1 pocket annotation exists: ligand whose 6.5 A pocket maximizes overlap with it (UniProt numbering); otherwise the ligand whose pocket contains the conserved anchor residue (Asp3.32 / SERT D98 / DAT D79)",
+ "selection_rule": "if Paper 1 pocket annotation exists: ligand copy whose 6.5 A pocket maximizes overlap with it (UniProt numbering); otherwise the ligand copy whose pocket contains the conserved anchor residue (Asp3.32 / SERT D98 / DAT D79); copies scored individually so multi-protomer entries pick one site",
  "receptors": {
   "DRD2": {
    "uniprot": "P14416",
@@ -14,6 +14,7 @@
    "selection_rule": "anchor_first_D114+paper1_pocket_overlap",
    "ligand": {
     "comp_id": "08Y",
+    "copy": "F",
     "name": "bromoergocryptine",
     "n_ligand_atoms": 43,
     "n_pocket_residues": 36,
@@ -25,6 +26,7 @@
    "ligand_scores": [
     {
      "comp_id": "08Y",
+     "copy": "F",
      "name": "bromoergocryptine",
      "n_ligand_atoms": 43,
      "n_pocket_residues": 36,
@@ -229,6 +231,7 @@
    "selection_rule": "anchor_first_D110",
    "ligand": {
     "comp_id": "G6O",
+    "copy": "F",
     "name": "(4aR,10bR)-4-propyl-3,4a,5,10b-tetrahydro-2H-chromeno[4,3-b][1,4]oxazin-9-ol",
     "n_ligand_atoms": 18,
     "n_pocket_residues": 29,
@@ -240,6 +243,7 @@
    "ligand_scores": [
     {
      "comp_id": "G6O",
+     "copy": "F",
      "name": "(4aR,10bR)-4-propyl-3,4a,5,10b-tetrahydro-2H-chromeno[4,3-b][1,4]oxazin-9-ol",
      "n_ligand_atoms": 18,
      "n_pocket_residues": 29,
@@ -409,6 +413,7 @@
    "selection_rule": "anchor_first_D116",
    "ligand": {
     "comp_id": "YFW",
+    "copy": "E",
     "name": "2-(5-methoxy-1H-indol-3-yl)-N,N-dimethylethan-1-amine",
     "n_ligand_atoms": 16,
     "n_pocket_residues": 28,
@@ -420,6 +425,7 @@
    "ligand_scores": [
     {
      "comp_id": "YFW",
+     "copy": "E",
      "name": "2-(5-methoxy-1H-indol-3-yl)-N,N-dimethylethan-1-amine",
      "n_ligand_atoms": 16,
      "n_pocket_residues": 28,
@@ -430,6 +436,7 @@
     },
     {
      "comp_id": "J40",
+     "copy": "F",
      "name": "[(2R)-1-[oxidanyl-[(2R,3R,5S,6R)-2,3,5,6-tetrakis(oxidanyl)-4-phosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-3-tetradecanoyloxy-propan-2-yl] (5E,8E)-hexadeca-5,8,11,14-tetraenoate",
      "n_ligand_atoms": 57,
      "n_pocket_residues": 27,
@@ -440,10 +447,22 @@
     },
     {
      "comp_id": "Y01",
+     "copy": "G",
      "name": "CHOLESTEROL HEMISUCCINATE",
-     "n_ligand_atoms": 70,
-     "n_pocket_residues": 36,
-     "n_mapped_to_uniprot": 36,
+     "n_ligand_atoms": 35,
+     "n_pocket_residues": 18,
+     "n_mapped_to_uniprot": 18,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "Y01",
+     "copy": "H",
+     "name": "CHOLESTEROL HEMISUCCINATE",
+     "n_ligand_atoms": 35,
+     "n_pocket_residues": 22,
+     "n_mapped_to_uniprot": 22,
      "overlap_with_paper1_pocket": 0,
      "frac_of_paper1_pocket": 0.0,
      "contains_anchor": false
@@ -604,8 +623,9 @@
    "selection_rule": "anchor_first_D155+paper1_pocket_overlap",
    "ligand": {
     "comp_id": "ZOT",
+    "copy": "C",
     "name": "2-(3-chloranylbenzo[b][1]benzothiepin-5-yl)oxy-N,N-dimethyl-ethanamine",
-    "n_ligand_atoms": 44,
+    "n_ligand_atoms": 22,
     "n_pocket_residues": 29,
     "n_mapped_to_uniprot": 29,
     "overlap_with_paper1_pocket": 23,
@@ -615,8 +635,9 @@
    "ligand_scores": [
     {
      "comp_id": "ZOT",
+     "copy": "C",
      "name": "2-(3-chloranylbenzo[b][1]benzothiepin-5-yl)oxy-N,N-dimethyl-ethanamine",
-     "n_ligand_atoms": 44,
+     "n_ligand_atoms": 22,
      "n_pocket_residues": 29,
      "n_mapped_to_uniprot": 29,
      "overlap_with_paper1_pocket": 23,
@@ -625,8 +646,9 @@
     },
     {
      "comp_id": "CLR",
+     "copy": "D",
      "name": "CHOLESTEROL",
-     "n_ligand_atoms": 56,
+     "n_ligand_atoms": 28,
      "n_pocket_residues": 19,
      "n_mapped_to_uniprot": 19,
      "overlap_with_paper1_pocket": 14,
@@ -635,6 +657,7 @@
     },
     {
      "comp_id": "A6L",
+     "copy": "J",
      "name": "2,3-dihydroxypropyl (9Z)-octadec-9-enoate",
      "n_ligand_atoms": 20,
      "n_pocket_residues": 12,
@@ -645,12 +668,35 @@
     },
     {
      "comp_id": "PLM",
+     "copy": "H",
      "name": "PALMITIC ACID",
      "n_ligand_atoms": 10,
      "n_pocket_residues": 4,
      "n_mapped_to_uniprot": 4,
      "overlap_with_paper1_pocket": 2,
      "frac_of_paper1_pocket": 0.0156,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "CLR",
+     "copy": "I",
+     "name": "CHOLESTEROL",
+     "n_ligand_atoms": 28,
+     "n_pocket_residues": 0,
+     "n_mapped_to_uniprot": 0,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "ZOT",
+     "copy": "G",
+     "name": "2-(3-chloranylbenzo[b][1]benzothiepin-5-yl)oxy-N,N-dimethyl-ethanamine",
+     "n_ligand_atoms": 22,
+     "n_pocket_residues": 0,
+     "n_mapped_to_uniprot": 0,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
      "contains_anchor": false
     }
    ],
@@ -802,138 +848,7 @@
      "residue": "TYR"
     }
    ],
-   "interface_other_chains": {
-    "B": [
-     {
-      "auth_seq_id": "127",
-      "residue": "VAL"
-     },
-     {
-      "auth_seq_id": "151",
-      "residue": "TRP"
-     },
-     {
-      "auth_seq_id": "152",
-      "residue": "ILE"
-     },
-     {
-      "auth_seq_id": "155",
-      "residue": "ASP"
-     },
-     {
-      "auth_seq_id": "156",
-      "residue": "VAL"
-     },
-     {
-      "auth_seq_id": "157",
-      "residue": "LEU"
-     },
-     {
-      "auth_seq_id": "158",
-      "residue": "PHE"
-     },
-     {
-      "auth_seq_id": "159",
-      "residue": "SER"
-     },
-     {
-      "auth_seq_id": "160",
-      "residue": "THR"
-     },
-     {
-      "auth_seq_id": "161",
-      "residue": "ALA"
-     },
-     {
-      "auth_seq_id": "162",
-      "residue": "LYS"
-     },
-     {
-      "auth_seq_id": "163",
-      "residue": "ILE"
-     },
-     {
-      "auth_seq_id": "210",
-      "residue": "ILE"
-     },
-     {
-      "auth_seq_id": "227",
-      "residue": "CYS"
-     },
-     {
-      "auth_seq_id": "228",
-      "residue": "LEU"
-     },
-     {
-      "auth_seq_id": "229",
-      "residue": "LEU"
-     },
-     {
-      "auth_seq_id": "231",
-      "residue": "ASP"
-     },
-     {
-      "auth_seq_id": "234",
-      "residue": "PHE"
-     },
-     {
-      "auth_seq_id": "235",
-      "residue": "VAL"
-     },
-     {
-      "auth_seq_id": "236",
-      "residue": "LEU"
-     },
-     {
-      "auth_seq_id": "237",
-      "residue": "ILE"
-     },
-     {
-      "auth_seq_id": "238",
-      "residue": "GLY"
-     },
-     {
-      "auth_seq_id": "239",
-      "residue": "SER"
-     },
-     {
-      "auth_seq_id": "242",
-      "residue": "SER"
-     },
-     {
-      "auth_seq_id": "243",
-      "residue": "PHE"
-     },
-     {
-      "auth_seq_id": "332",
-      "residue": "PHE"
-     },
-     {
-      "auth_seq_id": "336",
-      "residue": "TRP"
-     },
-     {
-      "auth_seq_id": "339",
-      "residue": "PHE"
-     },
-     {
-      "auth_seq_id": "340",
-      "residue": "PHE"
-     },
-     {
-      "auth_seq_id": "343",
-      "residue": "ASN"
-     },
-     {
-      "auth_seq_id": "366",
-      "residue": "VAL"
-     },
-     {
-      "auth_seq_id": "370",
-      "residue": "TYR"
-     }
-    ]
-   }
+   "interface_other_chains": {}
   },
   "CHRM1": {
    "uniprot": "P11229",
@@ -945,6 +860,7 @@
    "selection_rule": "anchor_first_D105+paper1_pocket_overlap",
    "ligand": {
     "comp_id": "QJT",
+    "copy": "B",
     "name": "1-[3-(4-butylpiperidin-1-yl)propyl]-3,4-dihydroquinolin-2-one",
     "n_ligand_atoms": 24,
     "n_pocket_residues": 30,
@@ -956,6 +872,7 @@
    "ligand_scores": [
     {
      "comp_id": "QJT",
+     "copy": "B",
      "name": "1-[3-(4-butylpiperidin-1-yl)propyl]-3,4-dihydroquinolin-2-one",
      "n_ligand_atoms": 24,
      "n_pocket_residues": 30,
@@ -965,23 +882,102 @@
      "contains_anchor": true
     },
     {
-     "comp_id": "OLA",
-     "name": "OLEIC ACID",
-     "n_ligand_atoms": 160,
-     "n_pocket_residues": 73,
-     "n_mapped_to_uniprot": 72,
-     "overlap_with_paper1_pocket": 36,
-     "frac_of_paper1_pocket": 0.2812,
-     "contains_anchor": false
-    },
-    {
      "comp_id": "OLC",
+     "copy": "L",
      "name": "(2R)-2,3-dihydroxypropyl (9Z)-octadec-9-enoate",
      "n_ligand_atoms": 25,
      "n_pocket_residues": 19,
      "n_mapped_to_uniprot": 19,
      "overlap_with_paper1_pocket": 13,
      "frac_of_paper1_pocket": 0.1016,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "OLA",
+     "copy": "D",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 20,
+     "n_pocket_residues": 14,
+     "n_mapped_to_uniprot": 14,
+     "overlap_with_paper1_pocket": 10,
+     "frac_of_paper1_pocket": 0.0781,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "OLA",
+     "copy": "F",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 20,
+     "n_pocket_residues": 17,
+     "n_mapped_to_uniprot": 17,
+     "overlap_with_paper1_pocket": 10,
+     "frac_of_paper1_pocket": 0.0781,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "OLA",
+     "copy": "I",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 20,
+     "n_pocket_residues": 15,
+     "n_mapped_to_uniprot": 15,
+     "overlap_with_paper1_pocket": 8,
+     "frac_of_paper1_pocket": 0.0625,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "OLA",
+     "copy": "C",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 20,
+     "n_pocket_residues": 18,
+     "n_mapped_to_uniprot": 18,
+     "overlap_with_paper1_pocket": 6,
+     "frac_of_paper1_pocket": 0.0469,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "OLA",
+     "copy": "E",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 20,
+     "n_pocket_residues": 5,
+     "n_mapped_to_uniprot": 5,
+     "overlap_with_paper1_pocket": 5,
+     "frac_of_paper1_pocket": 0.0391,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "OLA",
+     "copy": "J",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 20,
+     "n_pocket_residues": 7,
+     "n_mapped_to_uniprot": 7,
+     "overlap_with_paper1_pocket": 4,
+     "frac_of_paper1_pocket": 0.0312,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "OLA",
+     "copy": "K",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 20,
+     "n_pocket_residues": 7,
+     "n_mapped_to_uniprot": 7,
+     "overlap_with_paper1_pocket": 4,
+     "frac_of_paper1_pocket": 0.0312,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "OLA",
+     "copy": "H",
+     "name": "OLEIC ACID",
+     "n_ligand_atoms": 20,
+     "n_pocket_residues": 10,
+     "n_mapped_to_uniprot": 9,
+     "overlap_with_paper1_pocket": 3,
+     "frac_of_paper1_pocket": 0.0234,
      "contains_anchor": false
     }
    ],
@@ -1150,6 +1146,7 @@
    "selection_rule": "anchor_first_D128",
    "ligand": {
     "comp_id": "E3F",
+    "copy": "B",
     "name": "(8~{a}~{R},12~{a}~{S},13~{a}~{S})-12-ethylsulfonyl-3-methoxy-5,6,8,8~{a},9,10,11,12~{a},13,13~{a}-decahydroisoquinolino[2,1-g][1,6]naphthyridine",
     "n_ligand_atoms": 25,
     "n_pocket_residues": 24,
@@ -1161,6 +1158,7 @@
    "ligand_scores": [
     {
      "comp_id": "E3F",
+     "copy": "B",
      "name": "(8~{a}~{R},12~{a}~{S},13~{a}~{S})-12-ethylsulfonyl-3-methoxy-5,6,8,8~{a},9,10,11,12~{a},13,13~{a}-decahydroisoquinolino[2,1-g][1,6]naphthyridine",
      "n_ligand_atoms": 25,
      "n_pocket_residues": 24,
@@ -1171,6 +1169,7 @@
     },
     {
      "comp_id": "OLA",
+     "copy": "H",
      "name": "OLEIC ACID",
      "n_ligand_atoms": 6,
      "n_pocket_residues": 6,
@@ -1315,6 +1314,7 @@
    "selection_rule": "anchor_first_D113",
    "ligand": {
     "comp_id": "CAU",
+    "copy": "I",
     "name": "(2S)-1-(9H-Carbazol-4-yloxy)-3-(isopropylamino)propan-2-ol",
     "n_ligand_atoms": 22,
     "n_pocket_residues": 27,
@@ -1326,6 +1326,7 @@
    "ligand_scores": [
     {
      "comp_id": "CAU",
+     "copy": "I",
      "name": "(2S)-1-(9H-Carbazol-4-yloxy)-3-(isopropylamino)propan-2-ol",
      "n_ligand_atoms": 22,
      "n_pocket_residues": 27,
@@ -1336,6 +1337,7 @@
     },
     {
      "comp_id": "12P",
+     "copy": "Q",
      "name": "DODECAETHYLENE GLYCOL",
      "n_ligand_atoms": 21,
      "n_pocket_residues": 15,
@@ -1346,6 +1348,7 @@
     },
     {
      "comp_id": "ACM",
+     "copy": "L",
      "name": "ACETAMIDE",
      "n_ligand_atoms": 4,
      "n_pocket_residues": 9,
@@ -1356,26 +1359,62 @@
     },
     {
      "comp_id": "BU1",
+     "copy": "J",
      "name": "1,4-BUTANEDIOL",
-     "n_ligand_atoms": 12,
-     "n_pocket_residues": 29,
-     "n_mapped_to_uniprot": 28,
+     "n_ligand_atoms": 6,
+     "n_pocket_residues": 15,
+     "n_mapped_to_uniprot": 14,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "BU1",
+     "copy": "K",
+     "name": "1,4-BUTANEDIOL",
+     "n_ligand_atoms": 6,
+     "n_pocket_residues": 15,
+     "n_mapped_to_uniprot": 15,
      "overlap_with_paper1_pocket": 0,
      "frac_of_paper1_pocket": 0.0,
      "contains_anchor": false
     },
     {
      "comp_id": "CLR",
+     "copy": "M",
      "name": "CHOLESTEROL",
-     "n_ligand_atoms": 84,
-     "n_pocket_residues": 39,
-     "n_mapped_to_uniprot": 39,
+     "n_ligand_atoms": 28,
+     "n_pocket_residues": 20,
+     "n_mapped_to_uniprot": 20,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "CLR",
+     "copy": "N",
+     "name": "CHOLESTEROL",
+     "n_ligand_atoms": 28,
+     "n_pocket_residues": 16,
+     "n_mapped_to_uniprot": 16,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "CLR",
+     "copy": "O",
+     "name": "CHOLESTEROL",
+     "n_ligand_atoms": 28,
+     "n_pocket_residues": 13,
+     "n_mapped_to_uniprot": 13,
      "overlap_with_paper1_pocket": 0,
      "frac_of_paper1_pocket": 0.0,
      "contains_anchor": false
     },
     {
      "comp_id": "PLM",
+     "copy": "P",
      "name": "PALMITIC ACID",
      "n_ligand_atoms": 17,
      "n_pocket_residues": 5,
@@ -1535,6 +1574,7 @@
    "selection_rule": "anchor_first_D107",
    "ligand": {
     "comp_id": "XB7",
+    "copy": "B",
     "name": "1-[(4-fluorophenyl)methyl]-N-{1-[2-(4-methoxyphenyl)ethyl]piperidin-4-yl}-1H-benzimidazol-2-amine",
     "n_ligand_atoms": 34,
     "n_pocket_residues": 33,
@@ -1546,6 +1586,7 @@
    "ligand_scores": [
     {
      "comp_id": "XB7",
+     "copy": "B",
      "name": "1-[(4-fluorophenyl)methyl]-N-{1-[2-(4-methoxyphenyl)ethyl]piperidin-4-yl}-1H-benzimidazol-2-amine",
      "n_ligand_atoms": 34,
      "n_pocket_residues": 33,
@@ -1735,8 +1776,9 @@
    "selection_rule": "paper1_pocket_overlap",
    "ligand": {
     "comp_id": "PIO",
+    "copy": "N",
     "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate",
-    "n_ligand_atoms": 93,
+    "n_ligand_atoms": 46,
     "n_pocket_residues": 21,
     "n_mapped_to_uniprot": 21,
     "overlap_with_paper1_pocket": 8,
@@ -1746,8 +1788,9 @@
    "ligand_scores": [
     {
      "comp_id": "PIO",
+     "copy": "N",
      "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate",
-     "n_ligand_atoms": 93,
+     "n_ligand_atoms": 46,
      "n_pocket_residues": 21,
      "n_mapped_to_uniprot": 21,
      "overlap_with_paper1_pocket": 8,
@@ -1756,6 +1799,7 @@
     },
     {
      "comp_id": "RI5",
+     "copy": "O",
      "name": "(1aR,2aR,3S,6R,6aS,8aS,8bR,9R)-2a-hydroxy-8b-methyl-9-(prop-1-en-2-yl)hexahydro-3,6-methano-1,5,7-trioxacyclopenta[ij]c yclopropa[a]azulene-4,8(3H)-dione",
      "n_ligand_atoms": 21,
      "n_pocket_residues": 7,
@@ -1766,12 +1810,35 @@
     },
     {
      "comp_id": "ABU",
+     "copy": "P",
      "name": "GAMMA-AMINO-BUTANOIC ACID",
-     "n_ligand_atoms": 14,
+     "n_ligand_atoms": 7,
      "n_pocket_residues": 7,
      "n_mapped_to_uniprot": 7,
      "overlap_with_paper1_pocket": 5,
      "frac_of_paper1_pocket": 0.0495,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "ABU",
+     "copy": "R",
+     "name": "GAMMA-AMINO-BUTANOIC ACID",
+     "n_ligand_atoms": 7,
+     "n_pocket_residues": 0,
+     "n_mapped_to_uniprot": 0,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "PIO",
+     "copy": "Q",
+     "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate",
+     "n_ligand_atoms": 47,
+     "n_pocket_residues": 0,
+     "n_mapped_to_uniprot": 0,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
      "contains_anchor": false
     }
    ],
@@ -1883,102 +1950,7 @@
      "residue": "PHE"
     }
    ],
-   "interface_other_chains": {
-    "D": [
-     {
-      "auth_seq_id": "249",
-      "residue": "ARG"
-     },
-     {
-      "auth_seq_id": "299",
-      "residue": "SER"
-     },
-     {
-      "auth_seq_id": "302",
-      "residue": "ILE"
-     },
-     {
-      "auth_seq_id": "303",
-      "residue": "GLU"
-     },
-     {
-      "auth_seq_id": "306",
-      "residue": "THR"
-     },
-     {
-      "auth_seq_id": "307",
-      "residue": "VAL"
-     },
-     {
-      "auth_seq_id": "310",
-      "residue": "PHE"
-     },
-     {
-      "auth_seq_id": "311",
-      "residue": "THR"
-     },
-     {
-      "auth_seq_id": "312",
-      "residue": "LYS"
-     },
-     {
-      "auth_seq_id": "313",
-      "residue": "ARG"
-     },
-     {
-      "auth_seq_id": "385",
-      "residue": "THR"
-     },
-     {
-      "auth_seq_id": "386",
-      "residue": "PHE"
-     },
-     {
-      "auth_seq_id": "387",
-      "residue": "ASN"
-     },
-     {
-      "auth_seq_id": "388",
-      "residue": "SER"
-     },
-     {
-      "auth_seq_id": "389",
-      "residue": "VAL"
-     },
-     {
-      "auth_seq_id": "390",
-      "residue": "SER"
-     },
-     {
-      "auth_seq_id": "391",
-      "residue": "LYS"
-     },
-     {
-      "auth_seq_id": "392",
-      "residue": "ILE"
-     },
-     {
-      "auth_seq_id": "393",
-      "residue": "ASP"
-     },
-     {
-      "auth_seq_id": "395",
-      "residue": "LEU"
-     },
-     {
-      "auth_seq_id": "396",
-      "residue": "SER"
-     },
-     {
-      "auth_seq_id": "399",
-      "residue": "ALA"
-     },
-     {
-      "auth_seq_id": "400",
-      "residue": "PHE"
-     }
-    ]
-   }
+   "interface_other_chains": {}
   },
   "SERT": {
    "uniprot": "P31645",
@@ -1990,6 +1962,7 @@
    "selection_rule": "anchor_first_D98",
    "ligand": {
     "comp_id": "8PR",
+    "copy": "H",
     "name": "Paroxetine",
     "n_ligand_atoms": 24,
     "n_pocket_residues": 36,
@@ -2001,6 +1974,7 @@
    "ligand_scores": [
     {
      "comp_id": "8PR",
+     "copy": "H",
      "name": "Paroxetine",
      "n_ligand_atoms": 24,
      "n_pocket_residues": 36,
@@ -2011,6 +1985,7 @@
     },
     {
      "comp_id": "CLR",
+     "copy": "E",
      "name": "CHOLESTEROL",
      "n_ligand_atoms": 28,
      "n_pocket_residues": 11,
@@ -2021,6 +1996,7 @@
     },
     {
      "comp_id": "LMT",
+     "copy": "F",
      "name": "DODECYL-BETA-D-MALTOSIDE",
      "n_ligand_atoms": 22,
      "n_pocket_residues": 27,
@@ -2031,10 +2007,22 @@
     },
     {
      "comp_id": "NAG",
+     "copy": "D",
      "name": "2-acetamido-2-deoxy-beta-D-glucopyranose",
-     "n_ligand_atoms": 28,
-     "n_pocket_residues": 13,
-     "n_mapped_to_uniprot": 13,
+     "n_ligand_atoms": 14,
+     "n_pocket_residues": 7,
+     "n_mapped_to_uniprot": 7,
+     "overlap_with_paper1_pocket": 0,
+     "frac_of_paper1_pocket": 0.0,
+     "contains_anchor": false
+    },
+    {
+     "comp_id": "NAG",
+     "copy": "G",
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose",
+     "n_ligand_atoms": 14,
+     "n_pocket_residues": 6,
+     "n_mapped_to_uniprot": 6,
      "overlap_with_paper1_pocket": 0,
      "frac_of_paper1_pocket": 0.0,
      "contains_anchor": false
@@ -2235,6 +2223,7 @@
    "selection_rule": "anchor_first_D79",
    "ligand": {
     "comp_id": "LDP",
+    "copy": "B",
     "name": "L-DOPAMINE",
     "n_ligand_atoms": 11,
     "n_pocket_residues": 28,
@@ -2246,6 +2235,7 @@
    "ligand_scores": [
     {
      "comp_id": "LDP",
+     "copy": "B",
      "name": "L-DOPAMINE",
      "n_ligand_atoms": 11,
      "n_pocket_residues": 28,

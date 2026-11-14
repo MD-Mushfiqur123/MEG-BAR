@@ -1,0 +1,86 @@
+{
+ "phase": 13,
+ "purpose": "pocket residue graphs (numpy npz)",
+ "generated_utc": "2026-11-14T02:24:09Z",
+ "node_features": "ESM-2 1280 + AA one-hot 20 + pLDDT 1 = 1301",
+ "edge_rule": "heavy-atom min distance <= 8.0 A",
+ "receptors": {
+  "ADRA2A": {
+   "n_nodes": 24,
+   "n_edges": 111,
+   "x_dim": 1301,
+   "mean_plddt": 89.34,
+   "file": "ADRA2A_graph.npz"
+  },
+  "ADRB2": {
+   "n_nodes": 27,
+   "n_edges": 150,
+   "x_dim": 1301,
+   "mean_plddt": 96.34,
+   "file": "ADRB2_graph.npz"
+  },
+  "CHRM1": {
+   "n_nodes": 30,
+   "n_edges": 167,
+   "x_dim": 1301,
+   "mean_plddt": 97.26,
+   "file": "CHRM1_graph.npz"
+  },
+  "DAT": {
+   "n_nodes": 28,
+   "n_edges": 176,
+   "x_dim": 1301,
+   "mean_plddt": 94.75,
+   "file": "DAT_graph.npz"
+  },
+  "DRD2": {
+   "n_nodes": 36,
+   "n_edges": 200,
+   "x_dim": 1301,
+   "mean_plddt": 85.44,
+   "file": "DRD2_graph.npz"
+  },
+  "DRD3": {
+   "n_nodes": 29,
+   "n_edges": 169,
+   "x_dim": 1301,
+   "mean_plddt": 93.23,
+   "file": "DRD3_graph.npz"
+  },
+  "GABRA1": {
+   "n_nodes": 21,
+   "n_edges": 104,
+   "x_dim": 1301,
+   "mean_plddt": 89.73,
+   "file": "GABRA1_graph.npz"
+  },
+  "HRH1": {
+   "n_nodes": 33,
+   "n_edges": 184,
+   "x_dim": 1301,
+   "mean_plddt": 93.4,
+   "file": "HRH1_graph.npz"
+  },
+  "HTR1A": {
+   "n_nodes": 28,
+   "n_edges": 166,
+   "x_dim": 1301,
+   "mean_plddt": 95.31,
+   "file": "HTR1A_graph.npz"
+  },
+  "HTR2A": {
+   "n_nodes": 29,
+   "n_edges": 164,
+   "x_dim": 1301,
+   "mean_plddt": 95.31,
+   "file": "HTR2A_graph.npz"
+  },
+  "SERT": {
+   "n_nodes": 36,
+   "n_edges": 241,
+   "x_dim": 1301,
+   "mean_plddt": 95.58,
+   "file": "SERT_graph.npz"
+  }
+ }
+}

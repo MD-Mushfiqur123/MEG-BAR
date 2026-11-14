@@ -15,7 +15,7 @@ the true orthosteric pocket from a wrong one. Does explicit 3D pocket geometry
 |---|---|---|
 | 0 — Foundation | 1–4 | Phases 1–4 done |
 | 1 — Structure data | 5–10 | complete (Phases 5–10 done) |
-| 2 — 3D features | 11–15 | pending |
+| 2 — 3D features | 11–15 | complete (Phases 11–15 done; 208 validation checks green) |
 | 3 — Models (incl. wrong-pocket-3D control) | 16–21 | pending |
 | 4 — Evaluation | 22–26 | pending |
 | 5 — Robustness | 27–31 | pending |
@@ -36,9 +36,17 @@ paper2/
     pairs_41271.csv        frozen ChEMBL pairs joined onto structures (Phase 9)
     ligand_pair_mapping.json  pair coverage + exclusions (Phase 9)
     manifest.json          SHA-256 of every file here (Phase 10)
+  data/features/           frozen 3D feature artefacts (Stage 2)
+    {SYM}_distances.npz    CA + heavy-atom min distance matrices (Phase 11)
+    {SYM}_contacts.npz     binary 4/6/8 A + weighted contact maps (Phase 12)
+    {SYM}_graph.npz        pocket graphs: ESM-2 + one-hot + pLDDT nodes (Phase 13)
+    {SYM}_geometry.npz     per-residue SASA (Phase 14)
+    feature_validation.json  208 sanity checks (Phase 15)
   scripts/                 numbered, one phase per script where possible
     mmcif_lite.py          stdlib mmCIF parser + NW alignment (shared)
+    stage2_common.py       pocket context loader (shared Stage 2)
     run_stage1.py          Stage 1 orchestrator (checkpointed)
+    run_stage2.py          Stage 2 orchestrator (checkpointed)
   results/                 frozen evaluation outputs + pipeline_state.json
   figures/                 300 DPI regenerable figures
   PREREGISTRATION.md       hypotheses H1-H4 + decision rules (Phase 4, frozen)
@@ -51,8 +59,10 @@ paper2/
 Stage 1 runs end-to-end with one command from the repo root:
 
 ```
-make paper2-stage1            # runs phases 06 -> 07 -> 08 -> 10, skips completed
+make paper2-stage1            # runs phases 06 -> 07 -> 08 -> 09 -> 10, skips completed
 make paper2-stage1-force      # rerun everything
+make paper2-stage2            # runs phases 11 -> 12 -> 13 -> 14 -> 15 -> 10
+make paper2-stage2-force      # rerun everything
 make paper2-test              # Paper 2 artefact tests only
 make test                     # full suite
 ```

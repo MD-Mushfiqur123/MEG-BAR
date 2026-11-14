@@ -1,0 +1,90 @@
+{
+ "phase": 12,
+ "purpose": "binary + weighted pocket contact maps",
+ "generated_utc": "2026-11-14T02:24:09Z",
+ "thresholds_a": [
+  4.0,
+  6.0,
+  8.0
+ ],
+ "weighted": "exp(-d/3.0 A) within 8.0 A, else 0",
+ "receptors": {
+  "ADRA2A": {
+   "n_pocket_residues": 24,
+   "n_contacts_4": 58,
+   "n_contacts_6": 83,
+   "n_contacts_8": 123,
+   "file": "ADRA2A_contacts.npz"
+  },
+  "ADRB2": {
+   "n_pocket_residues": 27,
+   "n_contacts_4": 72,
+   "n_contacts_6": 102,
+   "n_contacts_8": 163,
+   "file": "ADRB2_contacts.npz"
+  },
+  "CHRM1": {
+   "n_pocket_residues": 30,
+   "n_contacts_4": 89,
+   "n_contacts_6": 120,
+   "n_contacts_8": 182,
+   "file": "CHRM1_contacts.npz"
+  },
+  "DAT": {
+   "n_pocket_residues": 28,
+   "n_contacts_4": 85,
+   "n_contacts_6": 121,
+   "n_contacts_8": 190,
+   "file": "DAT_contacts.npz"
+  },
+  "DRD2": {
+   "n_pocket_residues": 36,
+   "n_contacts_4": 99,
+   "n_contacts_6": 134,
+   "n_contacts_8": 218,
+   "file": "DRD2_contacts.npz"
+  },
+  "DRD3": {
+   "n_pocket_residues": 29,
+   "n_contacts_4": 84,
+   "n_contacts_6": 121,
+   "n_contacts_8": 183,
+   "file": "DRD3_contacts.npz"
+  },
+  "GABRA1": {
+   "n_pocket_residues": 21,
+   "n_contacts_4": 58,
+   "n_contacts_6": 81,
+   "n_contacts_8": 114,
+   "file": "GABRA1_contacts.npz"
+  },
+  "HRH1": {
+   "n_pocket_residues": 33,
+   "n_contacts_4": 92,
+   "n_contacts_6": 128,
+   "n_contacts_8": 200,
+   "file": "HRH1_contacts.npz"
+  },
+  "HTR1A": {
+   "n_pocket_residues": 28,
+   "n_contacts_4": 83,
+   "n_contacts_6": 114,
+   "n_contacts_8": 180,
+   "file": "HTR1A_contacts.npz"
+  },
+  "HTR2A": {
+   "n_pocket_residues": 29,
+   "n_contacts_4": 81,
+   "n_contacts_6": 110,
+   "n_contacts_8": 178,
+   "file": "HTR2A_contacts.npz"
+  },
+  "SERT": {
+   "n_pocket_residues": 36,
+   "n_contacts_4": 119,
+   "n_contacts_6": 170,
+   "n_contacts_8": 259,
+   "file": "SERT_contacts.npz"
+  }
+ }
+}
