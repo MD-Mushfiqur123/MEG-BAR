@@ -95,6 +95,36 @@
    "script": "21_arm_f_shuffled.py",
    "finished_utc": "2026-11-14T03:55:50Z",
    "runtime_s": 822.6
+  },
+  "phase_22_scaffold_master": {
+   "status": "done",
+   "script": "22_scaffold_master.py",
+   "finished_utc": "2026-11-14T07:07:48Z",
+   "runtime_s": 2.4
+  },
+  "phase_23_temporal_protocol": {
+   "status": "done",
+   "script": "23_temporal_protocol.py",
+   "finished_utc": "2026-11-14T08:16:45Z",
+   "runtime_s": 4137.1
+  },
+  "phase_24_low_resource": {
+   "status": "done",
+   "script": "24_low_resource.py",
+   "finished_utc": "2026-11-14T08:16:47Z",
+   "runtime_s": 2.2
+  },
+  "phase_25_statistics": {
+   "status": "done",
+   "script": "25_statistics.py",
+   "finished_utc": "2026-11-14T08:16:50Z",
+   "runtime_s": 3.3
+  },
+  "phase_26_compute_budget": {
+   "status": "done",
+   "script": "26_compute_budget.py",
+   "finished_utc": "2026-11-14T08:16:53Z",
+   "runtime_s": 2.2
   }
  }
 }

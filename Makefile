@@ -4,7 +4,8 @@
 PYTHON ?= python3
 
 .PHONY: help paper2-stage1 paper2-stage1-force paper2-stage2 paper2-stage2-force \
-        paper2-stage3 paper2-stage3-force \
+        paper2-stage3 paper2-stage3-force paper2-stage4 paper2-stage4-force \
+        paper2-stage5 paper2-stage5-force \
         paper2-phase5 paper2-manifest paper2-mapping paper2-test test
 
 help:
@@ -15,6 +16,10 @@ help:
 	@echo "  paper2-stage2-force  - rerun all Stage 2 phases ignoring checkpoints"
 	@echo "  paper2-stage3        - run Paper 2 Stage 3 (six model arms, Phases 16-21)"
 	@echo "  paper2-stage3-force  - delete the Stage 3 store and rerun all arms"
+	@echo "  paper2-stage4        - run Paper 2 Stage 4 (scaffold master, temporal, stats, Phases 22-26)"
+	@echo "  paper2-stage4-force  - rerun all Stage 4 phases ignoring checkpoints"
+	@echo "  paper2-stage5        - run Paper 2 Stage 5 (crystal-vs-AF, radius sweep, verdicts, Phases 27-31)"
+	@echo "  paper2-stage5-force  - rerun all Stage 5 phases ignoring checkpoints"
 	@echo "  paper2-phase5        - rerun PDB structure selection (RCSB search + GraphQL)"
 	@echo "  paper2-mapping       - rerun residue mapping only (phase 08)"
 	@echo "  paper2-manifest      - regenerate SHA-256 manifest only (phase 10)"
@@ -38,6 +43,18 @@ paper2-stage3:
 
 paper2-stage3-force:
 	$(PYTHON) paper2/scripts/run_stage3.py --force
+
+paper2-stage4:
+	$(PYTHON) paper2/scripts/run_stage4.py
+
+paper2-stage4-force:
+	$(PYTHON) paper2/scripts/run_stage4.py --force
+
+paper2-stage5:
+	$(PYTHON) paper2/scripts/run_stage5.py
+
+paper2-stage5-force:
+	$(PYTHON) paper2/scripts/run_stage5.py --force
 
 paper2-phase5:
 	$(PYTHON) paper2/scripts/05_pdb_mapping.py

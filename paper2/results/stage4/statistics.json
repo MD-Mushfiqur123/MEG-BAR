@@ -1,0 +1,713 @@
+{
+  "purpose": "Phase 25: pre-registered statistics (Wilcoxon, bootstrap, Holm)",
+  "alpha": 0.05,
+  "primary_endpoint": {
+    "definition": "paired Wilcoxon across seeds, Arm C vs Arm E, scaffold-disjoint, pooled across data-rich receptors",
+    "result": {
+      "pooled": {
+        "n_pairs": 45,
+        "mean_diff": 0.00025,
+        "win_loss_tie": [
+          18,
+          27,
+          0
+        ],
+        "wilcoxon_p": 0.22089,
+        "bootstrap_ci95": [
+          -0.02169,
+          0.02189
+        ]
+      },
+      "per_receptor_holm": {
+        "ADRB2": {
+          "n_seeds": 5,
+          "mean_diff": -0.00948,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "CHRM1": {
+          "n_seeds": 5,
+          "mean_diff": 0.01065,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DAT": {
+          "n_seeds": 5,
+          "mean_diff": -0.00401,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD2": {
+          "n_seeds": 5,
+          "mean_diff": 0.0211,
+          "wilcoxon_p": 0.4375,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD3": {
+          "n_seeds": 5,
+          "mean_diff": -0.00692,
+          "wilcoxon_p": 0.1875,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HRH1": {
+          "n_seeds": 5,
+          "mean_diff": 0.00528,
+          "wilcoxon_p": 0.4375,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR1A": {
+          "n_seeds": 5,
+          "mean_diff": -0.00457,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR2A": {
+          "n_seeds": 5,
+          "mean_diff": -0.00668,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "SERT": {
+          "n_seeds": 5,
+          "mean_diff": -0.00308,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        }
+      }
+    }
+  },
+  "secondary": {
+    "C_vs_F_shuffled": {
+      "pooled": {
+        "n_pairs": 45,
+        "mean_diff": 0.01116,
+        "win_loss_tie": [
+          24,
+          21,
+          0
+        ],
+        "wilcoxon_p": 0.15634,
+        "bootstrap_ci95": [
+          0.00041,
+          0.03014
+        ]
+      },
+      "per_receptor_holm": {
+        "ADRB2": {
+          "n_seeds": 5,
+          "mean_diff": 0.00235,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "CHRM1": {
+          "n_seeds": 5,
+          "mean_diff": 0.08016,
+          "wilcoxon_p": 0.125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DAT": {
+          "n_seeds": 5,
+          "mean_diff": 0.00024,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD2": {
+          "n_seeds": 5,
+          "mean_diff": 0.02284,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD3": {
+          "n_seeds": 5,
+          "mean_diff": 0.0015,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HRH1": {
+          "n_seeds": 5,
+          "mean_diff": 0.00021,
+          "wilcoxon_p": 1.0,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR1A": {
+          "n_seeds": 5,
+          "mean_diff": -0.00116,
+          "wilcoxon_p": 1.0,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR2A": {
+          "n_seeds": 5,
+          "mean_diff": -0.00095,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "SERT": {
+          "n_seeds": 5,
+          "mean_diff": -0.00477,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        }
+      }
+    },
+    "C_vs_B_1d": {
+      "pooled": {
+        "n_pairs": 45,
+        "mean_diff": 0.01716,
+        "win_loss_tie": [
+          24,
+          21,
+          0
+        ],
+        "wilcoxon_p": 0.86686,
+        "bootstrap_ci95": [
+          -0.0018,
+          0.03979
+        ]
+      },
+      "per_receptor_holm": {
+        "ADRB2": {
+          "n_seeds": 5,
+          "mean_diff": -0.00296,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "CHRM1": {
+          "n_seeds": 5,
+          "mean_diff": 0.14437,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DAT": {
+          "n_seeds": 5,
+          "mean_diff": -0.00517,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD2": {
+          "n_seeds": 5,
+          "mean_diff": 0.01424,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD3": {
+          "n_seeds": 5,
+          "mean_diff": -0.01064,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HRH1": {
+          "n_seeds": 5,
+          "mean_diff": 0.00391,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR1A": {
+          "n_seeds": 5,
+          "mean_diff": -0.00807,
+          "wilcoxon_p": 0.1875,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR2A": {
+          "n_seeds": 5,
+          "mean_diff": 0.0003,
+          "wilcoxon_p": 1.0,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "SERT": {
+          "n_seeds": 5,
+          "mean_diff": 0.01848,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        }
+      }
+    },
+    "B_vs_A_shared": {
+      "pooled": {
+        "n_pairs": 45,
+        "mean_diff": -0.00022,
+        "win_loss_tie": [
+          36,
+          9,
+          0
+        ],
+        "wilcoxon_p": 0.00082,
+        "bootstrap_ci95": [
+          -0.02735,
+          0.02219
+        ]
+      },
+      "per_receptor_holm": {
+        "ADRB2": {
+          "n_seeds": 5,
+          "mean_diff": -0.01737,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5625,
+          "significant_0.05": false
+        },
+        "CHRM1": {
+          "n_seeds": 5,
+          "mean_diff": -0.17307,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 0.625,
+          "significant_0.05": false
+        },
+        "DAT": {
+          "n_seeds": 5,
+          "mean_diff": 0.01861,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5625,
+          "significant_0.05": false
+        },
+        "DRD2": {
+          "n_seeds": 5,
+          "mean_diff": 0.03585,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5625,
+          "significant_0.05": false
+        },
+        "DRD3": {
+          "n_seeds": 5,
+          "mean_diff": 0.03262,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5625,
+          "significant_0.05": false
+        },
+        "HRH1": {
+          "n_seeds": 5,
+          "mean_diff": 0.0306,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5625,
+          "significant_0.05": false
+        },
+        "HTR1A": {
+          "n_seeds": 5,
+          "mean_diff": 0.02301,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5625,
+          "significant_0.05": false
+        },
+        "HTR2A": {
+          "n_seeds": 5,
+          "mean_diff": 0.02802,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5625,
+          "significant_0.05": false
+        },
+        "SERT": {
+          "n_seeds": 5,
+          "mean_diff": 0.01977,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 0.625,
+          "significant_0.05": false
+        }
+      }
+    },
+    "D_vs_E_wrongpocket": {
+      "pooled": {
+        "n_pairs": 45,
+        "mean_diff": -0.0098,
+        "win_loss_tie": [
+          19,
+          26,
+          0
+        ],
+        "wilcoxon_p": 0.34071,
+        "bootstrap_ci95": [
+          -0.02628,
+          0.001
+        ]
+      },
+      "per_receptor_holm": {
+        "ADRB2": {
+          "n_seeds": 5,
+          "mean_diff": -0.0636,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5625,
+          "significant_0.05": false
+        },
+        "CHRM1": {
+          "n_seeds": 5,
+          "mean_diff": -0.01231,
+          "wilcoxon_p": 0.4375,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DAT": {
+          "n_seeds": 5,
+          "mean_diff": 0.00196,
+          "wilcoxon_p": 1.0,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD2": {
+          "n_seeds": 5,
+          "mean_diff": 0.00098,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD3": {
+          "n_seeds": 5,
+          "mean_diff": 0.00331,
+          "wilcoxon_p": 0.4375,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HRH1": {
+          "n_seeds": 5,
+          "mean_diff": -0.00035,
+          "wilcoxon_p": 1.0,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR1A": {
+          "n_seeds": 5,
+          "mean_diff": 0.00341,
+          "wilcoxon_p": 0.4375,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR2A": {
+          "n_seeds": 5,
+          "mean_diff": -0.00344,
+          "wilcoxon_p": 0.4375,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "SERT": {
+          "n_seeds": 5,
+          "mean_diff": -0.01817,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        }
+      }
+    }
+  },
+  "temporal_protocol": {
+    "C_vs_E_wrongpocket": {
+      "pooled": {
+        "n_pairs": 40,
+        "mean_diff": -0.00896,
+        "win_loss_tie": [
+          17,
+          23,
+          0
+        ],
+        "wilcoxon_p": 0.0408,
+        "bootstrap_ci95": [
+          -0.01976,
+          0.00218
+        ]
+      },
+      "per_receptor_holm": {
+        "CHRM1": {
+          "n_seeds": 5,
+          "mean_diff": -0.02227,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DAT": {
+          "n_seeds": 5,
+          "mean_diff": -0.01913,
+          "wilcoxon_p": 0.125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD2": {
+          "n_seeds": 5,
+          "mean_diff": 0.00282,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD3": {
+          "n_seeds": 5,
+          "mean_diff": 0.00062,
+          "wilcoxon_p": 1.0,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HRH1": {
+          "n_seeds": 5,
+          "mean_diff": -0.02525,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR1A": {
+          "n_seeds": 5,
+          "mean_diff": -0.00061,
+          "wilcoxon_p": 1.0,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR2A": {
+          "n_seeds": 5,
+          "mean_diff": -0.00983,
+          "wilcoxon_p": 0.3125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "SERT": {
+          "n_seeds": 5,
+          "mean_diff": 0.00197,
+          "wilcoxon_p": 1.0,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        }
+      }
+    },
+    "C_vs_F_shuffled": {
+      "pooled": {
+        "n_pairs": 40,
+        "mean_diff": -0.00194,
+        "win_loss_tie": [
+          26,
+          14,
+          0
+        ],
+        "wilcoxon_p": 0.47621,
+        "bootstrap_ci95": [
+          -0.00881,
+          0.00341
+        ]
+      },
+      "per_receptor_holm": {
+        "CHRM1": {
+          "n_seeds": 5,
+          "mean_diff": -0.01615,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DAT": {
+          "n_seeds": 5,
+          "mean_diff": -0.00478,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD2": {
+          "n_seeds": 5,
+          "mean_diff": 0.00229,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD3": {
+          "n_seeds": 5,
+          "mean_diff": 0.00177,
+          "wilcoxon_p": 0.8125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HRH1": {
+          "n_seeds": 5,
+          "mean_diff": -0.01102,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR1A": {
+          "n_seeds": 5,
+          "mean_diff": 0.00653,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR2A": {
+          "n_seeds": 5,
+          "mean_diff": -0.00116,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "SERT": {
+          "n_seeds": 5,
+          "mean_diff": 0.00701,
+          "wilcoxon_p": 0.125,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        }
+      }
+    },
+    "C_vs_B_1d": {
+      "pooled": {
+        "n_pairs": 40,
+        "mean_diff": -0.00251,
+        "win_loss_tie": [
+          17,
+          23,
+          0
+        ],
+        "wilcoxon_p": 0.5537,
+        "bootstrap_ci95": [
+          -0.01394,
+          0.01002
+        ]
+      },
+      "per_receptor_holm": {
+        "CHRM1": {
+          "n_seeds": 5,
+          "mean_diff": 0.02828,
+          "wilcoxon_p": 0.4375,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DAT": {
+          "n_seeds": 5,
+          "mean_diff": 0.02462,
+          "wilcoxon_p": 0.125,
+          "holm_p": 0.875,
+          "significant_0.05": false
+        },
+        "DRD2": {
+          "n_seeds": 5,
+          "mean_diff": 0.00042,
+          "wilcoxon_p": 1.0,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "DRD3": {
+          "n_seeds": 5,
+          "mean_diff": 0.0058,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HRH1": {
+          "n_seeds": 5,
+          "mean_diff": -0.02547,
+          "wilcoxon_p": 0.625,
+          "holm_p": 1.0,
+          "significant_0.05": false
+        },
+        "HTR1A": {
+          "n_seeds": 5,
+          "mean_diff": -0.02269,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5,
+          "significant_0.05": false
+        },
+        "HTR2A": {
+          "n_seeds": 5,
+          "mean_diff": -0.01304,
+          "wilcoxon_p": 0.125,
+          "holm_p": 0.875,
+          "significant_0.05": false
+        },
+        "SERT": {
+          "n_seeds": 5,
+          "mean_diff": -0.01799,
+          "wilcoxon_p": 0.125,
+          "holm_p": 0.875,
+          "significant_0.05": false
+        }
+      }
+    },
+    "B_vs_A_shared": {
+      "pooled": {
+        "n_pairs": 40,
+        "mean_diff": 0.01255,
+        "win_loss_tie": [
+          24,
+          16,
+          0
+        ],
+        "wilcoxon_p": 0.1922,
+        "bootstrap_ci95": [
+          -0.00684,
+          0.03098
+        ]
+      },
+      "per_receptor_holm": {
+        "CHRM1": {
+          "n_seeds": 5,
+          "mean_diff": -0.04487,
+          "wilcoxon_p": 0.125,
+          "holm_p": 0.5,
+          "significant_0.05": false
+        },
+        "DAT": {
+          "n_seeds": 5,
+          "mean_diff": -0.07628,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5,
+          "significant_0.05": false
+        },
+        "DRD2": {
+          "n_seeds": 5,
+          "mean_diff": 0.02728,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5,
+          "significant_0.05": false
+        },
+        "DRD3": {
+          "n_seeds": 5,
+          "mean_diff": -0.03481,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5,
+          "significant_0.05": false
+        },
+        "HRH1": {
+          "n_seeds": 5,
+          "mean_diff": 0.07707,
+          "wilcoxon_p": 0.125,
+          "holm_p": 0.5,
+          "significant_0.05": false
+        },
+        "HTR1A": {
+          "n_seeds": 5,
+          "mean_diff": 0.05625,
+          "wilcoxon_p": 0.125,
+          "holm_p": 0.5,
+          "significant_0.05": false
+        },
+        "HTR2A": {
+          "n_seeds": 5,
+          "mean_diff": 0.05335,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5,
+          "significant_0.05": false
+        },
+        "SERT": {
+          "n_seeds": 5,
+          "mean_diff": 0.04238,
+          "wilcoxon_p": 0.0625,
+          "holm_p": 0.5,
+          "significant_0.05": false
+        }
+      }
+    }
+  },
+  "h2_verdict": "NOT SUPPORTED - decisive negative result per PREREGISTRATION.md decision rule 1"
+}
