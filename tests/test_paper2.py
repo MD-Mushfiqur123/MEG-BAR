@@ -155,6 +155,65 @@ def test_phase15_feature_validation_all_passed():
     assert len(d["receptors"]) == 11
 
 
+def test_stage3_store_complete():
+    d = _load(os.path.join("results", "stage3", "arms_scaffold_results.json"))
+    e3 = {k: v for k, v in d.items() if k.startswith("E3|")}
+    assert len(e3) >= 9, "expected E3 blocks for at least 9 receptors"
+    for key, blk in e3.items():
+        assert "shared" in blk and len(blk["shared"]["seeds"]) == 5, key
+        assert "ridge" in blk and "pearson_r" in blk["ridge"], key
+        for arch in ["crossattn_1d", "pocket3d", "dist_bias",
+                     "pocket3d_wrongpocket", "pocket3d_shuffled"]:
+            rec = blk.get(arch)
+            assert isinstance(rec, dict) and rec, f"{key} missing {arch}"
+            if "skipped" in rec:
+                assert "MIN_TRAIN" in rec["skipped"]
+            else:
+                assert len(rec["seeds"]) == 5, f"{key}/{arch} needs 5 seeds"
+                assert all("config" in s for s in rec["seeds"])
+                assert "mean_r" in rec and "sd_r" in rec
+
+
+def test_stage3_controls_in_same_store():
+    d = _load(os.path.join("results", "stage3", "arms_scaffold_results.json"))
+    for key, blk in d.items():
+        if not key.startswith("E3|"):
+            continue
+        c = blk.get("pocket3d", {})
+        if "skipped" in c:
+            assert "skipped" in blk.get("pocket3d_wrongpocket", {}), key
+            assert "skipped" in blk.get("pocket3d_shuffled", {}), key
+        else:
+            assert "seeds" in blk.get("pocket3d_wrongpocket", {}), key
+            assert "seeds" in blk.get("pocket3d_shuffled", {}), key
+
+
+def test_stage3_regression_guard_pass():
+    d = _load(os.path.join("results", "stage3", "arms_scaffold_results.json"))
+    guard = d["regression_guard"]
+    assert guard["verdict"] == "PASS"
+    assert len(guard["per_receptor"]) >= 9
+    assert all(r["pass"] for r in guard["per_receptor"])
+
+
+def test_stage3_shuffle_permutations_recorded():
+    d = _load(os.path.join("results", "stage3", "arms_scaffold_results.json"))
+    perm = d["shuffle_permutations"]
+    assert len(perm) == 11
+    for g, p in perm.items():
+        assert sorted(p) == list(range(len(p))), f"{g} not a permutation"
+        assert p != list(range(len(p))), f"{g} permutation is identity"
+
+
+def test_stage3_report_exists():
+    path = os.path.join(PAPER2, "results", "stage3", "stage3_report.md")
+    src = open(path).read()
+    for arm in ["shared", "crossattn_1d", "pocket3d", "dist_bias",
+                "pocket3d_wrongpocket", "pocket3d_shuffled"]:
+        assert arm in src
+    assert "regression guard" in src.lower()
+
+
 def test_phase10_manifest_covers_artefacts():
     import hashlib
 

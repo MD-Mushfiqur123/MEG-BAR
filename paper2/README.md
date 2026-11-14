@@ -16,7 +16,7 @@ the true orthosteric pocket from a wrong one. Does explicit 3D pocket geometry
 | 0 — Foundation | 1–4 | Phases 1–4 done |
 | 1 — Structure data | 5–10 | complete (Phases 5–10 done) |
 | 2 — 3D features | 11–15 | complete (Phases 11–15 done; 208 validation checks green) |
-| 3 — Models (incl. wrong-pocket-3D control) | 16–21 | pending |
+| 3 — Models (incl. wrong-pocket-3D control) | 16–21 | complete (all 6 arms measured; Arm A regression guard PASS; C vs E: +0.0003, p = 0.22 — decisive negative, see plan) |
 | 4 — Evaluation | 22–26 | pending |
 | 5 — Robustness | 27–31 | pending |
 | 6 — Analysis & figures | 32–34 | pending |
@@ -45,9 +45,15 @@ paper2/
   scripts/                 numbered, one phase per script where possible
     mmcif_lite.py          stdlib mmCIF parser + NW alignment (shared)
     stage2_common.py       pocket context loader (shared Stage 2)
+    stage3_common.py       arms data/models/training + resume store (shared Stage 3)
+    16..21_arm_*.py        the six model arms (A replication, B 1D, C 3D,
+                           D distance-bias, E wrong-pocket-3D, F shuffled)
     run_stage1.py          Stage 1 orchestrator (checkpointed)
     run_stage2.py          Stage 2 orchestrator (checkpointed)
+    run_stage3.py          Stage 3 orchestrator (checkpointed + report)
   results/                 frozen evaluation outputs + pipeline_state.json
+  results/stage3/          arms_scaffold_results.json (granular-resume store,
+                           all 7 arms x 11 receptors x 5 seeds) + report
   figures/                 300 DPI regenerable figures
   PREREGISTRATION.md       hypotheses H1-H4 + decision rules (Phase 4, frozen)
   ENVIRONMENT.md           verified versions + structure-tooling plan (Phase 3)
@@ -63,6 +69,8 @@ make paper2-stage1            # runs phases 06 -> 07 -> 08 -> 09 -> 10, skips co
 make paper2-stage1-force      # rerun everything
 make paper2-stage2            # runs phases 11 -> 12 -> 13 -> 14 -> 15 -> 10
 make paper2-stage2-force      # rerun everything
+make paper2-stage3            # runs phases 16 -> 21 (six arms) + report
+make paper2-stage3-force      # delete the Stage 3 store and rerun all arms
 make paper2-test              # Paper 2 artefact tests only
 make test                     # full suite
 ```
