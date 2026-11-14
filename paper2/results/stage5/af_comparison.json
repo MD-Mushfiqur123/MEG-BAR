@@ -1,0 +1,171 @@
+{
+ "purpose": "Phase 27 crystal-vs-AF geometry comparison (H4)",
+ "afdb_context_meta": {
+  "ADRA2A": {
+   "n_pocket_residues": 24,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 89.34
+  },
+  "ADRB2": {
+   "n_pocket_residues": 27,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 96.34
+  },
+  "CHRM1": {
+   "n_pocket_residues": 30,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 97.26
+  },
+  "DAT": {
+   "n_pocket_residues": 28,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 94.75
+  },
+  "DRD2": {
+   "n_pocket_residues": 36,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 85.44
+  },
+  "DRD3": {
+   "n_pocket_residues": 29,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 93.23
+  },
+  "GABRA1": {
+   "n_pocket_residues": 21,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 89.73
+  },
+  "HRH1": {
+   "n_pocket_residues": 33,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 93.4
+  },
+  "HTR1A": {
+   "n_pocket_residues": 28,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 95.31
+  },
+  "HTR2A": {
+   "n_pocket_residues": 29,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 95.31
+  },
+  "SERT": {
+   "n_pocket_residues": 36,
+   "missing_in_afdb": [],
+   "mean_plddt_in_pocket": 95.58
+  }
+ },
+ "per_receptor": {
+  "ADRB2": {
+   "pocket3d": {
+    "af_mean_r": 0.5207481940768176,
+    "crystal_mean_r": 0.521114266595298,
+    "delta_r": -0.00037
+   },
+   "pocket3d_wrongpocket": {
+    "af_mean_r": 0.5260272092766239,
+    "crystal_mean_r": 0.530598078484579,
+    "delta_r": -0.00457
+   }
+  },
+  "CHRM1": {
+   "pocket3d": {
+    "af_mean_r": 0.532139920713025,
+    "crystal_mean_r": 0.533627789739344,
+    "delta_r": -0.00149
+   },
+   "pocket3d_wrongpocket": {
+    "af_mean_r": 0.5326263184567945,
+    "crystal_mean_r": 0.5229789165636046,
+    "delta_r": 0.00965
+   }
+  },
+  "DAT": {
+   "pocket3d": {
+    "af_mean_r": 0.6065683875386935,
+    "crystal_mean_r": 0.6036728523862147,
+    "delta_r": 0.0029
+   },
+   "pocket3d_wrongpocket": {
+    "af_mean_r": 0.6015436437517564,
+    "crystal_mean_r": 0.6076874908127682,
+    "delta_r": -0.00614
+   }
+  },
+  "DRD2": {
+   "pocket3d": {
+    "af_mean_r": 0.6112453406904655,
+    "crystal_mean_r": 0.6273921576619454,
+    "delta_r": -0.01615
+   },
+   "pocket3d_wrongpocket": {
+    "af_mean_r": 0.6091585708474587,
+    "crystal_mean_r": 0.6062917738414528,
+    "delta_r": 0.00287
+   }
+  },
+  "DRD3": {
+   "pocket3d": {
+    "af_mean_r": 0.7081904435825889,
+    "crystal_mean_r": 0.7063915902112246,
+    "delta_r": 0.0018
+   },
+   "pocket3d_wrongpocket": {
+    "af_mean_r": 0.7098667654190358,
+    "crystal_mean_r": 0.7133108723971997,
+    "delta_r": -0.00344
+   }
+  },
+  "HRH1": {
+   "pocket3d": {
+    "af_mean_r": 0.8369479279258278,
+    "crystal_mean_r": 0.8369783239246592,
+    "delta_r": -3e-05
+   },
+   "pocket3d_wrongpocket": {
+    "af_mean_r": 0.8355024341269164,
+    "crystal_mean_r": 0.8316978306774171,
+    "delta_r": 0.0038
+   }
+  },
+  "HTR1A": {
+   "pocket3d": {
+    "af_mean_r": 0.6941195219477906,
+    "crystal_mean_r": 0.6967146368012211,
+    "delta_r": -0.0026
+   },
+   "pocket3d_wrongpocket": {
+    "af_mean_r": 0.696380912088412,
+    "crystal_mean_r": 0.7012850708968277,
+    "delta_r": -0.0049
+   }
+  },
+  "HTR2A": {
+   "pocket3d": {
+    "af_mean_r": 0.6776503008026502,
+    "crystal_mean_r": 0.6878584753638806,
+    "delta_r": -0.01021
+   },
+   "pocket3d_wrongpocket": {
+    "af_mean_r": 0.6840701118404813,
+    "crystal_mean_r": 0.6945415324834762,
+    "delta_r": -0.01047
+   }
+  },
+  "SERT": {
+   "pocket3d": {
+    "af_mean_r": 0.5397667456947979,
+    "crystal_mean_r": 0.5387107647496643,
+    "delta_r": 0.00106
+   },
+   "pocket3d_wrongpocket": {
+    "af_mean_r": 0.5337715554758538,
+    "crystal_mean_r": 0.5417887474587614,
+    "delta_r": -0.00802
+   }
+  }
+ },
+ "pooled_delta_r_pocket3d": -0.00279
+}

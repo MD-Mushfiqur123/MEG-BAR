@@ -30,10 +30,10 @@ STORES = [
                                     'stage4', 'temporal_results.json')),
     ('E3AF', 'AFDB geometry', os.path.join(_REPO, 'paper2', 'results',
                                            'stage5', 'af_results.json')),
-    ('R5p', 'radius 5.0 A', os.path.join(_REPO, 'paper2', 'results',
-                                         'stage5', 'radius_sweep_5p0.json')),
-    ('R8p', 'radius 8.0 A', os.path.join(_REPO, 'paper2', 'results',
-                                         'stage5', 'radius_sweep_8p0.json')),
+    ('R5', 'radius 5.0 A', os.path.join(_REPO, 'paper2', 'results',
+                                        'stage5', 'radius_sweep_5.json')),
+    ('R8', 'radius 8.0 A', os.path.join(_REPO, 'paper2', 'results',
+                                        'stage5', 'radius_sweep_8.json')),
 ]
 
 

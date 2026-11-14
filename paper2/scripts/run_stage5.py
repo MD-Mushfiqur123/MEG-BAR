@@ -29,8 +29,8 @@ PHASES = [
 
 ARTIFACTS = {
     "27_crystal_vs_af": ["af_results.json", "af_comparison.json"],
-    "28_radius_sweep": ["radius_sweep.json", "radius_sweep_5p0.json",
-                        "radius_sweep_8p0.json"],
+    "28_radius_sweep": ["radius_sweep.json", "radius_sweep_5.json",
+                        "radius_sweep_8.json"],
     "29_mutation_probe": ["mutation_probe.json"],
     "30_variance_decomposition": ["variance_decomposition.json"],
     "31_negative_result_guard": ["hypothesis_verdicts.json",

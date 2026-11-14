@@ -1,0 +1,29 @@
+{
+ "phase": 29,
+ "question": "Do known point mutations with measured affinity shifts let 3D pocket grounding respond where 1D cannot?",
+ "status": "not-run",
+ "reason": "frozen ChEMBL artefact has no assay_description column; mutant-specific records cannot be identified without re-downloading (forbidden by the frozen-data rule)",
+ "evidence": {
+  "columns": [
+   "activity_id",
+   "assay_chembl_id",
+   "document_chembl_id",
+   "gene",
+   "molecule_chembl_id",
+   "pchembl_value",
+   "retrieved_utc",
+   "smiles",
+   "source",
+   "standard_relation",
+   "standard_type",
+   "standard_units",
+   "standard_value_nM",
+   "target_chembl_id"
+  ],
+  "missing_columns": [
+   "assay_description"
+  ],
+  "n_activity_rows": 0,
+  "n_mutation_keyword_rows": 0
+ }
+}

@@ -1,0 +1,1819 @@
+{
+  "purpose": "Paper 2 Stage 5 Phase 27: pocket3d + wrong-pocket control with AFDB v6 predicted-structure geometry at the crystal pocket UniProt positions (H4 crystal-vs-AF)",
+  "protocol": "E3 scaffold-disjoint splits; pocket geometry from AFDB v6 models instead of crystal structures",
+  "data": {
+    "n_pairs": 41271,
+    "n_genes": 11,
+    "pairs_source": "paper2/data/structures/pairs_41271.csv",
+    "fp_source": "data/real/ligand_fp_cache_expanded.npz",
+    "pocket_source": "paper2/data/structures/residue_mapping.json",
+    "graph_source": "paper2/data/features/{SYM}_graph.npz"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "arms_requested": [
+    "pocket3d",
+    "pocket3d_wrongpocket"
+  ],
+  "min_train": 800,
+  "hyperparameters": {
+    "d_model": 128,
+    "batch": 512,
+    "max_epochs": 70,
+    "lr_peak": 0.0005,
+    "pocket_dim": 128,
+    "dropout": 0.2,
+    "patience": 7,
+    "weight_decay": 0.01,
+    "clip_norm": 1.0,
+    "optimizer": "AdamW, cosine LR with 5% warmup"
+  },
+  "pocket_pca": null,
+  "shuffle_permutations": null,
+  "E3|ADRA2A": {
+    "pocket3d": {
+      "skipped": "n_train=667 < MIN_TRAIN=800"
+    },
+    "pocket3d_wrongpocket": {
+      "skipped": "n_train=667 < MIN_TRAIN=800"
+    }
+  },
+  "E3|ADRB2": {
+    "pocket3d": {
+      "seeds": [
+        {
+          "pearson_r": 0.5172350492800457,
+          "spearman_rho": 0.4903192066176005,
+          "rmse": 0.9641210794404586,
+          "mae": 0.7550361602286982,
+          "n": 246,
+          "seed": 0,
+          "epochs": 41,
+          "seconds": 8.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5256429221230686,
+          "spearman_rho": 0.5097114262717631,
+          "rmse": 0.9585762784310309,
+          "mae": 0.7444773495681887,
+          "n": 246,
+          "seed": 1,
+          "epochs": 42,
+          "seconds": 6.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5247945221705375,
+          "spearman_rho": 0.4981305887446721,
+          "rmse": 0.9667829915867046,
+          "mae": 0.7486146465549625,
+          "n": 246,
+          "seed": 2,
+          "epochs": 44,
+          "seconds": 6.4,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5185256387383347,
+          "spearman_rho": 0.49476511172180315,
+          "rmse": 0.9652207404337955,
+          "mae": 0.7561443104007379,
+          "n": 246,
+          "seed": 3,
+          "epochs": 40,
+          "seconds": 5.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5175428380721014,
+          "spearman_rho": 0.4927716588373615,
+          "rmse": 0.9872839413088449,
+          "mae": 0.7656878203880496,
+          "n": 246,
+          "seed": 4,
+          "epochs": 47,
+          "seconds": 6.8,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.4148770570755005,
+        0.6109820604324341
+      ],
+      "mean_r": 0.5207481940768176,
+      "sd_r": 0.004119689897354448,
+      "n_train": 803,
+      "n_test": 246
+    },
+    "pocket3d_wrongpocket": {
+      "seeds": [
+        {
+          "pearson_r": 0.5326439420674598,
+          "spearman_rho": 0.5054704789361479,
+          "rmse": 0.9525274464538374,
+          "mae": 0.7420196533203125,
+          "n": 246,
+          "seed": 0,
+          "epochs": 41,
+          "seconds": 6.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5310922261657209,
+          "spearman_rho": 0.5193246830646014,
+          "rmse": 0.9524899120902014,
+          "mae": 0.7383214419450217,
+          "n": 246,
+          "seed": 1,
+          "epochs": 42,
+          "seconds": 6.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5335120929049612,
+          "spearman_rho": 0.49852660100191615,
+          "rmse": 0.9699346951117592,
+          "mae": 0.7535682112220826,
+          "n": 246,
+          "seed": 2,
+          "epochs": 44,
+          "seconds": 6.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5206993737444046,
+          "spearman_rho": 0.49866283650069887,
+          "rmse": 0.9687296967906909,
+          "mae": 0.752137850939743,
+          "n": 246,
+          "seed": 3,
+          "epochs": 40,
+          "seconds": 5.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5121884115005735,
+          "spearman_rho": 0.4841336874748225,
+          "rmse": 0.9685444597302031,
+          "mae": 0.7589877272039894,
+          "n": 246,
+          "seed": 4,
+          "epochs": 43,
+          "seconds": 6.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.4101268947124481,
+        0.6061804294586182
+      ],
+      "mean_r": 0.5260272092766239,
+      "sd_r": 0.009291894144719757,
+      "n_train": 803,
+      "n_test": 246
+    }
+  },
+  "E3|CHRM1": {
+    "pocket3d": {
+      "seeds": [
+        {
+          "pearson_r": 0.5899448144547595,
+          "spearman_rho": 0.5900837554871315,
+          "rmse": 1.0122158136864206,
+          "mae": 0.77838645562893,
+          "n": 410,
+          "seed": 0,
+          "epochs": 47,
+          "seconds": 11.5,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.605119517735669,
+          "spearman_rho": 0.6029628982557461,
+          "rmse": 1.0002079670474686,
+          "mae": 0.7722312299216666,
+          "n": 410,
+          "seed": 1,
+          "epochs": 50,
+          "seconds": 12.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.2753549139902157,
+          "spearman_rho": 0.24347290887427142,
+          "rmse": 1.2326042654092348,
+          "mae": 0.982005087922259,
+          "n": 410,
+          "seed": 2,
+          "epochs": 22,
+          "seconds": 5.2,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5909435616766675,
+          "spearman_rho": 0.5881791413785794,
+          "rmse": 1.0181410811148832,
+          "mae": 0.7838388035937054,
+          "n": 410,
+          "seed": 3,
+          "epochs": 43,
+          "seconds": 10.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5993367957078132,
+          "spearman_rho": 0.5986487695916439,
+          "rmse": 1.0183398253153126,
+          "mae": 0.7826331789900617,
+          "n": 410,
+          "seed": 4,
+          "epochs": 48,
+          "seconds": 11.8,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.5302061438560486,
+        0.6643314361572266
+      ],
+      "mean_r": 0.532139920713025,
+      "sd_r": 0.14368303240062838,
+      "n_train": 1336,
+      "n_test": 410
+    },
+    "pocket3d_wrongpocket": {
+      "seeds": [
+        {
+          "pearson_r": 0.22449013646944999,
+          "spearman_rho": 0.1804891043557233,
+          "rmse": 1.2809555715357295,
+          "mae": 1.0035898103946592,
+          "n": 410,
+          "seed": 0,
+          "epochs": 15,
+          "seconds": 3.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5934805742372494,
+          "spearman_rho": 0.5861379358447526,
+          "rmse": 1.007906315722942,
+          "mae": 0.7798843255857142,
+          "n": 410,
+          "seed": 1,
+          "epochs": 49,
+          "seconds": 12.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5949556291114485,
+          "spearman_rho": 0.5923832477403079,
+          "rmse": 1.005749201539073,
+          "mae": 0.7764048006476425,
+          "n": 410,
+          "seed": 2,
+          "epochs": 45,
+          "seconds": 11.2,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6262208733698705,
+          "spearman_rho": 0.627257007341432,
+          "rmse": 0.9770194727524094,
+          "mae": 0.7562079859942925,
+          "n": 410,
+          "seed": 3,
+          "epochs": 61,
+          "seconds": 14.8,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6239843790959542,
+          "spearman_rho": 0.6240355229676503,
+          "rmse": 0.9809111323233813,
+          "mae": 0.7557511445952625,
+          "n": 410,
+          "seed": 4,
+          "epochs": 56,
+          "seconds": 14.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.557738721370697,
+        0.6858773827552795
+      ],
+      "mean_r": 0.5326263184567945,
+      "sd_r": 0.17294675916025462,
+      "n_train": 1336,
+      "n_test": 410
+    }
+  },
+  "E3|DAT": {
+    "pocket3d": {
+      "seeds": [
+        {
+          "pearson_r": 0.6059740898147544,
+          "spearman_rho": 0.5659613002733962,
+          "rmse": 0.8334713323366999,
+          "mae": 0.6516760630015086,
+          "n": 676,
+          "seed": 0,
+          "epochs": 33,
+          "seconds": 14.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6060584090217179,
+          "spearman_rho": 0.5647702997428247,
+          "rmse": 0.8336370027214429,
+          "mae": 0.6554774920615924,
+          "n": 676,
+          "seed": 1,
+          "epochs": 36,
+          "seconds": 15.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6042678737673439,
+          "spearman_rho": 0.5585142641483862,
+          "rmse": 0.8372032770779847,
+          "mae": 0.654969908782011,
+          "n": 676,
+          "seed": 2,
+          "epochs": 32,
+          "seconds": 13.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5999327187689056,
+          "spearman_rho": 0.5508710586632847,
+          "rmse": 0.8414877100299791,
+          "mae": 0.6602249103184987,
+          "n": 676,
+          "seed": 3,
+          "epochs": 33,
+          "seconds": 13.7,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6166088463207453,
+          "spearman_rho": 0.5735924966917482,
+          "rmse": 0.8275917564554306,
+          "mae": 0.6491031399845372,
+          "n": 676,
+          "seed": 4,
+          "epochs": 36,
+          "seconds": 14.5,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.5637555122375488,
+        0.6637991666793823
+      ],
+      "mean_r": 0.6065683875386935,
+      "sd_r": 0.006138984933623882,
+      "n_train": 2200,
+      "n_test": 676
+    },
+    "pocket3d_wrongpocket": {
+      "seeds": [
+        {
+          "pearson_r": 0.57485845666195,
+          "spearman_rho": 0.5290034719789809,
+          "rmse": 0.8616086108597705,
+          "mae": 0.6784492907439463,
+          "n": 676,
+          "seed": 0,
+          "epochs": 28,
+          "seconds": 11.2,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5994148243652235,
+          "spearman_rho": 0.5541262933869882,
+          "rmse": 0.8533624905649507,
+          "mae": 0.659616382869743,
+          "n": 676,
+          "seed": 1,
+          "epochs": 28,
+          "seconds": 11.7,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6163723588440423,
+          "spearman_rho": 0.5752751136854786,
+          "rmse": 0.8260042899420872,
+          "mae": 0.6496063971660546,
+          "n": 676,
+          "seed": 2,
+          "epochs": 45,
+          "seconds": 18.4,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5962176249938732,
+          "spearman_rho": 0.5449539394123756,
+          "rmse": 0.8453207444513069,
+          "mae": 0.6663037235214866,
+          "n": 676,
+          "seed": 3,
+          "epochs": 33,
+          "seconds": 13.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6208549538936928,
+          "spearman_rho": 0.5776594733908469,
+          "rmse": 0.8217977922398654,
+          "mae": 0.6439205718463694,
+          "n": 676,
+          "seed": 4,
+          "epochs": 37,
+          "seconds": 15.5,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.5685456991195679,
+        0.6674922108650208
+      ],
+      "mean_r": 0.6015436437517564,
+      "sd_r": 0.0182880770482712,
+      "n_train": 2200,
+      "n_test": 676
+    }
+  },
+  "E3|DRD2": {
+    "pocket3d": {
+      "seeds": [
+        {
+          "pearson_r": 0.5719603293420557,
+          "spearman_rho": 0.5609403552819322,
+          "rmse": 0.8093283986483634,
+          "mae": 0.6106533959548992,
+          "n": 1815,
+          "seed": 0,
+          "epochs": 26,
+          "seconds": 29.7,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6196543105864453,
+          "spearman_rho": 0.6112533998278745,
+          "rmse": 0.77906669483541,
+          "mae": 0.5876702316536391,
+          "n": 1815,
+          "seed": 1,
+          "epochs": 31,
+          "seconds": 33.8,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6048139096388624,
+          "spearman_rho": 0.5929935240364413,
+          "rmse": 0.7825192190270764,
+          "mae": 0.5937698295950561,
+          "n": 1815,
+          "seed": 2,
+          "epochs": 31,
+          "seconds": 34.2,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6238700208190471,
+          "spearman_rho": 0.6130207495484146,
+          "rmse": 0.7738643636804087,
+          "mae": 0.5848914903057508,
+          "n": 1815,
+          "seed": 3,
+          "epochs": 33,
+          "seconds": 35.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6359281330659172,
+          "spearman_rho": 0.6309975486139775,
+          "rmse": 0.7608981975346445,
+          "mae": 0.5778423447254275,
+          "n": 1815,
+          "seed": 4,
+          "epochs": 43,
+          "seconds": 47.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.6058594584465027,
+        0.6628608703613281
+      ],
+      "mean_r": 0.6112453406904655,
+      "sd_r": 0.02461711287156949,
+      "n_train": 5903,
+      "n_test": 1815
+    },
+    "pocket3d_wrongpocket": {
+      "seeds": [
+        {
+          "pearson_r": 0.6171432006052218,
+          "spearman_rho": 0.6112793006062961,
+          "rmse": 0.7843404639785247,
+          "mae": 0.5953948386116132,
+          "n": 1815,
+          "seed": 0,
+          "epochs": 36,
+          "seconds": 38.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6269224333953146,
+          "spearman_rho": 0.6235020164288293,
+          "rmse": 0.7719600611170709,
+          "mae": 0.5855229955731016,
+          "n": 1815,
+          "seed": 1,
+          "epochs": 28,
+          "seconds": 29.8,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6078820374604376,
+          "spearman_rho": 0.5948917506522554,
+          "rmse": 0.8031016760611794,
+          "mae": 0.6099962484081258,
+          "n": 1815,
+          "seed": 2,
+          "epochs": 31,
+          "seconds": 33.5,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.610729290600248,
+          "spearman_rho": 0.6036416929138659,
+          "rmse": 0.7902079842482759,
+          "mae": 0.5968694634345609,
+          "n": 1815,
+          "seed": 3,
+          "epochs": 27,
+          "seconds": 29.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5831158921760714,
+          "spearman_rho": 0.5809540661164384,
+          "rmse": 0.8106042773065448,
+          "mae": 0.6112183781037974,
+          "n": 1815,
+          "seed": 4,
+          "epochs": 27,
+          "seconds": 28.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.5510205030441284,
+        0.6141993403434753
+      ],
+      "mean_r": 0.6091585708474587,
+      "sd_r": 0.016291308537060387,
+      "n_train": 5903,
+      "n_test": 1815
+    }
+  },
+  "E3|DRD3": {
+    "pocket3d": {
+      "seeds": [
+        {
+          "pearson_r": 0.7095320250567438,
+          "spearman_rho": 0.6940336185858491,
+          "rmse": 0.7998753246913184,
+          "mae": 0.5989783367449931,
+          "n": 1198,
+          "seed": 0,
+          "epochs": 43,
+          "seconds": 29.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7120160628975187,
+          "spearman_rho": 0.693598811055483,
+          "rmse": 0.7915600627307284,
+          "mae": 0.597643733223611,
+          "n": 1198,
+          "seed": 1,
+          "epochs": 36,
+          "seconds": 25.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7129312918466966,
+          "spearman_rho": 0.6970608034840339,
+          "rmse": 0.8062728145578494,
+          "mae": 0.6057527562811698,
+          "n": 1198,
+          "seed": 2,
+          "epochs": 36,
+          "seconds": 25.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7068552560586637,
+          "spearman_rho": 0.687239369676005,
+          "rmse": 0.8046970991555842,
+          "mae": 0.6048020858796491,
+          "n": 1198,
+          "seed": 3,
+          "epochs": 40,
+          "seconds": 27.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6996175820533217,
+          "spearman_rho": 0.6780956637260867,
+          "rmse": 0.7980604104183641,
+          "mae": 0.603344555490204,
+          "n": 1198,
+          "seed": 4,
+          "epochs": 34,
+          "seconds": 23.7,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.6650101542472839,
+        0.7316205501556396
+      ],
+      "mean_r": 0.7081904435825889,
+      "sd_r": 0.005342928194863929,
+      "n_train": 3897,
+      "n_test": 1198
+    },
+    "pocket3d_wrongpocket": {
+      "seeds": [
+        {
+          "pearson_r": 0.6960661594289335,
+          "spearman_rho": 0.6836027430378994,
+          "rmse": 0.7965155016799288,
+          "mae": 0.6027870265788745,
+          "n": 1198,
+          "seed": 0,
+          "epochs": 24,
+          "seconds": 17.2,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7120075388162065,
+          "spearman_rho": 0.6959399137943029,
+          "rmse": 0.7891565189266774,
+          "mae": 0.5925525687572754,
+          "n": 1198,
+          "seed": 1,
+          "epochs": 39,
+          "seconds": 27.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7176661846221716,
+          "spearman_rho": 0.6990162194712918,
+          "rmse": 0.7937580865279373,
+          "mae": 0.5948760111463289,
+          "n": 1198,
+          "seed": 2,
+          "epochs": 31,
+          "seconds": 21.4,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7202898624231544,
+          "spearman_rho": 0.7067831337827377,
+          "rmse": 0.7902652377928314,
+          "mae": 0.596402739045616,
+          "n": 1198,
+          "seed": 3,
+          "epochs": 26,
+          "seconds": 18.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7033040818047132,
+          "spearman_rho": 0.6831941604757567,
+          "rmse": 0.7982190470046058,
+          "mae": 0.6028899290724867,
+          "n": 1198,
+          "seed": 4,
+          "epochs": 31,
+          "seconds": 21.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.6686059832572937,
+        0.7347719073295593
+      ],
+      "mean_r": 0.7098667654190358,
+      "sd_r": 0.010094309581606987,
+      "n_train": 3897,
+      "n_test": 1198
+    }
+  },
+  "E3|GABRA1": {
+    "pocket3d": {
+      "skipped": "n_train=216 < MIN_TRAIN=800"
+    },
+    "pocket3d_wrongpocket": {
+      "skipped": "n_train=216 < MIN_TRAIN=800"
+    }
+  },
+  "E3|HRH1": {
+    "pocket3d": {
+      "seeds": [
+        {
+          "pearson_r": 0.8358485133433111,
+          "spearman_rho": 0.8010331758584013,
+          "rmse": 0.7512290811204997,
+          "mae": 0.578381968371441,
+          "n": 346,
+          "seed": 0,
+          "epochs": 57,
+          "seconds": 12.1,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.8308241491207359,
+          "spearman_rho": 0.7968218767301937,
+          "rmse": 0.7759038157929057,
+          "mae": 0.5985488684880251,
+          "n": 346,
+          "seed": 1,
+          "epochs": 52,
+          "seconds": 11.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.8426479468077407,
+          "spearman_rho": 0.8044448337225414,
+          "rmse": 0.7363866850016091,
+          "mae": 0.56827009620005,
+          "n": 346,
+          "seed": 2,
+          "epochs": 54,
+          "seconds": 11.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.8442893967121152,
+          "spearman_rho": 0.8136305678809689,
+          "rmse": 0.7372173869462583,
+          "mae": 0.565991831652691,
+          "n": 346,
+          "seed": 3,
+          "epochs": 55,
+          "seconds": 11.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.8311296336452366,
+          "spearman_rho": 0.7961095875824726,
+          "rmse": 0.7675457687086948,
+          "mae": 0.5980111739538998,
+          "n": 346,
+          "seed": 4,
+          "epochs": 47,
+          "seconds": 10.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.796696662902832,
+        0.8602600693702698
+      ],
+      "mean_r": 0.8369479279258278,
+      "sd_r": 0.0063037549684235705,
+      "n_train": 1127,
+      "n_test": 346
+    },
+    "pocket3d_wrongpocket": {
+      "seeds": [
+        {
+          "pearson_r": 0.8314072106010187,
+          "spearman_rho": 0.7953707885884972,
+          "rmse": 0.7613348908033742,
+          "mae": 0.5875635105750464,
+          "n": 346,
+          "seed": 0,
+          "epochs": 57,
+          "seconds": 12.1,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.8287295661912524,
+          "spearman_rho": 0.795128288683416,
+          "rmse": 0.7786316695339175,
+          "mae": 0.6038734196238436,
+          "n": 346,
+          "seed": 1,
+          "epochs": 52,
+          "seconds": 10.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.8373597149601951,
+          "spearman_rho": 0.8011931041112148,
+          "rmse": 0.7515795480618276,
+          "mae": 0.5834214894068723,
+          "n": 346,
+          "seed": 2,
+          "epochs": 52,
+          "seconds": 11.1,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.8452275337169772,
+          "spearman_rho": 0.8163108147410734,
+          "rmse": 0.7324126307995098,
+          "mae": 0.5651609318793853,
+          "n": 346,
+          "seed": 3,
+          "epochs": 55,
+          "seconds": 11.5,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.8347881451651391,
+          "spearman_rho": 0.7979067523509548,
+          "rmse": 0.7540134806387988,
+          "mae": 0.5853126173074534,
+          "n": 346,
+          "seed": 4,
+          "epochs": 53,
+          "seconds": 11.4,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.799288272857666,
+        0.8638607859611511
+      ],
+      "mean_r": 0.8355024341269164,
+      "sd_r": 0.00634783149296266,
+      "n_train": 1127,
+      "n_test": 346
+    }
+  },
+  "E3|HTR1A": {
+    "pocket3d": {
+      "seeds": [
+        {
+          "pearson_r": 0.6907459032316045,
+          "spearman_rho": 0.6879270832449754,
+          "rmse": 0.9210651857475292,
+          "mae": 0.7290828474177871,
+          "n": 1075,
+          "seed": 0,
+          "epochs": 47,
+          "seconds": 28.7,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6943590349766166,
+          "spearman_rho": 0.6765832519093987,
+          "rmse": 0.9015686945514415,
+          "mae": 0.7100336203464241,
+          "n": 1075,
+          "seed": 1,
+          "epochs": 21,
+          "seconds": 12.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6948710990011776,
+          "spearman_rho": 0.6940691949485572,
+          "rmse": 0.9205372487826382,
+          "mae": 0.7384594970525697,
+          "n": 1075,
+          "seed": 2,
+          "epochs": 30,
+          "seconds": 18.4,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6929862089638243,
+          "spearman_rho": 0.6909322798716364,
+          "rmse": 0.9189165687096742,
+          "mae": 0.7311090096762014,
+          "n": 1075,
+          "seed": 3,
+          "epochs": 38,
+          "seconds": 23.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6976353635657299,
+          "spearman_rho": 0.689937141956925,
+          "rmse": 0.8977472191326441,
+          "mae": 0.7118266704470613,
+          "n": 1075,
+          "seed": 4,
+          "epochs": 26,
+          "seconds": 16.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.6651782989501953,
+        0.7279200553894043
+      ],
+      "mean_r": 0.6941195219477906,
+      "sd_r": 0.002532245959736978,
+      "n_train": 3495,
+      "n_test": 1075
+    },
+    "pocket3d_wrongpocket": {
+      "seeds": [
+        {
+          "pearson_r": 0.6969021279893932,
+          "spearman_rho": 0.6824930830197203,
+          "rmse": 0.9313642291257995,
+          "mae": 0.7423316276905149,
+          "n": 1075,
+          "seed": 0,
+          "epochs": 21,
+          "seconds": 12.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6897634844554821,
+          "spearman_rho": 0.68594581017264,
+          "rmse": 0.9072763285576221,
+          "mae": 0.7179956937390705,
+          "n": 1075,
+          "seed": 1,
+          "epochs": 38,
+          "seconds": 23.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7015271871064285,
+          "spearman_rho": 0.6979436116358404,
+          "rmse": 0.8946316188952996,
+          "mae": 0.7172213230576626,
+          "n": 1075,
+          "seed": 2,
+          "epochs": 33,
+          "seconds": 20.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7026373770508821,
+          "spearman_rho": 0.7034822150176184,
+          "rmse": 0.8950837253268809,
+          "mae": 0.7098598679830862,
+          "n": 1075,
+          "seed": 3,
+          "epochs": 29,
+          "seconds": 17.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6910743838398742,
+          "spearman_rho": 0.6855198261746024,
+          "rmse": 0.9073350726043631,
+          "mae": 0.7187640607079794,
+          "n": 1075,
+          "seed": 4,
+          "epochs": 30,
+          "seconds": 18.7,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.6570724248886108,
+        0.7230498194694519
+      ],
+      "mean_r": 0.696380912088412,
+      "sd_r": 0.005870450513646864,
+      "n_train": 3495,
+      "n_test": 1075
+    }
+  },
+  "E3|HTR2A": {
+    "pocket3d": {
+      "seeds": [
+        {
+          "pearson_r": 0.6971791457026778,
+          "spearman_rho": 0.7232481997801509,
+          "rmse": 0.8080878990840152,
+          "mae": 0.613898616329801,
+          "n": 1142,
+          "seed": 0,
+          "epochs": 31,
+          "seconds": 23.1,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.641051832018814,
+          "spearman_rho": 0.6605474240703906,
+          "rmse": 0.8431403186303956,
+          "mae": 0.6364745546765169,
+          "n": 1142,
+          "seed": 1,
+          "epochs": 19,
+          "seconds": 14.0,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6821386328599666,
+          "spearman_rho": 0.7205915598671626,
+          "rmse": 0.8108712817499938,
+          "mae": 0.6115217350827833,
+          "n": 1142,
+          "seed": 2,
+          "epochs": 26,
+          "seconds": 19.4,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6634058677496687,
+          "spearman_rho": 0.6861570246495466,
+          "rmse": 0.8357853178199369,
+          "mae": 0.6394034020746234,
+          "n": 1142,
+          "seed": 3,
+          "epochs": 20,
+          "seconds": 14.8,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.7044760256821242,
+          "spearman_rho": 0.733517533127235,
+          "rmse": 0.7956572828322559,
+          "mae": 0.5984317016267526,
+          "n": 1142,
+          "seed": 4,
+          "epochs": 31,
+          "seconds": 22.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.6723564267158508,
+        0.7323146462440491
+      ],
+      "mean_r": 0.6776503008026502,
+      "sd_r": 0.025804516142613504,
+      "n_train": 3715,
+      "n_test": 1142
+    },
+    "pocket3d_wrongpocket": {
+      "seeds": [
+        {
+          "pearson_r": 0.7037958342615654,
+          "spearman_rho": 0.7319663995658201,
+          "rmse": 0.7982020131760145,
+          "mae": 0.6099195981401487,
+          "n": 1142,
+          "seed": 0,
+          "epochs": 24,
+          "seconds": 17.6,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.680294491769238,
+          "spearman_rho": 0.7010036033713973,
+          "rmse": 0.8123615952928422,
+          "mae": 0.6244236333148909,
+          "n": 1142,
+          "seed": 1,
+          "epochs": 21,
+          "seconds": 15.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.670591426930039,
+          "spearman_rho": 0.7127860530547939,
+          "rmse": 0.817600532332539,
+          "mae": 0.6093131389384094,
+          "n": 1142,
+          "seed": 2,
+          "epochs": 23,
+          "seconds": 17.8,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6763268408536657,
+          "spearman_rho": 0.7076514032345825,
+          "rmse": 0.8309982930845702,
+          "mae": 0.6255534016731116,
+          "n": 1142,
+          "seed": 3,
+          "epochs": 27,
+          "seconds": 20.4,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.6893419653878984,
+          "spearman_rho": 0.7226545390302731,
+          "rmse": 0.8180235333825009,
+          "mae": 0.6311576900883021,
+          "n": 1142,
+          "seed": 4,
+          "epochs": 27,
+          "seconds": 20.5,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.6568859815597534,
+        0.7165020108222961
+      ],
+      "mean_r": 0.6840701118404813,
+      "sd_r": 0.012969050314804241,
+      "n_train": 3715,
+      "n_test": 1142
+    }
+  },
+  "E3|SERT": {
+    "pocket3d": {
+      "seeds": [
+        {
+          "pearson_r": 0.5336365270525766,
+          "spearman_rho": 0.5381212667358667,
+          "rmse": 1.094298493236527,
+          "mae": 0.8663317341670812,
+          "n": 1070,
+          "seed": 0,
+          "epochs": 27,
+          "seconds": 18.3,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5323762997824887,
+          "spearman_rho": 0.5449507649785763,
+          "rmse": 1.0658354704723254,
+          "mae": 0.8536661504585052,
+          "n": 1070,
+          "seed": 1,
+          "epochs": 25,
+          "seconds": 16.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5522228298548796,
+          "spearman_rho": 0.5521111331749681,
+          "rmse": 1.0297632865173652,
+          "mae": 0.8074847136702493,
+          "n": 1070,
+          "seed": 2,
+          "epochs": 47,
+          "seconds": 31.7,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5383441114727385,
+          "spearman_rho": 0.5357926391608249,
+          "rmse": 1.0477373485285697,
+          "mae": 0.823396165348659,
+          "n": 1070,
+          "seed": 3,
+          "epochs": 38,
+          "seconds": 25.4,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.542253960311306,
+          "spearman_rho": 0.5492807394038776,
+          "rmse": 1.0728748958997112,
+          "mae": 0.858916244328579,
+          "n": 1070,
+          "seed": 4,
+          "epochs": 25,
+          "seconds": 17.1,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.5027127265930176,
+        0.5810815691947937
+      ],
+      "mean_r": 0.5397667456947979,
+      "sd_r": 0.007993160023820205,
+      "n_train": 3480,
+      "n_test": 1070
+    },
+    "pocket3d_wrongpocket": {
+      "seeds": [
+        {
+          "pearson_r": 0.526686911542644,
+          "spearman_rho": 0.5351418146686573,
+          "rmse": 1.1090840030941393,
+          "mae": 0.8836343818735853,
+          "n": 1070,
+          "seed": 0,
+          "epochs": 28,
+          "seconds": 18.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5270824845440876,
+          "spearman_rho": 0.5351765938132053,
+          "rmse": 1.0723162178401182,
+          "mae": 0.8558879281872901,
+          "n": 1070,
+          "seed": 1,
+          "epochs": 28,
+          "seconds": 18.9,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5062873561893625,
+          "spearman_rho": 0.5112943990482288,
+          "rmse": 1.0643619488233922,
+          "mae": 0.8405840806871931,
+          "n": 1070,
+          "seed": 2,
+          "epochs": 27,
+          "seconds": 18.5,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.572179319587373,
+          "spearman_rho": 0.5755492159953682,
+          "rmse": 1.0245925451311324,
+          "mae": 0.8020336012973963,
+          "n": 1070,
+          "seed": 3,
+          "epochs": 47,
+          "seconds": 31.4,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        },
+        {
+          "pearson_r": 0.5366217055158019,
+          "spearman_rho": 0.543629933817209,
+          "rmse": 1.0534568128159665,
+          "mae": 0.8236411344225162,
+          "n": 1070,
+          "seed": 4,
+          "epochs": 34,
+          "seconds": 23.2,
+          "config": {
+            "d_model": 128,
+            "batch": 512,
+            "max_epochs": 70,
+            "lr_peak": 0.0005,
+            "pocket_dim": 128
+          }
+        }
+      ],
+      "bootstrap_ci": [
+        0.4942362308502197,
+        0.5794600248336792
+      ],
+      "mean_r": 0.5337715554758538,
+      "sd_r": 0.02415365789744099,
+      "n_train": 3480,
+      "n_test": 1070
+    }
+  },
+  "completed_utc": "2026-11-14T08:49:35+00:00"
+}

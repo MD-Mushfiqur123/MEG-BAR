@@ -142,7 +142,7 @@ def fig_radius_sweep(sweep):
             if rkey not in sweep['radii']:
                 continue
             store = sweep['radii'][rkey]['results']
-            pfx = 'R%sp' % rkey.replace('.', '')
+            pfx = 'R%s' % rkey.split('.')[0]
         genes = [k for k in store if k.startswith(pfx + '|')
                  and 'seeds' in store[k].get('pocket3d', {})]
         if not genes:

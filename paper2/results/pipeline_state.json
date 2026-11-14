@@ -125,6 +125,36 @@
    "script": "26_compute_budget.py",
    "finished_utc": "2026-11-14T08:16:53Z",
    "runtime_s": 2.2
+  },
+  "phase_27_crystal_vs_af": {
+   "status": "done",
+   "script": "27_crystal_vs_af.py",
+   "finished_utc": "2026-11-14T08:49:35Z",
+   "runtime_s": 1613.1
+  },
+  "phase_28_radius_sweep": {
+   "status": "done",
+   "script": "28_radius_sweep.py",
+   "finished_utc": "2026-11-14T10:02:44Z",
+   "runtime_s": 4388.7
+  },
+  "phase_29_mutation_probe": {
+   "status": "done",
+   "script": "29_mutation_probe.py",
+   "finished_utc": "2026-11-14T10:02:44Z",
+   "runtime_s": 0.1
+  },
+  "phase_30_variance_decomposition": {
+   "status": "done",
+   "script": "30_variance_decomposition.py",
+   "finished_utc": "2026-11-14T10:02:46Z",
+   "runtime_s": 2.2
+  },
+  "phase_31_negative_result_guard": {
+   "status": "done",
+   "script": "31_negative_result_guard.py",
+   "finished_utc": "2026-11-14T10:02:48Z",
+   "runtime_s": 2.1
   }
  }
 }

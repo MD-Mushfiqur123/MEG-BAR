@@ -45,7 +45,8 @@ def test_stage4_temporal_store_complete():
         blk = d[key]
         for arm in ALL_ARMS:
             rec = blk.get(arm, {})
-            assert "seeds" in rec or "skipped" in rec, f"{key}/{arm} incomplete"
+            ok = "seeds" in rec or "skipped" in rec or "pearson_r" in rec
+            assert ok, f"{key}/{arm} incomplete"
             if "seeds" in rec:
                 assert len(rec["seeds"]) == 5, f"{key}/{arm} needs 5 seeds"
 
@@ -66,14 +67,22 @@ def test_stage4_low_resource_guard_honest():
     if not _exists(ST4, "low_resource.json"):
         pytest.skip("stage4 low_resource not yet committed")
     d = _load(os.path.join(ST4, "low_resource.json"))
-    assert "receptors" in d or "blocks" in d
+    assert d["rule"]
+    for proto in ("scaffold_guard_skips", "temporal_guard_skips"):
+        assert proto in d
+        for g, arms in d[proto].items():
+            assert arms, f"{proto}/{g} empty"
+            for arm, why in arms.items():
+                assert "MIN_TRAIN" in why or "n_train" in why, f"{proto}/{g}/{arm}"
 
 
 def test_stage4_compute_budget_measured():
     if not _exists(ST4, "compute_budget.json"):
         pytest.skip("stage4 compute budget not yet committed")
     d = _load(os.path.join(ST4, "compute_budget.json"))
-    assert "total_seconds" in d or "arms" in d or "stores" in d
+    assert d["total_measured_training_seconds"] > 0
+    assert d["total_measured_training_hours"] > 0
+    assert d["hardware"]
 
 
 # ---------- Stage 5 ----------

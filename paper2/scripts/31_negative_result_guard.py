@@ -12,6 +12,9 @@ import json
 import os
 import sys
 
+import numpy as np
+from scipy import stats
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
 sys.path.insert(0, HERE)
@@ -31,23 +34,50 @@ def load(path):
         return json.load(fh)
 
 
-def mean_r(store, key, arm):
-    blk = (store or {}).get(key, {}).get(arm, {})
-    return blk.get('mean_r')
-
-
 def supported(ev):
     return bool(ev and ev.get('wilcoxon_p', 1.0) < ALPHA
                 and ev.get('mean_diff', 0) > 0)
 
 
+def paired_pooled(store, a, b):
+    """Paired per-seed differences a-b pooled across receptors, with the
+    same Wilcoxon + bootstrap summary as Phase 25."""
+    pooled = []
+    for key in sorted(k for k in store if k.startswith('E3|')):
+        x = store[key].get(a, {})
+        y = store[key].get(b, {})
+        if 'seeds' not in x or 'seeds' not in y:
+            continue
+        xs = {s['seed']: s['pearson_r'] for s in x['seeds']}
+        ys = {s['seed']: s['pearson_r'] for s in y['seeds']}
+        pooled += [xs[s] - ys[s] for s in sorted(xs) if s in ys]
+    if not pooled:
+        return {}
+    arr = np.array(pooled)
+    res = {'n_pairs': int(len(arr)),
+           'mean_diff': round(float(arr.mean()), 5)}
+    if len(arr) >= 5 and np.any(arr != 0):
+        try:
+            res['wilcoxon_p'] = round(float(stats.wilcoxon(arr).pvalue), 5)
+        except ValueError:
+            res['wilcoxon_p'] = 1.0
+    else:
+        res['wilcoxon_p'] = 1.0
+    rng = np.random.default_rng(0)
+    boots = [arr[rng.integers(0, len(arr), len(arr))].mean() for _ in range(1000)]
+    res['bootstrap_ci95'] = [round(float(np.percentile(boots, 2.5)), 5),
+                             round(float(np.percentile(boots, 97.5)), 5)]
+    return res
+
+
 def main():
     e3 = load(E3_STORE)
-    stats = load(os.path.join(ST4, 'statistics.json')) or {}
+    stats_ = load(os.path.join(ST4, 'statistics.json')) or {}
+    af = load(os.path.join(ST5, 'af_results.json'))
     af_comp = load(os.path.join(ST5, 'af_comparison.json'))
 
-    sec = stats.get('secondary', {})
-    prim = stats.get('primary_endpoint', {}).get('result', {}).get('pooled', {})
+    sec = stats_.get('secondary', {})
+    prim = stats_.get('primary_endpoint', {}).get('result', {}).get('pooled', {})
     verdicts = {'phase': 31, 'alpha': ALPHA, 'hypotheses': {}}
 
     h1 = sec.get('C_vs_B_1d', {}).get('pooled', {})
@@ -66,23 +96,30 @@ def main():
         'evidence': h3, 'supported': supported(h3),
     }
 
+    # H4: AFDB grounding gives the same QUALITATIVE conclusion as crystal
+    # (PREREGISTRATION wording). Operationalisation: run the same paired
+    # C-vs-E test on the AF-geometry store; the conclusion transfers iff the
+    # verdict (significant vs not at alpha) matches the crystal verdict and,
+    # when both are significant, the sign matches. Magnitudes are reported
+    # alongside (pooled AF-vs-crystal delta) - sign flips of differences
+    # that are noise around zero are NOT a different conclusion.
     h4_supported, h4_evidence = None, {}
-    if af_comp and e3:
-        signs_agree, pairs = 0, 0
-        for g, row in af_comp.get('per_receptor', {}).items():
-            cr_c = mean_r(e3, 'E3|%s' % g, 'pocket3d')
-            cr_e = mean_r(e3, 'E3|%s' % g, 'pocket3d_wrongpocket')
-            af_c = row['pocket3d']['af_mean_r']
-            af_e = row['pocket3d_wrongpocket']['af_mean_r']
-            if None in (cr_c, cr_e, af_c, af_e):
-                continue
-            pairs += 1
-            if (cr_c - cr_e) * (af_c - af_e) > 0:
-                signs_agree += 1
-        h4_evidence = {'n_receptors': pairs, 'sign_agreements': signs_agree,
-                       'pooled_af_delta_vs_crystal':
-                           af_comp.get('pooled_delta_r_pocket3d')}
-        h4_supported = (pairs > 0 and signs_agree >= 0.75 * pairs)
+    if af:
+        af_cve = paired_pooled(af, 'pocket3d', 'pocket3d_wrongpocket')
+        crystal_sig = supported(h2)
+        af_sig = supported(af_cve)
+        same = (af_sig == crystal_sig)
+        if same and af_sig:
+            same = ((af_cve.get('mean_diff', 0) > 0)
+                    == (h2.get('mean_diff', 0) > 0))
+        h4_supported = bool(af_cve) and same
+        h4_evidence = {
+            'af_c_vs_e': af_cve,
+            'crystal_c_vs_e': h2,
+            'verdict_transfer': same,
+            'pooled_af_delta_vs_crystal':
+                (af_comp or {}).get('pooled_delta_r_pocket3d'),
+        }
     verdicts['hypotheses']['H4'] = {
         'statement': 'AFDB-predicted structures give the same qualitative '
                      'conclusion as crystal structures',

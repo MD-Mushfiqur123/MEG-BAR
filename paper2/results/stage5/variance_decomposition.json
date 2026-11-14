@@ -1,0 +1,45 @@
+{
+ "phase": 30,
+ "purpose": "seed x receptor x arm variance decomposition + split-protocol variance (measured only)",
+ "e3_scaffold": {
+  "n_cells": 280,
+  "grand_mean_r": 0.62023,
+  "total_var": 0.020326,
+  "receptor_var_share": 0.8448,
+  "arm_var_share": 0.027,
+  "residual_var_share": 0.1282,
+  "within_cell_seed_sd_mean": 0.02804,
+  "arm_means": {
+   "crossattn_1d": 0.622,
+   "dist_bias": 0.62911,
+   "pocket3d": 0.63916,
+   "pocket3d_shuffled": 0.62801,
+   "pocket3d_wrongpocket": 0.63891,
+   "shared": 0.57441
+  }
+ },
+ "e5_temporal": {
+  "n_cells": 250,
+  "grand_mean_r": 0.38857,
+  "total_var": 0.012256,
+  "receptor_var_share": 0.9154,
+  "arm_var_share": 0.0018,
+  "residual_var_share": 0.0828,
+  "within_cell_seed_sd_mean": 0.02103,
+  "arm_means": {
+   "crossattn_1d": 0.38954,
+   "dist_bias": 0.37991,
+   "pocket3d": 0.38704,
+   "pocket3d_shuffled": 0.38898,
+   "pocket3d_wrongpocket": 0.396,
+   "shared": 0.38968
+  }
+ },
+ "e3_minus_e5": {
+  "n_cells": 50,
+  "mean_delta_r": 0.2547,
+  "sd_delta_r": 0.16265,
+  "min_delta_r": -0.19251,
+  "max_delta_r": 0.5917
+ }
+}
